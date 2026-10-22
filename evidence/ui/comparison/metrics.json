@@ -3,7 +3,7 @@
   "pages": [
     {
       "row": 0,
-      "title": "Welcome & Wizards",
+      "title": "SAT Workspace",
       "referenceSize": [
         1385,
         900
@@ -13,8 +13,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 67952,
-      "fractionChanged": 0.05451423987164059,
+      "changedPixelsAbove8": 448451,
+      "fractionChanged": 0.35976815082230246,
       "exact": false
     },
     {
@@ -29,8 +29,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36644,
-      "fractionChanged": 0.029397513036502208,
+      "changedPixelsAbove8": 42073,
+      "fractionChanged": 0.03375290814279984,
       "exact": false
     },
     {
@@ -45,13 +45,13 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36705,
-      "fractionChanged": 0.029446450060168473,
+      "changedPixelsAbove8": 45553,
+      "fractionChanged": 0.03654472523064581,
       "exact": false
     },
     {
       "row": 3,
-      "title": "VESC Packages",
+      "title": "Controller Packages",
       "referenceSize": [
         1385,
         900
@@ -61,8 +61,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36487,
-      "fractionChanged": 0.029271560369033292,
+      "changedPixelsAbove8": 40288,
+      "fractionChanged": 0.03232089851584436,
       "exact": false
     },
     {
@@ -77,8 +77,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36609,
-      "fractionChanged": 0.029369434416365824,
+      "changedPixelsAbove8": 124627,
+      "fractionChanged": 0.09998154833533895,
       "exact": false
     },
     {
@@ -93,8 +93,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35390,
-      "fractionChanged": 0.028391496189330123,
+      "changedPixelsAbove8": 50069,
+      "fractionChanged": 0.04016766947452868,
       "exact": false
     },
     {
@@ -109,8 +109,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35428,
-      "fractionChanged": 0.028421981548335338,
+      "changedPixelsAbove8": 40857,
+      "fractionChanged": 0.03277737665463297,
       "exact": false
     },
     {
@@ -125,8 +125,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35351,
-      "fractionChanged": 0.028360208584035297,
+      "changedPixelsAbove8": 40780,
+      "fractionChanged": 0.03271560369033293,
       "exact": false
     },
     {
@@ -141,8 +141,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35350,
-      "fractionChanged": 0.02835940633774569,
+      "changedPixelsAbove8": 40779,
+      "fractionChanged": 0.032714801444043325,
       "exact": false
     },
     {
@@ -157,8 +157,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35256,
-      "fractionChanged": 0.028283995186522262,
+      "changedPixelsAbove8": 40685,
+      "fractionChanged": 0.0326393902928199,
       "exact": false
     },
     {
@@ -173,8 +173,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36600,
-      "fractionChanged": 0.029362214199759325,
+      "changedPixelsAbove8": 124512,
+      "fractionChanged": 0.0998892900120337,
       "exact": false
     },
     {
@@ -189,8 +189,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35390,
-      "fractionChanged": 0.028391496189330123,
+      "changedPixelsAbove8": 41374,
+      "fractionChanged": 0.033192137986361815,
       "exact": false
     },
     {
@@ -205,13 +205,13 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35434,
-      "fractionChanged": 0.028426795026073006,
+      "changedPixelsAbove8": 40863,
+      "fractionChanged": 0.03278219013237064,
       "exact": false
     },
     {
       "row": 18,
-      "title": "VESC Remote",
+      "title": "Remote Control",
       "referenceSize": [
         1385,
         900
@@ -221,8 +221,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35261,
-      "fractionChanged": 0.028288006417970316,
+      "changedPixelsAbove8": 40482,
+      "fractionChanged": 0.03247653429602888,
       "exact": false
     },
     {
@@ -237,8 +237,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35472,
-      "fractionChanged": 0.028457280385078217,
+      "changedPixelsAbove8": 40901,
+      "fractionChanged": 0.03281267549137585,
       "exact": false
     },
     {
@@ -253,8 +253,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 35401,
-      "fractionChanged": 0.028400320898515845,
+      "changedPixelsAbove8": 38823,
+      "fractionChanged": 0.031145607701564382,
       "exact": false
     },
     {
@@ -269,8 +269,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36602,
-      "fractionChanged": 0.029363818692338547,
+      "changedPixelsAbove8": 48019,
+      "fractionChanged": 0.03852306458082631,
       "exact": false
     },
     {
@@ -285,8 +285,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 31072,
-      "fractionChanged": 0.024927396710790212,
+      "changedPixelsAbove8": 106456,
+      "fractionChanged": 0.08540393100681909,
       "exact": false
     },
     {
@@ -301,8 +301,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 31093,
-      "fractionChanged": 0.02494424388287204,
+      "changedPixelsAbove8": 34515,
+      "fractionChanged": 0.027689530685920578,
       "exact": false
     },
     {
@@ -317,8 +317,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 31069,
-      "fractionChanged": 0.02492498997192138,
+      "changedPixelsAbove8": 32460,
+      "fractionChanged": 0.026040914560770158,
       "exact": false
     },
     {
@@ -333,8 +333,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 31085,
-      "fractionChanged": 0.024937825912555153,
+      "changedPixelsAbove8": 32476,
+      "fractionChanged": 0.02605375050140393,
       "exact": false
     },
     {
@@ -349,8 +349,8 @@
         900
       ],
       "comparable": true,
-      "changedPixelsAbove8": 31097,
-      "fractionChanged": 0.024947452868030486,
+      "changedPixelsAbove8": 32488,
+      "fractionChanged": 0.026063377456879262,
       "exact": false
     },
     {
@@ -365,8 +365,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 36967,
-      "fractionChanged": 0.027861142723634526,
+      "changedPixelsAbove8": 38358,
+      "fractionChanged": 0.028909506116081184,
       "exact": false
     },
     {
@@ -381,13 +381,13 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 37047,
-      "fractionChanged": 0.02792143680803117,
+      "changedPixelsAbove8": 38438,
+      "fractionChanged": 0.02896980020047783,
       "exact": false
     },
     {
       "row": 33,
-      "title": "VESC Dev Tools",
+      "title": "controller Dev Tools",
       "referenceSize": [
         1385,
         958
@@ -397,8 +397,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30511,
-      "fractionChanged": 0.022995410112825306,
+      "changedPixelsAbove8": 91969,
+      "fractionChanged": 0.06931483309843763,
       "exact": false
     },
     {
@@ -413,8 +413,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30515,
-      "fractionChanged": 0.022998424817045136,
+      "changedPixelsAbove8": 33886,
+      "fractionChanged": 0.02553906679830875,
       "exact": false
     },
     {
@@ -429,8 +429,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30521,
-      "fractionChanged": 0.023002946873374886,
+      "changedPixelsAbove8": 34480,
+      "fractionChanged": 0.025986750374953838,
       "exact": false
     },
     {
@@ -445,8 +445,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30521,
-      "fractionChanged": 0.023002946873374886,
+      "changedPixelsAbove8": 34480,
+      "fractionChanged": 0.025986750374953838,
       "exact": false
     },
     {
@@ -461,8 +461,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30520,
-      "fractionChanged": 0.02300219319731993,
+      "changedPixelsAbove8": 33891,
+      "fractionChanged": 0.02554283517858354,
       "exact": false
     },
     {
@@ -477,8 +477,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30869,
-      "fractionChanged": 0.02326522614050029,
+      "changedPixelsAbove8": 34157,
+      "fractionChanged": 0.025743313009202386,
       "exact": false
     },
     {
@@ -493,8 +493,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 32186,
-      "fractionChanged": 0.024257817504880052,
+      "changedPixelsAbove8": 49517,
+      "fractionChanged": 0.037319777213358156,
       "exact": false
     },
     {
@@ -509,8 +509,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30527,
-      "fractionChanged": 0.023007468929704636,
+      "changedPixelsAbove8": 32514,
+      "fractionChanged": 0.024505023250906297,
       "exact": false
     },
     {
@@ -525,8 +525,8 @@
         958
       ],
       "comparable": true,
-      "changedPixelsAbove8": 30527,
-      "fractionChanged": 0.023007468929704636,
+      "changedPixelsAbove8": 32514,
+      "fractionChanged": 0.024505023250906297,
       "exact": false
     }
   ]

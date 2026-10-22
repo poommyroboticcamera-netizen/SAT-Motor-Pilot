@@ -1,14 +1,19 @@
 {
-  "protocolFailed": 0,
+  "reaExecutableEvidence": "ev_fefdf24435ebe9f8d62fef43a2f366fea4dfaecb2b63724d9b883015e216ad5f",
   "renderedPages": 33,
-  "localXmlMotorPass": true,
-  "protocolPassed": 11,
-  "cleanBuild": true,
-  "whitespaceScope": "source/docs/scripts; generated raw logs excluded",
-  "compilerInvocations": 286,
-  "appLaunchExitCode": 0,
   "buildExitCode": 0,
-  "localXmlAppPass": true,
+  "buildSourceCommit": "17d52d56c44e6a0437a9ff0e5168ce7c0e891741",
+  "protocolFailed": 0,
+  "companyUiRuntimePassed": 11,
+  "compilerInvocations": 276,
+  "appLaunchExitCode": 0,
+  "product": "SAT Motor Pilot 0.2.0",
+  "newPackage": "SAT-Motor-Pilot-Windows-x64.zip",
+  "cleanBuild": true,
+  "hardwareTests": "NOT RUN",
+  "companyUiRuntimeFailed": 0,
+  "reaPackageEvidence": "ev_b8f58e8ce274e4f2446338c21d542eb3052847e0373fdca1ea07fbc84093aa2a",
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
-  "physicalHardwareTests": "not run"
+  "coreRegressionPassed": 88,
+  "protocolPassed": 11
 }

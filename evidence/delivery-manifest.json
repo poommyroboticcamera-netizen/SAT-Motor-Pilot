@@ -1,9 +1,9 @@
 {
-  "product": "MotorLab 0.1.0 engineering preview",
+  "product": "SAT Motor Pilot 0.2.0 engineering preview",
   "companyArtwork": "User supplied Somboon Advance Technology",
   "upstreamAppCommit": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
   "upstreamFirmwareCommit": "26af69484014b6771d02e68c22f4cb96645b5f22",
-  "buildSourceCommit": "13c1fd0585846339ccc34b133d30ca72c7cf6836",
+  "buildSourceCommit": "17d52d56c44e6a0437a9ff0e5168ce7c0e891741",
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
   "protocolTests": {
     "passed": 11,
@@ -43,14 +43,14 @@
   "acceptance": "OPEN; see docs/ACCEPTANCE_AND_KNOWN_ISSUES.md",
   "files": [
     {
-      "path": "dist/MotorLab/MotorLab.exe",
-      "bytes": 21193216,
-      "sha256": "4613d9c4f272528395ee6898fc93ab7119f605a3b4b0e4964e080a1144d56f84"
+      "path": "dist/SATMotorPilot/SATMotorPilot.exe",
+      "bytes": 21215744,
+      "sha256": "0a0b23164a5601ded2063fe563fd76b22ec1cc2360d3b70c3238cf9e267eee19"
     },
     {
-      "path": "MotorLab-Windows-x64-trial.zip",
-      "bytes": 62800159,
-      "sha256": "ec95a2312387a2720ebe7ea851a44c40b1b1029a3299f80878ff882d8077fad0"
+      "path": "SAT-Motor-Pilot-Windows-x64.zip",
+      "bytes": 62824720,
+      "sha256": "c557d19056dc0c4a60f797a4e28743485cc765fa035d85124a9f11e1529602e9"
     },
     {
       "path": "source/packet.cpp",
@@ -79,8 +79,8 @@
     },
     {
       "path": "source/main.cpp",
-      "bytes": 68930,
-      "sha256": "ca5129f66a4bec04587602eec89c52d1f07b94116eed76811732ce56a497408b"
+      "bytes": 67347,
+      "sha256": "5451d564e69b36ef3ef4d6c992615c902dc4d564ae01a1a73165ffdebb99104c"
     },
     {
       "path": "source/res/motorlab/somboon-user-supplied.png",

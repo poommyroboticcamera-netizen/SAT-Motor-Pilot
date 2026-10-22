@@ -1,5 +1,17 @@
 # REA evidence ledger
 
+## SAT company application, 2026-10-23
+
+REA inspected the actual newly built `dist/SATMotorPilot/SATMotorPilot.exe` using the native PE resource parser. Evidence `ev_fefdf24435ebe9f8d62fef43a2f366fea4dfaecb2b63724d9b883015e216ad5f` establishes PE32+, x86-64, 21,215,744 bytes, SHA-256 `0a0b23164a5601ded2063fe563fd76b22ec1cc2360d3b70c3238cf9e267eee19`. It completed 19 resource entries / 8 resources. Complete PE evidence is in `evidence/rea-company-executable.json`.
+
+The Windows version-resource probe independently reports product SAT Motor Pilot, company Somboon Advance Technology, version 0.2.0.0. The supported CLI version/About probes exit successfully using only the packaged runtime and system PATH, and preserve original source attribution. See `sat-executable-identity.json`, `sat-version.txt`, and `sat-about.txt`.
+
+REA also inspected the actual company trial ZIP: SHA-256 `c557d19056dc0c4a60f797a4e28743485cc765fa035d85124a9f11e1529602e9`; inspection `ev_b8f58e8ce274e4f2446338c21d542eb3052847e0373fdca1ea07fbc84093aa2a`. The inventory contains 1,173 occurrences (1,168 files, 5 directories), 1,164 content nodes and zero integrity contradictions within the ZIP inventory scope. Complete records are in `evidence/rea-company-package.json`. The opened package session was closed successfully after export.
+
+These are static artifact observations, not native call tracing or proof of hardware behavior. UI/navigation/first-run evidence comes from the explicitly instrumented Windows runtime audit, not a REA native UI capture. No native decompilation was needed to read the complete available source. The earlier provider limitations below are retained as historical reference.
+
+---
+
 Investigation date: 2026-10-22. Skill: `reverse-engineer-anything`, version 42. REA MCP server: 6.7.0.
 
 | Finding | Evidence | Scope / limitation |

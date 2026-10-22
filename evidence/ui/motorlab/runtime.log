@@ -19,7 +19,7 @@ qrc:/res/qml/WelcomeQmlPanel.qml:118:5: QML Dialog: Binding loop detected for pr
 qrc:/mobile/SetupWizardFoc.qml:827:5: QML Dialog: Binding loop detected for property "implicitHeight"
 qrc:/mobile/SetupWizardFoc.qml:768:5: QML Dialog: Binding loop detected for property "implicitHeight"
 qrc:/mobile/SetupWizardFoc.qml:726:5: QML Dialog: Binding loop detected for property "implicitHeight"
-Could not load package archive resource. Please update the archive in order to use VESC packages.
+Could not load package archive resource. Please update the archive in order to use controller packages.
 QFSFileEngine::open: No file name specified
 QFSFileEngine::open: No file name specified
 Param group "gpd" not found.

@@ -1,0 +1,106 @@
+{
+  "product": "SAT Motor Pilot 0.2.0",
+  "checks": 12,
+  "runtimePassed": 11,
+  "failed": 0,
+  "sourceReviewed": 1,
+  "scope": "Company UI/navigation/onboarding/local files; hardware not tested",
+  "rows": [
+    {
+      "feature": "SAT commissioning navigation 1",
+      "implementation": "source/pages/pagewelcome.cpp; source/mainwindow.cpp",
+      "test": "Click actual satWorkspace0 and inspect current stacked page",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#workspaceNavigation",
+      "remaining": "Connected workflow and hardware acceptance"
+    },
+    {
+      "feature": "SAT commissioning navigation 2",
+      "implementation": "source/pages/pagewelcome.cpp; source/mainwindow.cpp",
+      "test": "Click actual satWorkspace1 and inspect current stacked page",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#workspaceNavigation",
+      "remaining": "Connected workflow and hardware acceptance"
+    },
+    {
+      "feature": "SAT commissioning navigation 3",
+      "implementation": "source/pages/pagewelcome.cpp; source/mainwindow.cpp",
+      "test": "Click actual satWorkspace2 and inspect current stacked page",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#workspaceNavigation",
+      "remaining": "Connected workflow and hardware acceptance"
+    },
+    {
+      "feature": "SAT commissioning navigation 4",
+      "implementation": "source/pages/pagewelcome.cpp; source/mainwindow.cpp",
+      "test": "Click actual satWorkspace3 and inspect current stacked page",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#workspaceNavigation",
+      "remaining": "Connected workflow and hardware acceptance"
+    },
+    {
+      "feature": "Company application identity",
+      "implementation": "source/main.cpp; source/sat_motor_pilot.pro",
+      "test": "Read QApplication organization/name/domain and Windows executable metadata",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json",
+      "remaining": "Other hosts/install profiles"
+    },
+    {
+      "feature": "Company onboarding 0",
+      "implementation": "source/satproduct.h; source/startupwizard.cpp",
+      "test": "Render page and inspect mandatory acceptance state",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/onboarding/page-0.png",
+      "remaining": "Full manual completion/keyboard/focus/DPI coverage"
+    },
+    {
+      "feature": "Company onboarding 1",
+      "implementation": "source/satproduct.h; source/startupwizard.cpp",
+      "test": "Render page and inspect mandatory acceptance state",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/onboarding/page-1.png",
+      "remaining": "Full manual completion/keyboard/focus/DPI coverage"
+    },
+    {
+      "feature": "Company onboarding 2",
+      "implementation": "source/satproduct.h; source/startupwizard.cpp",
+      "test": "Render page and inspect mandatory acceptance state",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/onboarding/page-2.png",
+      "remaining": "Full manual completion/keyboard/focus/DPI coverage"
+    },
+    {
+      "feature": "Company onboarding 3",
+      "implementation": "source/satproduct.h; source/startupwizard.cpp",
+      "test": "Render page and inspect mandatory acceptance state",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/onboarding/page-3.png",
+      "remaining": "Full manual completion/keyboard/focus/DPI coverage"
+    },
+    {
+      "feature": "Company help/build/update ownership",
+      "implementation": "source/mainwindow.cpp; source/utility.cpp; source/res/sat_changelog.md",
+      "test": "Inspect source: no startup checkVersion calls; checkVersion contains no network request; own GitHub links",
+      "result": "SOURCE_REVIEWED",
+      "evidence": "docs/COMPANY_PRODUCT.md",
+      "remaining": "Exercise every help action and external link"
+    },
+    {
+      "feature": "Local motor XML persistence",
+      "implementation": "source/configparams.cpp; source/motorlabaudit.h",
+      "test": "Perturb destination, save/load XML, compare all parameters and serialized bytes",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#configurationRoundtrips",
+      "remaining": "Physical controller read/write"
+    },
+    {
+      "feature": "Local application XML persistence",
+      "implementation": "source/configparams.cpp; source/motorlabaudit.h",
+      "test": "Perturb destination, save/load XML, compare all parameters and serialized bytes",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#configurationRoundtrips",
+      "remaining": "Physical controller read/write"
+    }
+  ]
+}
