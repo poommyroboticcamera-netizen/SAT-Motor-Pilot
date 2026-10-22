@@ -1,0 +1,19 @@
+Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
+Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
+Failed to load opengl32sw.dll (The specified module could not be found.)
+Failed to load and resolve WGL/OpenGL functions
+Software OpenGL failed. Falling back to system OpenGL.
+qrc:/mobile/SetupWizardIMU.qml:89:5: QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
+qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
+qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
+qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
+qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+Could not load package archive resource. Please update the archive in order to use VESC packages.
+QFSFileEngine::open: No file name specified
+QFSFileEngine::open: No file name specified
+Param group "gpd" not found.

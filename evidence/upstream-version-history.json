@@ -1,0 +1,122 @@
+[
+  {
+    "sha": "c5436d740ffc9761c8555b784fb779e74fd8a5b3",
+    "date": "2026-10-13T20:51:51Z",
+    "message": "Windows: embed the application icon and version info in the executable",
+    "url": "https://github.com/vedderb/vesc_tool/commit/c5436d740ffc9761c8555b784fb779e74fd8a5b3"
+  },
+  {
+    "sha": "6d46a0b88a830f66e17aba4060f41f2332185b04",
+    "date": "2026-10-06T00:04:50Z",
+    "message": "Add VirtualVesc: a simulated VESC speaking the packet protocol",
+    "url": "https://github.com/vedderb/vesc_tool/commit/6d46a0b88a830f66e17aba4060f41f2332185b04"
+  },
+  {
+    "sha": "49706b0c6511df120477e8581511a4b25eefc6c7",
+    "date": "2026-08-23T10:18:45Z",
+    "message": "Poll rate limiting and more reliable config writes while polling",
+    "url": "https://github.com/vedderb/vesc_tool/commit/49706b0c6511df120477e8581511a4b25eefc6c7"
+  },
+  {
+    "sha": "74e99c60a1b8feec4df4ee2d98cdc5e5fdf80aff",
+    "date": "2026-07-10T16:13:25Z",
+    "message": "Beta 7.01",
+    "url": "https://github.com/vedderb/vesc_tool/commit/74e99c60a1b8feec4df4ee2d98cdc5e5fdf80aff"
+  },
+  {
+    "sha": "a68a6ad0cb9fcf6f0c5ed617ff7367e20d8355d1",
+    "date": "2026-06-01T09:05:17Z",
+    "message": "Attempt at fixing more crashes reported on play store",
+    "url": "https://github.com/vedderb/vesc_tool/commit/a68a6ad0cb9fcf6f0c5ed617ff7367e20d8355d1"
+  },
+  {
+    "sha": "cf6174935eb7097003acc03f48126055dd4c397d",
+    "date": "2026-05-28T05:58:01Z",
+    "message": "Another attempt on fixing crash reported on android",
+    "url": "https://github.com/vedderb/vesc_tool/commit/cf6174935eb7097003acc03f48126055dd4c397d"
+  },
+  {
+    "sha": "5bc3085eb80105e276332528be0470c7f277ca33",
+    "date": "2026-05-25T07:07:15Z",
+    "message": "Use included config if it is newer than the downloaded one",
+    "url": "https://github.com/vedderb/vesc_tool/commit/5bc3085eb80105e276332528be0470c7f277ca33"
+  },
+  {
+    "sha": "86af95b8d286d3bc418367fea2f05e72b0033b8d",
+    "date": "2026-05-17T10:26:02Z",
+    "message": "Bumped android version",
+    "url": "https://github.com/vedderb/vesc_tool/commit/86af95b8d286d3bc418367fea2f05e72b0033b8d"
+  },
+  {
+    "sha": "36b8d6dac39017bc7c29f9f9de468a969233d2d5",
+    "date": "2026-05-15T17:21:27Z",
+    "message": "Bump android version again",
+    "url": "https://github.com/vedderb/vesc_tool/commit/36b8d6dac39017bc7c29f9f9de468a969233d2d5"
+  },
+  {
+    "sha": "348c12aed3af30d38443bab09c8d984aa6e0896c",
+    "date": "2026-05-15T17:09:32Z",
+    "message": "Added date to changelog",
+    "url": "https://github.com/vedderb/vesc_tool/commit/348c12aed3af30d38443bab09c8d984aa6e0896c"
+  },
+  {
+    "sha": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
+    "date": "2026-05-15T15:57:49Z",
+    "message": "Release 7.00",
+    "url": "https://github.com/vedderb/vesc_tool/commit/01d5f10901116c311e3fb84d5a1541f663d3ce20"
+  },
+  {
+    "sha": "ed61ce8429cf6ff46d49983687fd5890fe24e9b2",
+    "date": "2026-02-25T14:43:58Z",
+    "message": "Firmware download cleanup and fixes, remove included ESP firmwares, ESP firmware download support, automatic ESP firmware lookup",
+    "url": "https://github.com/vedderb/vesc_tool/commit/ed61ce8429cf6ff46d49983687fd5890fe24e9b2"
+  },
+  {
+    "sha": "05ad6f706de02fabeceeb26c4486e6c5b217eda3",
+    "date": "2026-01-06T10:53:28Z",
+    "message": "Do not use position on rt log on windows",
+    "url": "https://github.com/vedderb/vesc_tool/commit/05ad6f706de02fabeceeb26c4486e6c5b217eda3"
+  },
+  {
+    "sha": "4d7500eb6635a6c7e6e9b54b610fbefde9194bb6",
+    "date": "2025-11-08T17:47:28Z",
+    "message": "No longer include firmwares, support downloading of firmwares on demand",
+    "url": "https://github.com/vedderb/vesc_tool/commit/4d7500eb6635a6c7e6e9b54b610fbefde9194bb6"
+  },
+  {
+    "sha": "09d393417a27a820c3c554dc44aedf109a61d7d8",
+    "date": "2025-10-09T15:50:27Z",
+    "message": "modified settings for mac build",
+    "url": "https://github.com/vedderb/vesc_tool/commit/09d393417a27a820c3c554dc44aedf109a61d7d8"
+  },
+  {
+    "sha": "f520c7e9e0bcecd327848800e387e0a57c0ea7bb",
+    "date": "2025-10-06T13:07:18Z",
+    "message": "added universal build",
+    "url": "https://github.com/vedderb/vesc_tool/commit/f520c7e9e0bcecd327848800e387e0a57c0ea7bb"
+  },
+  {
+    "sha": "fa6ebd66421996adb0e11bfb4c3e73192dc44998",
+    "date": "2025-09-15T15:46:14Z",
+    "message": "modified for iOS and Mac",
+    "url": "https://github.com/vedderb/vesc_tool/commit/fa6ebd66421996adb0e11bfb4c3e73192dc44998"
+  },
+  {
+    "sha": "1f32af09ac21bd2bbb2e3a8b4148d1892636f8d9",
+    "date": "2025-10-05T13:27:44Z",
+    "message": "Bump android numbers",
+    "url": "https://github.com/vedderb/vesc_tool/commit/1f32af09ac21bd2bbb2e3a8b4148d1892636f8d9"
+  },
+  {
+    "sha": "18388c6205becfa6c66f76faa49dfecb602bbc46",
+    "date": "2025-09-05T13:01:51Z",
+    "message": "Updated android ld flags to meet play store requirements",
+    "url": "https://github.com/vedderb/vesc_tool/commit/18388c6205becfa6c66f76faa49dfecb602bbc46"
+  },
+  {
+    "sha": "8c85e323c8f3ff858530e700839e2db1a37e42d8",
+    "date": "2025-08-30T08:06:21Z",
+    "message": "Fixed confict",
+    "url": "https://github.com/vedderb/vesc_tool/commit/8c85e323c8f3ff858530e700839e2db1a37e42d8"
+  }
+]

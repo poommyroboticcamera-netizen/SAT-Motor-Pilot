@@ -1,0 +1,533 @@
+{
+  "scope": "Disconnected native Windows source builds; all differences retained, including intentional branding. Pixel metrics are not functional equivalence.",
+  "pages": [
+    {
+      "row": 0,
+      "title": "Welcome & Wizards",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 67952,
+      "fractionChanged": 0.05451423987164059,
+      "exact": false
+    },
+    {
+      "row": 1,
+      "title": "Connection",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36644,
+      "fractionChanged": 0.029397513036502208,
+      "exact": false
+    },
+    {
+      "row": 2,
+      "title": "Firmware",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36705,
+      "fractionChanged": 0.029446450060168473,
+      "exact": false
+    },
+    {
+      "row": 3,
+      "title": "VESC Packages",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36487,
+      "fractionChanged": 0.029271560369033292,
+      "exact": false
+    },
+    {
+      "row": 4,
+      "title": "Motor Settings",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36609,
+      "fractionChanged": 0.029369434416365824,
+      "exact": false
+    },
+    {
+      "row": 5,
+      "title": "General",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35390,
+      "fractionChanged": 0.028391496189330123,
+      "exact": false
+    },
+    {
+      "row": 8,
+      "title": "FOC",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35428,
+      "fractionChanged": 0.028421981548335338,
+      "exact": false
+    },
+    {
+      "row": 10,
+      "title": "PID Controllers",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35351,
+      "fractionChanged": 0.028360208584035297,
+      "exact": false
+    },
+    {
+      "row": 11,
+      "title": "Additional Info",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35350,
+      "fractionChanged": 0.02835940633774569,
+      "exact": false
+    },
+    {
+      "row": 12,
+      "title": "Experiments",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35256,
+      "fractionChanged": 0.028283995186522262,
+      "exact": false
+    },
+    {
+      "row": 13,
+      "title": "App Settings",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36600,
+      "fractionChanged": 0.029362214199759325,
+      "exact": false
+    },
+    {
+      "row": 14,
+      "title": "General",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35390,
+      "fractionChanged": 0.028391496189330123,
+      "exact": false
+    },
+    {
+      "row": 17,
+      "title": "UART",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35434,
+      "fractionChanged": 0.028426795026073006,
+      "exact": false
+    },
+    {
+      "row": 18,
+      "title": "VESC Remote",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35261,
+      "fractionChanged": 0.028288006417970316,
+      "exact": false
+    },
+    {
+      "row": 19,
+      "title": "Nrf",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35472,
+      "fractionChanged": 0.028457280385078217,
+      "exact": false
+    },
+    {
+      "row": 21,
+      "title": "IMU",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 35401,
+      "fractionChanged": 0.028400320898515845,
+      "exact": false
+    },
+    {
+      "row": 25,
+      "title": "Data Analysis",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36602,
+      "fractionChanged": 0.029363818692338547,
+      "exact": false
+    },
+    {
+      "row": 26,
+      "title": "Realtime Data",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31072,
+      "fractionChanged": 0.024927396710790212,
+      "exact": false
+    },
+    {
+      "row": 27,
+      "title": "Sampled Data",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31093,
+      "fractionChanged": 0.02494424388287204,
+      "exact": false
+    },
+    {
+      "row": 28,
+      "title": "Experiment Plot",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31069,
+      "fractionChanged": 0.02492498997192138,
+      "exact": false
+    },
+    {
+      "row": 29,
+      "title": "IMU Data",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31085,
+      "fractionChanged": 0.024937825912555153,
+      "exact": false
+    },
+    {
+      "row": 30,
+      "title": "BMS Data",
+      "referenceSize": [
+        1385,
+        900
+      ],
+      "motorlabSize": [
+        1385,
+        900
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31097,
+      "fractionChanged": 0.024947452868030486,
+      "exact": false
+    },
+    {
+      "row": 31,
+      "title": "Log Analysis",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 36967,
+      "fractionChanged": 0.027861142723634526,
+      "exact": false
+    },
+    {
+      "row": 32,
+      "title": "Motor Analysis",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 37047,
+      "fractionChanged": 0.02792143680803117,
+      "exact": false
+    },
+    {
+      "row": 33,
+      "title": "VESC Dev Tools",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30511,
+      "fractionChanged": 0.022995410112825306,
+      "exact": false
+    },
+    {
+      "row": 34,
+      "title": "Terminal",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30515,
+      "fractionChanged": 0.022998424817045136,
+      "exact": false
+    },
+    {
+      "row": 35,
+      "title": "QML Scripting",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30521,
+      "fractionChanged": 0.023002946873374886,
+      "exact": false
+    },
+    {
+      "row": 36,
+      "title": "LispBM Scripting",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30521,
+      "fractionChanged": 0.023002946873374886,
+      "exact": false
+    },
+    {
+      "row": 37,
+      "title": "CAN Tools",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30520,
+      "fractionChanged": 0.02300219319731993,
+      "exact": false
+    },
+    {
+      "row": 38,
+      "title": "Display Tool",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30869,
+      "fractionChanged": 0.02326522614050029,
+      "exact": false
+    },
+    {
+      "row": 39,
+      "title": "Debug Console",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 31518,
+      "fractionChanged": 0.02375436190016807,
+      "exact": false
+    },
+    {
+      "row": 40,
+      "title": "SWD Programmer",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30527,
+      "fractionChanged": 0.023007468929704636,
+      "exact": false
+    },
+    {
+      "row": 41,
+      "title": "ESP Programmer",
+      "referenceSize": [
+        1385,
+        958
+      ],
+      "motorlabSize": [
+        1385,
+        958
+      ],
+      "comparable": true,
+      "changedPixelsAbove8": 30527,
+      "fractionChanged": 0.023007468929704636,
+      "exact": false
+    }
+  ]
+}

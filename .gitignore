@@ -1,0 +1,10 @@
+tooling/
+build/
+baseline-build/
+dist/
+*.log
+.upstream-git/
+__pycache__/
+*.zip
+!evidence/*.log
+!evidence/ui/**/runtime.log

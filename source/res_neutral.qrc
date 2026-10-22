@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="res/icon.svg">res/motorlab/app-icon.png</file>
+        <file alias="res/logo.png">res/motorlab/logo.png</file>
+        <file alias="res/+theme_light/icon.svg">res/motorlab/app-icon.png</file>
+        <file alias="res/+theme_light/logo.png">res/motorlab/logo_light.png</file>
+    </qresource>
+</RCC>

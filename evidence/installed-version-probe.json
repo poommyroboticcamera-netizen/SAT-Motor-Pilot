@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-22",
+  "executable": "C:\\Users\\poomc\\Downloads\\VESC_Tool-win-Qt6\\VESC_Tool.exe",
+  "arguments": "--debugOutFile \"C:\\Users\\poomc\\Documents\\ChatGPT\\DRV8302\\MotorLab\\evidence\\installed-version-output.txt\" --version",
+  "stdout": "",
+  "stderr": "",
+  "exitCode": 0,
+  "binarySha256": "9ecfb464d5284af1b85139025e122a7404757729416998d0fa652930fbef300a",
+  "debugOutput": "\"7.00-0+255006e8\"\r\n",
+  "notes": "Early CLI version exit, environment directories redirected, native darkMode setting may be read; no GUI or hardware request."
+}

@@ -1,0 +1,307 @@
+[
+  {
+    "Name": "d3dcompiler_47.dll",
+    "FileVersion": "10.0.26100.7705 (WinBuild.160101.0800)",
+    "ProductVersion": "10.0.26100.7705"
+  },
+  {
+    "Name": "dxcompiler.dll",
+    "FileVersion": "10.0.19041.5609 (WinBuild.160101.0800)",
+    "ProductVersion": "10.0.19041.5609"
+  },
+  {
+    "Name": "dxil.dll",
+    "FileVersion": "101.6.2112.13",
+    "ProductVersion": "101.6.2112.13 (release/github-release-1.6.2112, b9cfa8a)"
+  },
+  {
+    "Name": "opengl32sw.dll",
+    "FileVersion": null,
+    "ProductVersion": null
+  },
+  {
+    "Name": "Qt63DAnimation.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DCore.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DExtras.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DInput.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DLogic.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuick.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuickExtras.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuickInput.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuickRender.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuickScene2D.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DQuickScene3D.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt63DRender.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Bluetooth.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Concurrent.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Core.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Gui.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6LabsFolderListModel.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6LabsPlatform.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Network.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6OpenGL.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6OpenGLWidgets.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6PrintSupport.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Qml.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QmlCore.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QmlMeta.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QmlModels.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QmlWorkerScript.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Quick.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Quick3DUtils.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Basic.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2BasicStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2FluentWinUI3StyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Fusion.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2FusionStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Imagine.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2ImagineStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Impl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Material.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2MaterialStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2Universal.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2UniversalStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickControls2WindowsStyleImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickDialogs2.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickDialogs2QuickImpl.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickDialogs2Utils.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickEffects.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickLayouts.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickShapes.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickTemplates2.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6QuickWidgets.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6SerialBus.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6SerialPort.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6ShaderTools.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Svg.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "Qt6Widgets.dll",
+    "FileVersion": "6.8.3.0",
+    "ProductVersion": "6.8.3.0"
+  },
+  {
+    "Name": "SDL3.dll",
+    "FileVersion": "3, 2, 10, 0",
+    "ProductVersion": "3, 2, 10, 0"
+  }
+]

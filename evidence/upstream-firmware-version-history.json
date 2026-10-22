@@ -1,0 +1,182 @@
+[
+  {
+    "sha": "65d0f3ff770dbbd341187cb7c70e91cc38af5a0a",
+    "date": "2026-07-10T15:50:05Z",
+    "message": "Beta 7.01",
+    "url": "https://github.com/vedderb/bldc/commit/65d0f3ff770dbbd341187cb7c70e91cc38af5a0a"
+  },
+  {
+    "sha": "26af69484014b6771d02e68c22f4cb96645b5f22",
+    "date": "2026-05-15T15:55:57Z",
+    "message": "Release 7.00",
+    "url": "https://github.com/vedderb/bldc/commit/26af69484014b6771d02e68c22f4cb96645b5f22"
+  },
+  {
+    "sha": "9bd41480546b1da55f5a0af8b90dffef7eae4f2b",
+    "date": "2025-11-16T19:57:22Z",
+    "message": "Profiling, refactoring and optimization",
+    "url": "https://github.com/vedderb/bldc/commit/9bd41480546b1da55f5a0af8b90dffef7eae4f2b"
+  },
+  {
+    "sha": "d628ac7a3f1de3b83169ecd30a708ff6d1be9301",
+    "date": "2025-11-09T18:31:02Z",
+    "message": "Started profiling the FOC code, fixed a few minor bottlenecks, also started testing with latest GCC",
+    "url": "https://github.com/vedderb/bldc/commit/d628ac7a3f1de3b83169ecd30a708ff6d1be9301"
+  },
+  {
+    "sha": "71d3972ad9d589126647ef151e551d26704f5440",
+    "date": "2025-08-18T19:45:13Z",
+    "message": "FW7 beta 1",
+    "url": "https://github.com/vedderb/bldc/commit/71d3972ad9d589126647ef151e551d26704f5440"
+  },
+  {
+    "sha": "b5d04dde2bf3108fd4cf664b26a14e3c5fda7199",
+    "date": "2025-06-25T21:47:08Z",
+    "message": "Detect encoder parameters during flux linkage detection",
+    "url": "https://github.com/vedderb/bldc/commit/b5d04dde2bf3108fd4cf664b26a14e3c5fda7199"
+  },
+  {
+    "sha": "55783886cac2552d35483bd84448ffad8b70c871",
+    "date": "2025-01-28T14:26:56Z",
+    "message": "First attempt at overmodulation support",
+    "url": "https://github.com/vedderb/bldc/commit/55783886cac2552d35483bd84448ffad8b70c871"
+  },
+  {
+    "sha": "2398b7c57328598597e94a3c8df05bcebe9349a6",
+    "date": "2024-10-26T20:31:45Z",
+    "message": "Moved constant heap into its own flash sector, added const-heap-erase extension",
+    "url": "https://github.com/vedderb/bldc/commit/2398b7c57328598597e94a3c8df05bcebe9349a6"
+  },
+  {
+    "sha": "2290fa9f345347d28b9c9e8fecc218ff7bfa4cd5",
+    "date": "2024-09-30T12:06:02Z",
+    "message": "New current offset settings, automatic offset calibration support",
+    "url": "https://github.com/vedderb/bldc/commit/2290fa9f345347d28b9c9e8fecc218ff7bfa4cd5"
+  },
+  {
+    "sha": "ce3699aad3d01f14106365ebd85d1a1ba79b85ba",
+    "date": "2024-08-19T08:41:31Z",
+    "message": "6.06 dev",
+    "url": "https://github.com/vedderb/bldc/commit/ce3699aad3d01f14106365ebd85d1a1ba79b85ba"
+  },
+  {
+    "sha": "820e853e0739994ddd5d71181b5b2c4396067c99",
+    "date": "2024-08-19T06:50:00Z",
+    "message": "Switched to release FW",
+    "url": "https://github.com/vedderb/bldc/commit/820e853e0739994ddd5d71181b5b2c4396067c99"
+  },
+  {
+    "sha": "0bf6b0652d45c3b34f9e759e15b9161b1e8dd298",
+    "date": "2024-07-20T11:40:58Z",
+    "message": "Added option to short all phases on full brake",
+    "url": "https://github.com/vedderb/bldc/commit/0bf6b0652d45c3b34f9e759e15b9161b1e8dd298"
+  },
+  {
+    "sha": "2490f782309ad2322b6890ec472b4b7cb26a53ca",
+    "date": "2024-05-15T09:09:36Z",
+    "message": "Added BMS cell voltage limits",
+    "url": "https://github.com/vedderb/bldc/commit/2490f782309ad2322b6890ec472b4b7cb26a53ca"
+  },
+  {
+    "sha": "c34f269411fddd5a386da2355f90bac578acd0c1",
+    "date": "2024-04-09T08:52:27Z",
+    "message": "Updated changelog",
+    "url": "https://github.com/vedderb/bldc/commit/c34f269411fddd5a386da2355f90bac578acd0c1"
+  },
+  {
+    "sha": "341a7e67b114e41a1307c8e84ee70f413509b19a",
+    "date": "2024-03-10T11:56:27Z",
+    "message": "Added cache support",
+    "url": "https://github.com/vedderb/bldc/commit/341a7e67b114e41a1307c8e84ee70f413509b19a"
+  },
+  {
+    "sha": "c8be115bb5be5a5558e3a50ba82e55931e3a45c4",
+    "date": "2024-03-05T18:29:23Z",
+    "message": "Added can-msg-age extension",
+    "url": "https://github.com/vedderb/bldc/commit/c8be115bb5be5a5558e3a50ba82e55931e3a45c4"
+  },
+  {
+    "sha": "5fd5dfe0860e99a7c7548102c9e25651aae515dc",
+    "date": "2024-02-23T07:13:56Z",
+    "message": "Made HFI error truncation configurable",
+    "url": "https://github.com/vedderb/bldc/commit/5fd5dfe0860e99a7c7548102c9e25651aae515dc"
+  },
+  {
+    "sha": "5af6dbd03c277589393aaa99a02445d83d83fdc7",
+    "date": "2024-02-06T22:23:53Z",
+    "message": "Add missing M2 defines and reduce code duplication",
+    "url": "https://github.com/vedderb/bldc/commit/5af6dbd03c277589393aaa99a02445d83d83fdc7"
+  },
+  {
+    "sha": "af65f521dec573edb853f12bcd1da6dad58d318e",
+    "date": "2024-02-05T23:47:45Z",
+    "message": "Add support for calibrating current sensors",
+    "url": "https://github.com/vedderb/bldc/commit/af65f521dec573edb853f12bcd1da6dad58d318e"
+  },
+  {
+    "sha": "a207d75a6946252839945573678e7e935d5e79c6",
+    "date": "2023-12-31T16:26:15Z",
+    "message": "Added foc-play-samples",
+    "url": "https://github.com/vedderb/bldc/commit/a207d75a6946252839945573678e7e935d5e79c6"
+  },
+  {
+    "sha": "cf1ed6edbf599f04077e36de8a32ae40e818cb9f",
+    "date": "2023-12-26T21:46:10Z",
+    "message": "Updated documentation",
+    "url": "https://github.com/vedderb/bldc/commit/cf1ed6edbf599f04077e36de8a32ae40e818cb9f"
+  },
+  {
+    "sha": "383986ad3cf18ec7a86c50e1421793919d15eb7c",
+    "date": "2023-11-08T13:27:18Z",
+    "message": "Added baud rate parameter, documentation fixes",
+    "url": "https://github.com/vedderb/bldc/commit/383986ad3cf18ec7a86c50e1421793919d15eb7c"
+  },
+  {
+    "sha": "e31f087a6e1b16a7ede5bfa11045af8976806956",
+    "date": "2023-11-02T14:37:58Z",
+    "message": "Added crc32",
+    "url": "https://github.com/vedderb/bldc/commit/e31f087a6e1b16a7ede5bfa11045af8976806956"
+  },
+  {
+    "sha": "edf0a326ee61a395882f7e49196299c330ac2b2a",
+    "date": "2023-10-22T10:50:18Z",
+    "message": "Added more possible adc channels to get-adc",
+    "url": "https://github.com/vedderb/bldc/commit/edf0a326ee61a395882f7e49196299c330ac2b2a"
+  },
+  {
+    "sha": "058abe4d7953eb3f7f433810aaf5697b2dee097a",
+    "date": "2023-10-16T11:37:15Z",
+    "message": "Use braking current limit in duty mode when braking",
+    "url": "https://github.com/vedderb/bldc/commit/058abe4d7953eb3f7f433810aaf5697b2dee097a"
+  },
+  {
+    "sha": "e0bc115454cf4027d88de0c3692a616a314faa1b",
+    "date": "2023-10-15T07:13:59Z",
+    "message": "Always add vesc id to imu values as there were no bits left in mask. Changing mask size would break compatibility with old code.",
+    "url": "https://github.com/vedderb/bldc/commit/e0bc115454cf4027d88de0c3692a616a314faa1b"
+  },
+  {
+    "sha": "f32ee99852a7e0b64e5676a7d303f9a98c281982",
+    "date": "2023-10-08T08:07:11Z",
+    "message": "Allow passive flux linkage measurement",
+    "url": "https://github.com/vedderb/bldc/commit/f32ee99852a7e0b64e5676a7d303f9a98c281982"
+  },
+  {
+    "sha": "191a45fd88db4b98af128b0d381a7bf3c453a1d2",
+    "date": "2023-09-26T15:41:44Z",
+    "message": "Added another parameter",
+    "url": "https://github.com/vedderb/bldc/commit/191a45fd88db4b98af128b0d381a7bf3c453a1d2"
+  },
+  {
+    "sha": "3d8df40d7dbdd14568d48a1cd384b7a25f72567d",
+    "date": "2023-09-23T13:08:01Z",
+    "message": "Updated changelog",
+    "url": "https://github.com/vedderb/bldc/commit/3d8df40d7dbdd14568d48a1cd384b7a25f72567d"
+  },
+  {
+    "sha": "331741b302ea3c6378d9e175e4d739f9559db8e5",
+    "date": "2023-08-22T18:49:13Z",
+    "message": "Fix possible runaway after faults during openloop measurements",
+    "url": "https://github.com/vedderb/bldc/commit/331741b302ea3c6378d9e175e4d739f9559db8e5"
+  }
+]

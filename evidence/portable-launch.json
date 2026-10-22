@@ -1,0 +1,24 @@
+[
+  {
+    "variant": "reference",
+    "pathPolicy": "Windows system directories only",
+    "physicalTransport": "blocked by audit guard",
+    "exitCode": 0,
+    "qmlPolicy": "packaged qt.conf qml",
+    "platform": "windows",
+    "mapPolicy": "disabled remote tile rendering",
+    "quickBackend": "software",
+    "openGL": "software"
+  },
+  {
+    "variant": "motorlab",
+    "pathPolicy": "Windows system directories only",
+    "physicalTransport": "blocked by audit guard",
+    "exitCode": 0,
+    "qmlPolicy": "packaged qt.conf qml",
+    "platform": "windows",
+    "mapPolicy": "disabled remote tile rendering",
+    "quickBackend": "software",
+    "openGL": "software"
+  }
+]

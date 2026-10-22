@@ -1,0 +1,38 @@
+C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\dist\MotorLab\MotorLab.exe 64 bit, release executable [QML]
+Scanning C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\source\mobile:
+QML imports:
+  'QtQuick' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick.2
+  'QtQuick.Controls' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls.2
+  'QtQuick.Layouts' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Layouts
+  'QtQml' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQml
+  'QtQuick.Templates' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Templates.2
+  'QtQml.Models' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQml\Models.2
+  'QtQml.WorkerScript' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQml\WorkerScript.2
+Unable to find the platform plugin.
+  'QtQuick.Window' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Window.2
+  'QtQuick.Dialogs' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Dialogs
+  'Qt.labs.folderlistmodel' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt\labs\folderlistmodel
+  'Qt.labs.settings' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt\labs\settings
+  'QtQuick.Dialogs.Private' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Dialogs\Private
+  'QtQuick.Controls' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls
+  'QtQuick.PrivateWidgets' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\PrivateWidgets
+  'QtQuick.Extras' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Extras
+  'QtGraphicalEffects' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtGraphicalEffects
+  'QtQuick.Controls.Material' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls.2\Material
+  'QtGraphicalEffects/private' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtGraphicalEffects\private
+  'QtQuick.Controls.Styles' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls\Styles
+  'Qt.labs.platform' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt\labs\platform
+  'Qt3D.Core' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt3D\Core
+  'Qt3D.Render' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt3D\Render
+  'Qt3D.Input' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt3D\Input
+  'Qt3D.Extras' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt3D\Extras
+  'QtQuick.Scene3D' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Scene3D
+  'Qt3D.Logic' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\Qt3D\Logic
+  'QtQuick.Controls.Private' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls\Private
+  'QtQuick.Extras.Private' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Extras\Private
+  'QtQuick.Controls.Fusion' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls.2\Fusion
+  'QtQuick.Controls.Imagine' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls.2\Imagine
+  'QtQuick.Controls.Universal' C:\Users\poomc\Documents\ChatGPT\DRV8302\MotorLab\tooling\Qt\5.15.2\mingw81_64\qml\QtQuick\Controls.2\Universal
+Direct dependencies: Qt5Bluetooth Qt5Core Qt5Gamepad Qt5Gui Qt5Network Qt5PrintSupport Qt5Qml Qt5Quick Qt5QuickWidgets Qt5SerialPort Qt5Widgets
+All dependencies   : Qt5Bluetooth Qt5Core Qt5Gamepad Qt5Gui Qt5Network Qt5PrintSupport Qt5Qml Qt5Quick Qt5QuickWidgets Qt5SerialPort Qt5Widgets
+To be deployed     : Qt5Bluetooth Qt5Core Qt5Gamepad Qt5Gui Qt5Network Qt5PrintSupport Qt5Qml Qt5Quick Qt5QuickWidgets Qt5SerialPort Qt5Widgets

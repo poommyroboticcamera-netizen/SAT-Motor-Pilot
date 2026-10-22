@@ -1,0 +1,52 @@
+{
+  "checked_date": "2026-10-22",
+  "timezone": "Asia/Bangkok",
+  "upstream": {
+    "repository": "https://github.com/vedderb/vesc_tool",
+    "selected_version": "7.00",
+    "release_commit": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
+    "release_commit_date": "2026-05-15T15:57:49Z",
+    "tag": null,
+    "github_releases": [],
+    "remote_tags_observed": [],
+    "stable_flag": 0,
+    "release_evidence": "commit message Release 7.00; VT_VERSION=7.00; VT_IS_TEST_VERSION=0; newer 7.01 explicitly Beta/TBD",
+    "latest_test_observed": "7.01",
+    "firmware_repository": "https://github.com/vedderb/bldc",
+    "firmware_schema_latest": "7.00",
+    "firmware_commit": "26af69484014b6771d02e68c22f4cb96645b5f22",
+    "firmware_binary_hash": null,
+    "default_source_flags": [
+      "c++11",
+      "resources_big",
+      "exclude_fw",
+      "HAS_BLUETOOTH",
+      "HAS_SERIALPORT (desktop)"
+    ],
+    "native_canbus_default": false,
+    "firmware_release_date": "2026-05-15T15:55:57Z",
+    "firmware_release_test_flag": 0
+  },
+  "installed_reference": {
+    "path": "C:/Users/poomc/Downloads/VESC_Tool-win-Qt6/VESC_Tool.exe",
+    "size_bytes": 20027904,
+    "sha256": "9ecfb464d5284af1b85139025e122a7404757729416998d0fa652930fbef300a",
+    "version_resource": {
+      "FileVersion": "",
+      "ProductVersion": "",
+      "CompanyName": "",
+      "ProductName": ""
+    },
+    "displayed_version": "7.00-0+255006e8",
+    "source_commit": "255006e8f55a37ea8539d4f0462dd290daf23454",
+    "official_download_provenance": "not cryptographically established",
+    "qt_core_file_version": "6.8.3.0",
+    "execution_performed_by_this_worker": true
+  },
+  "limitations": [
+    "Firmware schemas are not proof that every listed hardware or firmware combination was tested.",
+    "No UI pixel comparison or hardware execution performed by this worker.",
+    "Firmware source release 7.00 is pinned, but no downloaded or device firmware payload hash was established.",
+    "Installed binary reports 7.00-0+255006e8; this differs from source release commit01d5f109 and has not been compared for full feature/pixel parity."
+  ]
+}

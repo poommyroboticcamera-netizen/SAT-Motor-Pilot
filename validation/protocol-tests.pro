@@ -1,0 +1,9 @@
+QT += core testlib
+QT -= gui
+CONFIG += console testcase c++11
+CONFIG -= app_bundle
+TEMPLATE = app
+TARGET = protocol-tests
+INCLUDEPATH += ../source
+SOURCES += protocol_tests.cpp ../source/packet.cpp ../source/vbytearray.cpp
+HEADERS += ../source/packet.h ../source/vbytearray.h
