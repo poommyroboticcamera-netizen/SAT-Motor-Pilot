@@ -11,11 +11,15 @@
 #include <QLabel>
 #include <QAbstractButton>
 #include <QAction>
+#include <QPushButton>
+#include <QStackedWidget>
+#include <QSettings>
 #include <QTimer>
 #include <QScreen>
 #include <memory>
 #include "vescinterface.h"
 #include "map/mapwidget.h"
+#include "startupwizard.h"
 
 inline void motorLabAudit(MainWindow *window, const QString &directory)
 {
@@ -27,6 +31,9 @@ inline void motorLabAudit(MainWindow *window, const QString &directory)
     (*report)["transportPolicy"] = "Audit mode requires physical outbound transport blocked by VescInterface";
     (*report)["platform"] = QGuiApplication::platformName();
     (*report)["qtVersion"] = qVersion();
+    (*report)["applicationName"] = QCoreApplication::applicationName();
+    (*report)["organizationName"] = QCoreApplication::organizationName();
+    (*report)["organizationDomain"] = QCoreApplication::organizationDomain();
     (*report)["devicePixelRatio"] = window->devicePixelRatioF();
     (*report)["logicalDpi"] = QGuiApplication::primaryScreen()->logicalDotsPerInch();
     (*report)["mapPolicy"] = "Remote OpenStreetMap rendering disabled identically in both audited builds to eliminate asynchronous tile content";
@@ -76,6 +83,55 @@ inline void motorLabAudit(MainWindow *window, const QString &directory)
     }
     (*report)["configurationRoundtrips"] = configs;
     (*report)["interfaceFound"] = vesc != nullptr;
+    QJsonArray navigation;
+    const QStringList expectedClasses = {"PageConnection", "PageMotorSettings", "PageAppSettings", "PageRtData"};
+    auto stack = window->findChild<QStackedWidget *>("pageWidget");
+    auto navigationList = window->findChild<QListWidget *>("pageList");
+    const int initialRow = navigationList ? navigationList->currentRow() : 0;
+    for (int i = 0; i < 4; ++i) {
+        auto button = window->findChild<QPushButton *>(QString("satWorkspace%1").arg(i));
+        QJsonObject result;
+        result["button"] = QString("satWorkspace%1").arg(i);
+        result["exists"] = button != nullptr;
+        if (button && stack) {
+            button->click(); // Navigation only: no device connection or command.
+            QString actual = stack->currentWidget()->metaObject()->className();
+            result["actualClass"] = actual;
+            result["pass"] = actual == expectedClasses.at(i);
+        } else result["pass"] = false;
+        navigation.append(result);
+    }
+    if (navigationList) navigationList->setCurrentRow(initialRow);
+    (*report)["workspaceNavigation"] = navigation;
+    if (vesc) {
+        QSettings settings;
+        const QVariant previousIntro = settings.value("intro_done");
+        StartupWizard onboarding(vesc, window);
+        // Keep the isolated audit's main-window timer from launching a nested
+        // first-run wizard while the explicit onboarding capture pumps events.
+        settings.setValue("intro_done", true);
+        QJsonArray firstRun;
+        QDir().mkpath(directory + "/onboarding");
+        for (int id : onboarding.pageIds()) {
+            QWizardPage *page = onboarding.page(id);
+            QJsonObject entry;
+            entry["id"] = id;
+            entry["title"] = page->title();
+            entry["completeBeforeAcceptance"] = page->isComplete();
+            onboarding.setStartId(id);
+            onboarding.restart();
+            onboarding.show();
+            QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+            const QString screenshot = QString("onboarding/page-%1.png").arg(id);
+            entry["screenshotSaved"] = onboarding.grab().save(directory + "/" + screenshot);
+            entry["screenshot"] = screenshot;
+            onboarding.hide();
+            firstRun.append(entry);
+        }
+        settings.setValue("intro_done", previousIntro);
+        (*report)["onboardingPages"] = firstRun;
+        (*report)["onboardingWindowTitle"] = onboarding.windowTitle();
+    }
     auto pages = std::make_shared<QJsonArray>();
     auto row = std::make_shared<int>(0);
     QListWidget *list = window->findChild<QListWidget *>("pageList");

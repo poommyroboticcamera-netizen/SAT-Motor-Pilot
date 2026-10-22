@@ -306,7 +306,7 @@ Item {
                     } else {
                         name = params.hw
                     }
-                } else if (params.hwTypeStr() === "VESC BMS") { //is a bms
+                } else if (params.hwTypeStr() === "controller BMS") { //is a bms
                     devicePath = theme + "icons/icons8-battery-100.png"
                     if (params.fwName.length !== 0) {
                         name = params.hw + "-" + params.fwName
@@ -337,7 +337,7 @@ Item {
                         } else {
                             name = params.hw
                         }
-                    } else if (params.hwTypeStr() === "VESC BMS") { //is a bms
+                    } else if (params.hwTypeStr() === "controller BMS") { //is a bms
                         devicePath = theme + "icons/icons8-battery-100.png"
                         if (params.fwName.length !== 0) {
                             name = params.hw + "-" + params.fwName

@@ -6,6 +6,7 @@ def add(kind,p,line,name,text='',acceptance='Open and exercise in Windows runtim
  rows.append(dict(id=f'UI-{len(rows)+1:05}',kind=kind,source=p.relative_to(src).as_posix(),line=line,name=name,label=text,evidence='source-observed',runtime='PENDING',acceptance=acceptance))
 files=[]
 for p in sorted(src.rglob('*')):
+ if 'reference' in p.relative_to(src).parts: continue
  if p.suffix not in ('.ui','.qml'): continue
  text=p.read_text(encoding='utf-8',errors='replace'); files.append(p.relative_to(src).as_posix())
  add('form' if p.suffix=='.ui' else 'qml-component',p,1,p.stem)

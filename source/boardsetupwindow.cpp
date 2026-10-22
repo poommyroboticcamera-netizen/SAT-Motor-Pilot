@@ -178,7 +178,7 @@ void BoardSetupWindow::timerSlot()
         // put code when opening tool here
 
         has_run_start_checks = true;
-        Utility::checkVersion(mVesc);
+        // SAT application builds are checked manually from Help / Project and builds.
     }
 }
 

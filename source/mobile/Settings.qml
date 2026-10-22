@@ -38,7 +38,7 @@ Item {
         standardButtons: Dialog.Close
         modal: true
         focus: true
-        title: "VESC Tool Settings"
+        title: "SAT Motor Pilot Settings"
 
         Overlay.modal: Rectangle {
             color: "#AA000000"
@@ -198,8 +198,8 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "The theme has been changed. This requires restarting VESC Tool to take effect. " +
-                "Do you want to close VESC Tool now?"
+                "The theme has been changed. This requires restarting SAT Motor Pilot to take effect. " +
+                "Do you want to close SAT Motor Pilot now?"
         }
 
         onAccepted: {

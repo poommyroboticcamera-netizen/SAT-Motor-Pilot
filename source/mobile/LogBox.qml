@@ -149,7 +149,7 @@ Item {
             onClicked: {
                 if (checked && !VescIf.isPortConnected()) {
                     VescIf.emitMessageDialog("Log Data",
-                                             "You must be connected to the VESC in order to log data.",
+                                             "You must be connected to the controller in order to log data.",
                                              false, false)
                     checked = false
                     return
@@ -165,7 +165,7 @@ Item {
                                                  "Motor data together with your location is now being logged to:\n\n" +
                                                  VescIf.rtLogFilePath() + "\n\n" +
                                                  "You can connect your device to a computer and transfer the file to it for " +
-                                                 "analysis in the desktop version of VESC Tool (under Data Analysis->Log Analysis).",
+                                                 "analysis in the desktop version of SAT Motor Pilot (under Data Analysis->Log Analysis).",
                                                  true, false)
                     } else {
                         VescIf.emitStatusMessage("Logging Failed", false)

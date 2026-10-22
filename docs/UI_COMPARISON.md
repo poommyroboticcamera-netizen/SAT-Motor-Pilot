@@ -1,3 +1,6 @@
+# Current comparison scope — SAT Motor Pilot 0.2.0
+
+The new SAT Workspace, first-run content and application help are intentionally company-specific. The current comparison images retain original-source reference screenshots for tracing changes; pixel identity of the new home page is not an acceptance goal. Command/packet/schema regression is tested separately. The earlier comparison setup below remains historical evidence.
 # ภาพเทียบ UI และความแตกต่าง
 
 เปรียบเทียบ pinned source release 7.00 กับ MotorLab ในสถานะ disconnected ด้วย Windows Qt 5.15.2 เหมือนกัน เปิดผ่าน native `windows` platform ใช้ software OpenGL/Qt Quick และ settings แยกกัน ไม่มีอุปกรณ์เชื่อมต่อหรือ packet จากฮาร์ดแวร์

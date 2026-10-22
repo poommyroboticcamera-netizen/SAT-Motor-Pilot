@@ -493,7 +493,7 @@
           <item>
            <widget class="QGroupBox" name="groupBox_2">
             <property name="title">
-             <string>Connected VESC</string>
+             <string>Connected controller</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,1">
              <property name="spacing">

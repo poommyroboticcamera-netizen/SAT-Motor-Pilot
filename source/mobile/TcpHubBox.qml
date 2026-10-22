@@ -115,7 +115,7 @@ Item {
         }
 
         Text {
-            text: "VESC ID"
+            text: "controller ID"
             color: Utility.getAppHexColor("lightText")
             Layout.fillWidth: false
         }

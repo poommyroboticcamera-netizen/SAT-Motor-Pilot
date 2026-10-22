@@ -1,0 +1,448 @@
+{
+  "baseline": "f6631534ad00c48b01fc1124a832ccf573d41d86",
+  "purpose": "Product conversion regression: source text identity after CRLF normalization; transport bodies allow only the audit diagnostic product-name replacement. Does not establish live hardware compatibility.",
+  "checks": 88,
+  "pass": true,
+  "records": [
+    {
+      "path": "source/commands.cpp",
+      "identical": true,
+      "sha256": "b921f16d10ab6ff7166b34588511aa345a040e7f64a3b8bf40a3c01bf9a32e2d"
+    },
+    {
+      "path": "source/commands.h",
+      "identical": true,
+      "sha256": "3f3fd818776a41762e349f3f2d5b699384a92ea5acb5a7bc1a5f70c435b159cf"
+    },
+    {
+      "path": "source/packet.cpp",
+      "identical": true,
+      "sha256": "a1f7d6da6e2ef27005a27583dcab837dffadbe68930492f6e171a62bd424badb"
+    },
+    {
+      "path": "source/packet.h",
+      "identical": true,
+      "sha256": "417401e05718899f9b6951e481793fb497cf326e5d4df289c174717cc645c0fe"
+    },
+    {
+      "path": "source/vbytearray.cpp",
+      "identical": true,
+      "sha256": "eb6e8ab7e7cc3ac12b25c28be3925fc363f16541bbb6aaca839130acf4e0e06b"
+    },
+    {
+      "path": "source/vbytearray.h",
+      "identical": true,
+      "sha256": "312f0453900be0a14990159a814808897ec8b7ca9488da28ad2351c61fe4aac0"
+    },
+    {
+      "path": "source/configparams.cpp",
+      "identical": true,
+      "sha256": "f6d35c70b5af1a734a5be5c67008cfb991d7b7760ccd2b629e5ba9b43a3feb6b"
+    },
+    {
+      "path": "source/configparams.h",
+      "identical": true,
+      "sha256": "849ca552f97e7105e2efef7f74ce45c9b1349505d28bd2db028769b9540c7031"
+    },
+    {
+      "path": "source/configparam.cpp",
+      "identical": true,
+      "sha256": "8f8bbfb2a3a94e0d3f425b9ede973770894186849698ccc3623d1c0c8d855e11"
+    },
+    {
+      "path": "source/configparam.h",
+      "identical": true,
+      "sha256": "1b4dabf20d823734717abb113282824de45f13857dcb414d081a139c5aacb0bc"
+    },
+    {
+      "path": "source/datatypes.h",
+      "identical": true,
+      "sha256": "a06fb19b6469e340b651fef754b381ca4fc046f547fbe31b1d075b353a82c40c"
+    },
+    {
+      "path": "source/res/config/fw.xml",
+      "identical": true,
+      "sha256": "67039af64266d0635dc14581ab9d69b89b2cf1840512ed3a1c99bdcb40a73c03"
+    },
+    {
+      "path": "source/res/config/3.55/info.xml",
+      "identical": true,
+      "sha256": "284bdcb03bf037d99514f7702aa0d74dbf756fca8e0e274dcab63fd2d7499efb"
+    },
+    {
+      "path": "source/res/config/3.55/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "fc47624f9ad3231691f17a726927291e7bb3351dba46fb3486ea67ec59c72729"
+    },
+    {
+      "path": "source/res/config/3.55/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "bf909d196ddcd8ace67150f5988c42973f8186339b67c8fe77927a52c1b34e49"
+    },
+    {
+      "path": "source/res/config/3.56/info.xml",
+      "identical": true,
+      "sha256": "1cc76661f8c3ea723af0acd50c1667a61be279622fb0aad314de90c771606d27"
+    },
+    {
+      "path": "source/res/config/3.56/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "fc47624f9ad3231691f17a726927291e7bb3351dba46fb3486ea67ec59c72729"
+    },
+    {
+      "path": "source/res/config/3.56/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "bf909d196ddcd8ace67150f5988c42973f8186339b67c8fe77927a52c1b34e49"
+    },
+    {
+      "path": "source/res/config/3.57/info.xml",
+      "identical": true,
+      "sha256": "918437b342835f2039453bca661f6c626066602dc21a9f3dd946ec98e5f8b3b2"
+    },
+    {
+      "path": "source/res/config/3.57/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "eb213852d9a9438ff247d19456556e12ee60659b420bb22e17d12f195e670ffe"
+    },
+    {
+      "path": "source/res/config/3.57/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "bf909d196ddcd8ace67150f5988c42973f8186339b67c8fe77927a52c1b34e49"
+    },
+    {
+      "path": "source/res/config/3.58/info.xml",
+      "identical": true,
+      "sha256": "5a18353ecbf9145135e095b2a988bb23e33bd0838f2c4e6478360336cca957cb"
+    },
+    {
+      "path": "source/res/config/3.58/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8319aa3cbc3ac25f183dd70103a378cf418d86890ac216d4460de51549ae1fce"
+    },
+    {
+      "path": "source/res/config/3.58/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "bf909d196ddcd8ace67150f5988c42973f8186339b67c8fe77927a52c1b34e49"
+    },
+    {
+      "path": "source/res/config/3.59/info.xml",
+      "identical": true,
+      "sha256": "6809a0b019a442addd3a2b364416a449b322b1960d87606426eff078b62c1242"
+    },
+    {
+      "path": "source/res/config/3.59/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "659e7ed2a7ba7d6daec3c2431dafa10385e5bb567b812cc42b5a60947d758fc6"
+    },
+    {
+      "path": "source/res/config/3.59/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "bf909d196ddcd8ace67150f5988c42973f8186339b67c8fe77927a52c1b34e49"
+    },
+    {
+      "path": "source/res/config/3.60/info.xml",
+      "identical": true,
+      "sha256": "e3303c97fed5a6ad48ebb2367e2a426b2eb1d751fed997ec0d5b6fc3aa24f2ab"
+    },
+    {
+      "path": "source/res/config/3.60/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "869bc8fc6b5de4a60bf1f88401662b3d57a92885ff7a83fd1614b038dfa4686b"
+    },
+    {
+      "path": "source/res/config/3.60/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "19d456f73bf9a0de741b07e42d8c3095ae10a00619461bda6467128c3fd19a57"
+    },
+    {
+      "path": "source/res/config/3.61/info.xml",
+      "identical": true,
+      "sha256": "9e8e1ce9c54316b1213470ca4a026e6b5c6b87a0c4097a3896acfbd3499e1b8b"
+    },
+    {
+      "path": "source/res/config/3.61/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "476c0d270e03c8aea434a8c30dbbcf379129269d5d46c17c76fee7c1ebb55172"
+    },
+    {
+      "path": "source/res/config/3.61/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "19d456f73bf9a0de741b07e42d8c3095ae10a00619461bda6467128c3fd19a57"
+    },
+    {
+      "path": "source/res/config/3.62/info.xml",
+      "identical": true,
+      "sha256": "17d9539c75e8aa897f558f2a05ad20c31d60b82d7d23964bd81e6df6ef395d97"
+    },
+    {
+      "path": "source/res/config/3.62/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8f5d1bc84f8334d5852de1fdb166c7d0a1f511f3c006e6be625397840c2adabc"
+    },
+    {
+      "path": "source/res/config/3.62/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "19d456f73bf9a0de741b07e42d8c3095ae10a00619461bda6467128c3fd19a57"
+    },
+    {
+      "path": "source/res/config/3.63/info.xml",
+      "identical": true,
+      "sha256": "06748b9c792ae3ff3aad46d071df68b279b2d9f4b894180b3cddf7c954d7b009"
+    },
+    {
+      "path": "source/res/config/3.63/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8f5d1bc84f8334d5852de1fdb166c7d0a1f511f3c006e6be625397840c2adabc"
+    },
+    {
+      "path": "source/res/config/3.63/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "6aae8806dce6c7266dca8fa672bec70e624a8b44b360a8fb1adcedc46e20086b"
+    },
+    {
+      "path": "source/res/config/3.64/info.xml",
+      "identical": true,
+      "sha256": "3dedc7031d4cc705ee9f124400625371f6304879f926d87fe310d5fe98fd49a9"
+    },
+    {
+      "path": "source/res/config/3.64/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8f5d1bc84f8334d5852de1fdb166c7d0a1f511f3c006e6be625397840c2adabc"
+    },
+    {
+      "path": "source/res/config/3.64/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "35dee6eb76de7cbaa332830db6428732db81779db5d374411fc83eca22e8af54"
+    },
+    {
+      "path": "source/res/config/3.65/info.xml",
+      "identical": true,
+      "sha256": "b31fa1f3177ef9c7f9e6ea2e949233720419c38fbf3e6d82ff23ae06974638f6"
+    },
+    {
+      "path": "source/res/config/3.65/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8f5d1bc84f8334d5852de1fdb166c7d0a1f511f3c006e6be625397840c2adabc"
+    },
+    {
+      "path": "source/res/config/3.65/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "46a4610f2be3cb6688651796afa2621fcffccd66c4b34c2145285066e4772344"
+    },
+    {
+      "path": "source/res/config/3.66/info.xml",
+      "identical": true,
+      "sha256": "15c9764166ce742ef890a47987b13e1fb85c0f523efcbc5c7c45255b25188bb6"
+    },
+    {
+      "path": "source/res/config/3.66/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "8f5d1bc84f8334d5852de1fdb166c7d0a1f511f3c006e6be625397840c2adabc"
+    },
+    {
+      "path": "source/res/config/3.66/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "1602bc063227cf7a426e2bd1f70e4bbc2697b61f18894bed4e5e95729a56bb47"
+    },
+    {
+      "path": "source/res/config/4.00/info.xml",
+      "identical": true,
+      "sha256": "8ad5740620899a007427da79772a1ef1ff59278714dead6abea4334dc78ea16c"
+    },
+    {
+      "path": "source/res/config/4.00/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "e70a538f14a1ed9502d3b2892825465bba89f0ebe6af09217114917e188ede8e"
+    },
+    {
+      "path": "source/res/config/4.00/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "51c075334625dc407bb125858460746c4e3b98fddff9a91263b88935c8aa2e4b"
+    },
+    {
+      "path": "source/res/config/4.01/info.xml",
+      "identical": true,
+      "sha256": "ab301b939e7a5b54e1710119ac511bcfbd57f551edc812e898057e9153b35399"
+    },
+    {
+      "path": "source/res/config/4.01/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "e15da2820ef8422a697c7f4c3832e1d6c3d77d643fde9b29ef8bf8d8c39b51ee"
+    },
+    {
+      "path": "source/res/config/4.01/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "8175f0620e0d3de00becbb89f757ccc0ea94462554deb5691af63592504f9561"
+    },
+    {
+      "path": "source/res/config/4.02/info.xml",
+      "identical": true,
+      "sha256": "3bba4dc9e764cecdaebead54f9ff9295d40559dc192cdfb04bd46b0c92730a16"
+    },
+    {
+      "path": "source/res/config/4.02/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "1ce15386a299fb377f745ef9b68bd368e2eae0f6485392baa9502fce5c02e5b9"
+    },
+    {
+      "path": "source/res/config/4.02/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "a2ac63b86cbb75b73b8c93aa59c3a9ecd88cf1b79e86df3d2ea7c16d5ff098b9"
+    },
+    {
+      "path": "source/res/config/5.00/info.xml",
+      "identical": true,
+      "sha256": "f827ae53f312c617f8a7387b3d63ce6018fd0e1445d98b7f97f27429909505aa"
+    },
+    {
+      "path": "source/res/config/5.00/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "aa227d8862f588e7cc12e440fab26d2dcb24a25a3c60a0fadc2a162ba03e5c62"
+    },
+    {
+      "path": "source/res/config/5.00/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "c11afbabf157eb36556ed74d7641dec63f420050e5e61b2097d616829a42e58c"
+    },
+    {
+      "path": "source/res/config/5.01/info.xml",
+      "identical": true,
+      "sha256": "9d15fcec436575fa820fc61d7c87bd5c82942c979d298468918ec65f7200ee43"
+    },
+    {
+      "path": "source/res/config/5.01/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "aa227d8862f588e7cc12e440fab26d2dcb24a25a3c60a0fadc2a162ba03e5c62"
+    },
+    {
+      "path": "source/res/config/5.01/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "c11afbabf157eb36556ed74d7641dec63f420050e5e61b2097d616829a42e58c"
+    },
+    {
+      "path": "source/res/config/5.02/info.xml",
+      "identical": true,
+      "sha256": "8d7eae55b5ff7827af75ab505f7591c1778d0be5c698ad552da35c75c15f8fbc"
+    },
+    {
+      "path": "source/res/config/5.02/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "3fe13f76a0cb3a65e1151ad54ebcc38bb94330d810f530dd307374e9695734cd"
+    },
+    {
+      "path": "source/res/config/5.02/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "640086efdad9318badf2a5b0a238d701e48ed53d31e8be7cdcd321ac17dce8fe"
+    },
+    {
+      "path": "source/res/config/5.03/info.xml",
+      "identical": true,
+      "sha256": "29255b6559a8eac2c99035501383efeb4293a6a5d28a106a56fc4ab5ac9297e3"
+    },
+    {
+      "path": "source/res/config/5.03/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "7676b35d8f3f639f7c20d0be8286a820f94ab09515519129090e30f56ea56dcb"
+    },
+    {
+      "path": "source/res/config/5.03/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "e8ba197e0be5cc2682dfeb582e04c63cbf3f75ede547710450a14fe6d62b018a"
+    },
+    {
+      "path": "source/res/config/6.00/info.xml",
+      "identical": true,
+      "sha256": "d8f474116773200457ac9e15ab6fc150f1b710cef82ca95ab7d6ff7d3743c55a"
+    },
+    {
+      "path": "source/res/config/6.00/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "33c64b9db644b524f5a90a85d3fc76130950cb7247c33cd915aa5bd0414f2436"
+    },
+    {
+      "path": "source/res/config/6.00/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "b7cc767487bac6fc7526e29b4f71f54db4da0b29b9110b5de23d67fff74255b0"
+    },
+    {
+      "path": "source/res/config/6.02/info.xml",
+      "identical": true,
+      "sha256": "34edb8b81e208dd181ad9dc335e7a89569fafc6fe109b075227cdc77dc427945"
+    },
+    {
+      "path": "source/res/config/6.02/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "33c64b9db644b524f5a90a85d3fc76130950cb7247c33cd915aa5bd0414f2436"
+    },
+    {
+      "path": "source/res/config/6.02/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "335e5a83d0cfecf31c21b2c492702fde710f1a710fe52ac2ebcc015dd9146547"
+    },
+    {
+      "path": "source/res/config/6.05/info.xml",
+      "identical": true,
+      "sha256": "336db12bc9694ed4b9c704ae5e1411491746dc89c324e7a40bddf4f2d65e5cc6"
+    },
+    {
+      "path": "source/res/config/6.05/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "553e1e7f01855c5535cec88962e9ae3cb0450ed3f802d7c7a3d1e486464b00b4"
+    },
+    {
+      "path": "source/res/config/6.05/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "06e32af02839c15a2ca36d3fec6bc2a5fe3c8060c403dd256427a6a7d7648a1f"
+    },
+    {
+      "path": "source/res/config/6.06/info.xml",
+      "identical": true,
+      "sha256": "441bd8274699a1f7beeb8bd9f76f9c7b1a22933d0e0baf651a549ebf25f14d0a"
+    },
+    {
+      "path": "source/res/config/6.06/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "e69b265424b4d004b70e84416c19e959a9f1387ebe434b45ea7abff00aff3c37"
+    },
+    {
+      "path": "source/res/config/6.06/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "e6beae8100db9a7b17e6c9953817990c95be2e1ddf9146e2d6f2e11e4373d2c2"
+    },
+    {
+      "path": "source/res/config/7.00/info.xml",
+      "identical": true,
+      "sha256": "a63780cb4bab1f5b620eda4427a90857ed70084ace98cb3a42fa5064c1a406cc"
+    },
+    {
+      "path": "source/res/config/7.00/parameters_appconf.xml",
+      "identical": true,
+      "sha256": "e24b1cbbee0e5110f544cd086539bbfc89fd051ee7671520db31f99f6dddc435"
+    },
+    {
+      "path": "source/res/config/7.00/parameters_mcconf.xml",
+      "identical": true,
+      "sha256": "d907e562c495c73e02d92bfd057e064927872006e36f7d998b54421a2be05228"
+    },
+    {
+      "function": "packetDataToSend",
+      "identical": true,
+      "sha256": "68b7877f2eb3abb381eba7c5feccd84ab638844678c78be98212049e06340e3a"
+    },
+    {
+      "function": "serialDataAvailable",
+      "identical": true,
+      "sha256": "3ef1da273ac2fd2b71a40472f3a1589e9ed6836d187453e87828a05c811e71da"
+    },
+    {
+      "function": "tcpInputDataAvailable",
+      "identical": true,
+      "sha256": "885769633a76fdcf3995adeec30aae4cd1f4b8e428cd1602c2c317783005f621"
+    },
+    {
+      "function": "udpInputDataAvailable",
+      "identical": true,
+      "sha256": "db1c0826d1d5df63d8628f44eedddbbb58cfb778f67dc9466cf5c8c3f86b8903"
+    }
+  ]
+}

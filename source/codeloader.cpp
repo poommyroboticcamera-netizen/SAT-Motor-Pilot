@@ -43,7 +43,7 @@ CodeLoader::CodeLoader(QObject *parent) : QObject(parent)
         if (loadPackageArchiveResource()) {
             qDebug() << "Loaded package archive resource";
         } else {
-            qWarning() << "Could not load package archive resource. Please update the archive in order to use VESC packages.";
+            qWarning() << "Could not load package archive resource. Please update the archive in order to use controller packages.";
         }
 
         resourceLoaded = true;

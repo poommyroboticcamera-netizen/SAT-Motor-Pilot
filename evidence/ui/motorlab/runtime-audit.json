@@ -105,7 +105,7 @@
         {
             "enabled": true,
             "name": "actionAbout",
-            "text": "About MotorLab",
+            "text": "About SAT Motor Pilot",
             "visible": true
         },
         {
@@ -231,7 +231,7 @@
         {
             "enabled": true,
             "name": "actionVESCToolChangelog",
-            "text": "VESC Tool Changelog",
+            "text": "SAT Motor Pilot Changelog",
             "visible": true
         },
         {
@@ -243,7 +243,7 @@
         {
             "enabled": true,
             "name": "actionVESCProjectForums",
-            "text": "VESC Project Forums",
+            "text": "Project and builds",
             "visible": true
         },
         {
@@ -369,7 +369,7 @@
         {
             "enabled": true,
             "name": "actionVESC_Discord",
-            "text": "VESC Discord",
+            "text": "Report an issue",
             "visible": true
         },
         {
@@ -572,6 +572,12 @@
         },
         {
             "enabled": true,
+            "name": "actionSatQuickStart",
+            "text": "SAT quick start",
+            "visible": true
+        },
+        {
+            "enabled": true,
             "name": "",
             "text": "Load Firmware Configs",
             "visible": true
@@ -727,6 +733,7 @@
             "visible": true
         }
     ],
+    "applicationName": "SAT Motor Pilot",
     "configurationRoundtrips": [
         {
             "differenceCount": 0,
@@ -761,6 +768,39 @@
     "interfaceFound": true,
     "logicalDpi": 120,
     "mapPolicy": "Remote OpenStreetMap rendering disabled identically in both audited builds to eliminate asynchronous tile content",
+    "onboardingPages": [
+        {
+            "completeBeforeAcceptance": true,
+            "id": 0,
+            "screenshot": "onboarding/page-0.png",
+            "screenshotSaved": true,
+            "title": "Welcome to SAT Motor Pilot"
+        },
+        {
+            "completeBeforeAcceptance": false,
+            "id": 1,
+            "screenshot": "onboarding/page-1.png",
+            "screenshotSaved": true,
+            "title": "Usage"
+        },
+        {
+            "completeBeforeAcceptance": false,
+            "id": 2,
+            "screenshot": "onboarding/page-2.png",
+            "screenshotSaved": true,
+            "title": "Warranty"
+        },
+        {
+            "completeBeforeAcceptance": true,
+            "id": 3,
+            "screenshot": "onboarding/page-3.png",
+            "screenshotSaved": true,
+            "title": "Your workspace is ready"
+        }
+    ],
+    "onboardingWindowTitle": "SAT Motor Pilot Introduction",
+    "organizationDomain": "satmotorpilot.local",
+    "organizationName": "SomboonAdvanceTechnology",
     "pageListFound": true,
     "pages": [
         {
@@ -768,7 +808,7 @@
             "row": 0,
             "screenshot": "screenshots/page-000.png",
             "screenshotSaved": true,
-            "title": "Welcome & Wizards",
+            "title": "SAT Workspace",
             "visibleControls": [
                 {
                     "class": "QWidget",
@@ -857,11 +897,6 @@
                     "name": "bgWidget"
                 },
                 {
-                    "class": "QLabel",
-                    "enabled": true,
-                    "name": "label"
-                },
-                {
                     "class": "QGroupBox",
                     "enabled": true,
                     "name": "groupBox"
@@ -913,6 +948,40 @@
                     "enabled": true,
                     "name": "wizardIMUButton",
                     "text": "Setup IMU"
+                },
+                {
+                    "class": "QFrame",
+                    "enabled": true,
+                    "name": "satCommissioningWorkspace"
+                },
+                {
+                    "class": "QLabel",
+                    "enabled": true,
+                    "name": "satTargetStatus"
+                },
+                {
+                    "class": "QPushButton",
+                    "enabled": true,
+                    "name": "satWorkspace0",
+                    "text": "1  Connection"
+                },
+                {
+                    "class": "QPushButton",
+                    "enabled": true,
+                    "name": "satWorkspace1",
+                    "text": "2  Motor configuration"
+                },
+                {
+                    "class": "QPushButton",
+                    "enabled": true,
+                    "name": "satWorkspace2",
+                    "text": "3  Application configuration"
+                },
+                {
+                    "class": "QPushButton",
+                    "enabled": true,
+                    "name": "satWorkspace3",
+                    "text": "4  Live measurements"
                 },
                 {
                     "class": "QSplitterHandle",
@@ -1721,7 +1790,7 @@
             "row": 3,
             "screenshot": "screenshots/page-003.png",
             "screenshotSaved": true,
-            "title": "VESC Packages",
+            "title": "Controller Packages",
             "visibleControls": [
                 {
                     "class": "QWidget",
@@ -6453,7 +6522,7 @@
             "row": 18,
             "screenshot": "screenshots/page-018.png",
             "screenshotSaved": true,
-            "title": "VESC Remote",
+            "title": "Remote Control",
             "visibleControls": [
                 {
                     "class": "QWidget",
@@ -11917,7 +11986,7 @@
             "row": 33,
             "screenshot": "screenshots/page-033.png",
             "screenshotSaved": true,
-            "title": "VESC Dev Tools",
+            "title": "controller Dev Tools",
             "visibleControls": [
                 {
                     "class": "QWidget",
@@ -15099,5 +15168,31 @@
     "platform": "windows",
     "qtVersion": "5.15.2",
     "scope": "Disconnected UI rendering and local configuration persistence only; no hardware validation",
-    "transportPolicy": "Audit mode requires physical outbound transport blocked by VescInterface"
+    "transportPolicy": "Audit mode requires physical outbound transport blocked by VescInterface",
+    "workspaceNavigation": [
+        {
+            "actualClass": "PageConnection",
+            "button": "satWorkspace0",
+            "exists": true,
+            "pass": true
+        },
+        {
+            "actualClass": "PageMotorSettings",
+            "button": "satWorkspace1",
+            "exists": true,
+            "pass": true
+        },
+        {
+            "actualClass": "PageAppSettings",
+            "button": "satWorkspace2",
+            "exists": true,
+            "pass": true
+        },
+        {
+            "actualClass": "PageRtData",
+            "button": "satWorkspace3",
+            "exists": true,
+            "pass": true
+        }
+    ]
 }

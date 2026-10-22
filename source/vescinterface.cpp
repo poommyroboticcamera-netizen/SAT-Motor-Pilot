@@ -124,7 +124,7 @@ VescInterface::VescInterface(QObject *parent) : QObject(parent)
             if (powerMgr.isValid()) {
                 jint levelAndFlags = QAndroidJniObject::getStaticField<jint>(
                             "android/os/PowerManager","PARTIAL_WAKE_LOCK");
-                QAndroidJniObject tag = QAndroidJniObject::fromString( "VESC Tool" );
+                QAndroidJniObject tag = QAndroidJniObject::fromString( "SAT Motor Pilot" );
                 mWakeLock = powerMgr.callObjectMethod("newWakeLock",
                                                        "(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;",
                                                        levelAndFlags,tag.object<jstring>());
@@ -566,7 +566,7 @@ VescInterface::VescInterface(QObject *parent) : QObject(parent)
             emitMessageDialog("Deserializing " + configName + " configuration failed",
                               "Could not deserialize " + configName +
                               " configuration. This probably means "
-                              "that something is wrong with your firmware, or this VESC Tool version.",
+                              "that something is wrong with your firmware, or this SAT Motor Pilot version.",
                               false, false);
 #endif
         }
@@ -589,10 +589,10 @@ VescInterface::VescInterface(QObject *parent) : QObject(parent)
 #if VT_IS_TEST_VERSION
     QTimer::singleShot(1000, [this]() {
         if (!mIgnoreTestVersion) {
-            emitMessageDialog("VESC Tool Test Version",
-                              "Warning: This is a test version of VESC Tool. The included firmwares are NOT compatible with "
+            emitMessageDialog("SAT Motor Pilot Test Version",
+                              "Warning: This is a test version of SAT Motor Pilot. The included firmwares are NOT compatible with "
                               "released firmwares and should only be used with this test version. When using a release version "
-                              "of VESC Tool, the firmware must be upgraded even if the version number is the same.",
+                              "of SAT Motor Pilot, the firmware must be upgraded even if the version number is the same.",
                               false);
         }
     });
@@ -2506,7 +2506,7 @@ bool VescInterface::connectSerial(QString port, int baudrate)
     (void)baudrate;
     emit messageDialog(tr("Connect serial"),
                        tr("Serial port support is not enabled in this build "
-                          "of VESC Tool."),
+                          "of SAT Motor Pilot."),
                        false, false);
     return false;
 #endif
@@ -2626,7 +2626,7 @@ bool VescInterface::connectCANbus(QString backend, QString ifName, int bitrate)
     (void)bitrate;
     emit messageDialog(tr("Connect serial"),
                        tr("CAN bus support is not enabled in this build "
-                          "of VESC Tool."),
+                          "of SAT Motor Pilot."),
                        false, false);
     return false;
 #endif
@@ -3324,7 +3324,7 @@ void VescInterface::packetDataToSend(QByteArray &data)
 {
     // Audit captures are disconnected UI/configuration tests, never device tests.
     if (!qgetenv("MOTORLAB_AUDIT_DIR").isEmpty()) {
-        qWarning() << "MotorLab audit: physical packet transmission blocked";
+        qWarning() << "SAT Motor Pilot audit: physical packet transmission blocked";
         return;
     }
 #ifdef HAS_SERIALPORT
@@ -3513,7 +3513,7 @@ void VescInterface::fwVersionReceived(FW_RX_PARAMS params)
         if (params.isPaired && !hasPairedUuid(mUuidStr)) {
             disconnectPort();
             emitMessageDialog("Pairing",
-                              "This device is not paired to your local version of VESC Tool. You can either "
+                              "This device is not paired to your local version of SAT Motor Pilot. You can either "
                               "add the UUID to the pairing list manually, or connect over USB and set the app "
                               "pairing flag to false for this VESC. Then you can pair to this version of VESC "
                               "tool, or leave the device unpaired.",
@@ -3533,7 +3533,7 @@ void VescInterface::fwVersionReceived(FW_RX_PARAMS params)
 
     if (fwPairs.isEmpty()) {
         emit messageDialog(tr("No Supported Firmwares"),
-                           tr("This version of VESC Tool does not seem to have any supported "
+                           tr("This version of SAT Motor Pilot does not seem to have any supported "
                               "firmwares. Something is probably wrong with the motor configuration "
                               "file."),
                            false, false);
@@ -3786,7 +3786,7 @@ void VescInterface::fwVersionReceived(FW_RX_PARAMS params)
         updateFwRx(true);
         if (!wasReceived) {
             emit messageDialog(tr("Warning"), tr("The connected device has newer firmware than this version of "
-                                                "VESC Tool supports. It is recommended that you update VESC "
+                                                "SAT Motor Pilot supports. It is recommended that you update VESC "
                                                 "Tool to the latest version. Alternatively, the firmware on "
                                                 "the connected device can be downgraded in the firmware page. "
                                                 "Until then, limited communication mode will be used."), false, false);
@@ -3872,7 +3872,7 @@ void VescInterface::fwVersionReceived(FW_RX_PARAMS params)
 
     if (params.isTestFw > 0 && !VT_IS_TEST_VERSION) {
         emitMessageDialog("Test Firmware",
-                          "The connected VESC-based device has test firmware and this is not a test build of VESC Tool. "
+                          "The connected VESC-based device has test firmware and this is not a test build of SAT Motor Pilot. "
                           "You should update the firmware urgently, this may not be a safe situation.",
                           false, false);
     }
@@ -4184,7 +4184,7 @@ void VescInterface::mcconfUpdated()
             if (mMcConfig->getConfigVersion() != VT_CONFIG_VERSION) {
                 emitMessageDialog("Configuration Loaded",
                                   "The loaded motor configuration file is from a different firmware and/or different "
-                                  "version of VESC Tool. If it does not work properly you should run the motor wizard "
+                                  "version of SAT Motor Pilot. If it does not work properly you should run the motor wizard "
                                   "again or re-measure the parameters manually.\n\n"
                                   ""
                                   "When updating firmware it is always best to reset to the default configuration and "

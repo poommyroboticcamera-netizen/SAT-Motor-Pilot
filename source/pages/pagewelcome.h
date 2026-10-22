@@ -40,6 +40,9 @@ public:
     VescInterface *vesc() const;
     void setVesc(VescInterface *vesc);
 
+signals:
+    void openWorkspace(QString name);
+
 public slots:
     void startSetupWizardFocSimple();
     void startSetupWizardFocQml();

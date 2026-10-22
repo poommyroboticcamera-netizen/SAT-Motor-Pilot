@@ -988,7 +988,7 @@
              <item row="0" column="0">
               <widget class="QRadioButton" name="m1ConfLocalButton">
                <property name="toolTip">
-                <string>Use mcconf from connected VESC</string>
+                <string>Use mcconf from connected controller</string>
                </property>
                <property name="text">
                 <string>Local</string>
@@ -1028,7 +1028,7 @@
                 </sizepolicy>
                </property>
                <property name="toolTip">
-                <string>Load selected motor configuration in VESC Tool</string>
+                <string>Load selected motor configuration in SAT Motor Pilot</string>
                </property>
                <property name="text">
                 <string/>
@@ -1289,7 +1289,7 @@
              <item row="0" column="0">
               <widget class="QRadioButton" name="m2ConfLocalButton">
                <property name="toolTip">
-                <string>Use mcconf from connected VESC</string>
+                <string>Use mcconf from connected controller</string>
                </property>
                <property name="text">
                 <string>Local</string>
@@ -1315,7 +1315,7 @@
                 </sizepolicy>
                </property>
                <property name="toolTip">
-                <string>Load selected motor configuration in VESC Tool</string>
+                <string>Load selected motor configuration in SAT Motor Pilot</string>
                </property>
                <property name="text">
                 <string/>

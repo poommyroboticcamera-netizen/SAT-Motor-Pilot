@@ -53,14 +53,14 @@ Item {
     function setCanDevs(canDevs) {
         canIdModel.clear()
         if (!mCommands.getSendCan() && Utility.isConnectedToHwVesc(VescIf)) {
-            canIdModel.append({"name": "This VESC",
+            canIdModel.append({"name": "This controller",
                                   "canId": mAppConf.getParamInt("controller_id"),
                                   "isCan": false,
                                   "isInv": Utility.getInvertDirection(VescIf, -1)})
         }
 
         for (var i = 0;i < canDevs.length;i++) {
-            canIdModel.append({"name": "VESC on CAN-bus",
+            canIdModel.append({"name": "controller on CAN-bus",
                                   "canId": canDevs[i],
                                   "isCan": true,
                                   "isInv": Utility.getInvertDirection(VescIf, canDevs[i])})
@@ -78,7 +78,7 @@ Item {
             id: text
             Layout.fillWidth: true
             color: {color = Utility.getAppHexColor("lightText")}
-            text: qsTr("Select which VESCs have inverted motor direction. Press the FWD or REV button to try.")
+            text: qsTr("Select which controllers have inverted motor direction. Press the FWD or REV button to try.")
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap

@@ -41,7 +41,7 @@ ApplicationWindow {
     visible: true
     width: 500
     height: 850
-    title: qsTr("MotorLab")
+    title: qsTr("SAT Motor Pilot")
 
     // Full screen iPhone X workaround:
     property int notchLeft: 0
@@ -228,7 +228,7 @@ ApplicationWindow {
 
                 onClicked: {
                     VescIf.emitMessageDialog(
-                                "VESC Tool Changelog",
+                                "SAT Motor Pilot Changelog",
                                 Utility.vescToolChangeLog(),
                                 true, false)
                 }
@@ -1229,8 +1229,8 @@ ApplicationWindow {
                 wrapMode: Text.WordWrap
                 text:
                     "The hardware you are connecting to contains code that will alter the " +
-                    "user interface of VESC Tool. This code has not been verified by the " +
-                    "authors of VESC Tool and could contain bugs and security problems. \n\n" +
+                    "user interface of SAT Motor Pilot. This code has not been verified by the " +
+                    "authors of SAT Motor Pilot and could contain bugs and security problems. \n\n" +
                     "Do you want to load this custom user interface?"
             }
 

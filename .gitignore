@@ -8,3 +8,4 @@ __pycache__/
 *.zip
 !evidence/*.log
 !evidence/ui/**/runtime.log
+/MotorLab-Windows-x64-trial/

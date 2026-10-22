@@ -1,9 +1,9 @@
 {
-  "pageCount": 33,
-  "platform": "windows",
-  "pathPolicy": "Windows system directories only",
-  "qtVersion": "5.15.2",
-  "companyTheme": "#304B8A",
   "exitCode": 0,
-  "transport": "audit blocks physical packets"
+  "qtVersion": "5.15.2",
+  "platform": "windows",
+  "transport": "audit blocks physical packets",
+  "pageCount": 33,
+  "companyTheme": "#304B8A",
+  "pathPolicy": "Windows system directories only"
 }

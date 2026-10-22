@@ -13,8 +13,8 @@ for relative in ['logo.png','logo_light.png']:
     canvas.alpha_composite(scaled,(0,0))
     from PIL import ImageDraw,ImageFont
     draw=ImageDraw.Draw(canvas)
-    font=ImageFont.truetype('C:/Windows/Fonts/arialbd.ttf',48)
-    draw.text((155,42),'MotorLab',font=font,fill='#304b8a')
+    font=ImageFont.truetype('C:/Windows/Fonts/arialbd.ttf',31)
+    draw.text((149,47),'SAT Motor Pilot',font=font,fill='#304b8a')
     canvas.save(assets/relative)
 for relative in ['res/logo_vertical.png','res/+theme_light/logo_vertical.png','res/symbol_v_wide.png','res/+theme_light/symbol_v_wide.png']:
     target=root/'source'/relative

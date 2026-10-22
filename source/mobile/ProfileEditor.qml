@@ -92,7 +92,7 @@ Item {
         } else {
             VescIf.emitMessageDialog(
                         "Connection Error",
-                        "The VESC is not connected. Please connect it to run detection.",
+                        "The controller is not connected. Please connect it to run detection.",
                         false, false)
             return false
         }

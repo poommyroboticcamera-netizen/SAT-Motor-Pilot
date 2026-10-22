@@ -1,159 +1,110 @@
 <div align="center">
 
-<img src="source/res/motorlab/logo.png" alt="MotorLab" width="360">
+<img src="source/res/motorlab/logo.png" alt="Somboon Advance Technology — SAT Motor Pilot" width="480">
 
-# SAT Motor Pilot · MotorLab
+# SAT Motor Pilot
 
-**แอป Windows สำหรับตั้งค่า ควบคุม และตรวจข้อมูลมอเตอร์ โดยต่อยอดจาก VESC Tool 7.00 พร้อม source และหลักฐานตรวจสอบ**
+**พื้นที่ทำงานตั้งค่า ทดสอบ และตรวจข้อมูลมอเตอร์ของสมบูรณ์ บน Windows**
 
-![Windows](https://img.shields.io/badge/Platform-Windows_x64-0B1220?style=for-the-badge&logo=windows&logoColor=38BDF8)
-![Qt](https://img.shields.io/badge/Framework-Qt_5.15.2-0B1220?style=for-the-badge&logo=qt&logoColor=41CD52)
-![C++](https://img.shields.io/badge/Language-C%2B%2B-0B1220?style=for-the-badge&logo=cplusplus&logoColor=38BDF8)
-![Tests](https://img.shields.io/badge/Protocol_tests-11_passed-166534?style=for-the-badge)
+![Windows](https://img.shields.io/badge/Platform-Windows_x64-304B8A?style=for-the-badge)
+![Qt](https://img.shields.io/badge/Qt-5.15.2-304B8A?style=for-the-badge&logo=qt)
+![Version](https://img.shields.io/badge/Version-0.2.0-304B8A?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Engineering_Preview-B45309?style=for-the-badge)
 ![License](https://img.shields.io/badge/Source-GPL--3.0--or--later-2563EB?style=for-the-badge)
 
-[ภาพรวม](#ภาพรวม) · [ความสามารถ](#ความสามารถและขอบเขต) · [เริ่มใช้งาน](#เริ่มใช้งานบน-windows) · [Build](#build-จาก-source) · [ผลตรวจ](#การตรวจสอบและหลักฐาน) · [แหล่งอ้างอิง](docs/REFERENCE_AND_COMPATIBILITY.md)
+[เริ่มใช้งาน](#เริ่มใช้งาน) · [Build](#build-จาก-source) · [หลักฐาน](#ผลทดสอบและหลักฐาน) · [รายการที่ยังต้องยืนยัน](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md)
 
 </div>
 
----
+## โปรแกรมของสมบูรณ์
 
-## ภาพรวม
+**SAT Motor Pilot 0.2.0** เปิดใช้งานเป็นโปรแกรมของตนเอง ไม่เปิดหรือเรียกใช้โปรแกรม VESC Tool และไม่ต้องติดตั้งโปรแกรมนั้นก่อน ใช้ชื่อไฟล์ `SATMotorPilot.exe`, Windows product/company metadata, AppUserModelID และ settings namespace ของตนเอง
 
-**SAT Motor Pilot** เป็นชื่อ repository ส่วนโปรแกรมใช้ชื่อ **MotorLab** พัฒนาจาก source ของ VESC Tool รุ่น stable 7.00 โดยคงหน้าจอ ขั้นตอนตั้งค่า ระบบพารามิเตอร์ และโครงสร้างสื่อสารต้นทางไว้ แล้วปรับชื่อโปรแกรม โลโก้ ไอคอน และข้อมูล About ให้ระบุโครงการนี้อย่างชัดเจน
+เวอร์ชันนี้พัฒนาต่อจาก MotorLab รุ่นทดลองเดิมเป็นส่วนผลิตภัณฑ์ของสมบูรณ์: หน้า **SAT Workspace** สำหรับ commissioning, สถานะอุปกรณ์จริง, ทางลัด 4 ขั้นตอนที่กดแล้วไปหน้าทำงานได้, การเริ่มใช้งานครั้งแรก, คู่มือเริ่มต้น, changelog และลิงก์โครงการ/แจ้งปัญหาของ SAT พร้อมธีมสีน้ำเงินและโลโก้บริษัทที่ผู้ใช้แนบ
 
-แนวทางนี้ช่วยรักษาความต่อเนื่องของ workflow เช่น Connection → อ่าน configuration → ตั้งค่า Motor/App → ตรวจ telemetry โดยไม่สร้างหน้าจอจำลองแทนระบบตั้งค่าจริง ข้อมูลจากอุปกรณ์ยังต้องมาจากการตอบกลับของ controller ผ่านระบบสื่อสารเดิม
+<img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot company workspace, disconnected" width="100%">
 
-> [!IMPORTANT]
-> **สถานะ 22 ตุลาคม 2026: Engineering preview** ผล unit test ของ packet/serializer และ local configuration XML round trip ผ่านแล้ว มีภาพ disconnected UI 33 page rows แต่ยังไม่มีผลยืนยันทุก control ทุก wizard ทุก transport หรือการทำงานกับมอเตอร์จริง การใช้ source ร่วมกันยังไม่ใช่หลักฐานว่าเหมือนต้นฉบับทุกพิกเซลหรือผ่านการทดสอบฮาร์ดแวร์แล้ว
+ส่วนสื่อสารและเครื่องมือตั้งค่าอาศัยโค้ด GPL จากรุ่นอ้างอิงเพื่อรักษาความเข้ากันได้กับ controller และ firmware จึงยังเก็บเครดิตผู้พัฒนาเดิมและไลเซนส์ใน About/เอกสาร การเป็นผลิตภัณฑ์ของสมบูรณ์ไม่ได้หมายความว่าอ้างว่าเขียนโค้ดต้นทางทั้งหมดขึ้นใหม่ ดู [ขอบเขตผลิตภัณฑ์และ compatibility core](docs/COMPANY_PRODUCT.md)
 
-<div align="center">
-<img src="evidence/ui/motorlab/screenshots/page-000.png" alt="MotorLab disconnected Welcome screen from runtime audit" width="100%">
-<sub>ภาพจาก runtime audit ในสถานะ disconnected; รอบแรกใช้ offscreen renderer ภาพนี้ไม่ใช่ผลทดสอบมอเตอร์</sub>
-</div>
-
-## ความสามารถและขอบเขต
-
-ตารางนี้ระบุความสามารถที่สืบทอดอยู่ใน source และข้อจำกัดของหลักฐานปัจจุบัน คำว่า “มีใน source” ไม่ได้หมายถึงผ่านการทดลองกับอุปกรณ์จริงแล้ว
-
-| กลุ่มงาน | หน้าจอ / ระบบที่มีใน source | สถานะการยืนยัน |
-|:--|:--|:--|
-| เริ่มต้น | Welcome, motor/app setup wizards, calculators | รอทดสอบ workflow ทุกขั้น |
-| การเชื่อมต่อ | Serial/USB, TCP, UDP, Bluetooth/BLE และ CAN forwarding | รอทดสอบแต่ละ transport กับ controller |
-| Motor configuration | General, BLDC, DC, FOC, GPDrive, PID, motor information | Local XML round trip ผ่าน; ยังไม่ทดสอบ physical controller read/write |
-| App configuration | PPM, ADC, UART, remote, NRF, PAS, IMU | Local XML round trip ผ่าน; ยังไม่ทดสอบอินพุตจริง |
-| Telemetry | Realtime, sampled data, experiment plot, IMU และ BMS | รอเทียบข้อมูลและกราฟจาก fixture/controller |
-| วิเคราะห์ข้อมูล | Log analysis, motor analysis, import/export | รอทดสอบไฟล์และค่าผลลัพธ์ |
-| เครื่องมือพัฒนา | Terminal, QML, LispBM, CAN tools, display/debug tools | มีใน source; รอ acceptance รายฟังก์ชัน |
-| Firmware / programming | Firmware workflow, SWD/ESP tools, packages | ยังไม่ทดสอบ download/flash หรืออุปกรณ์จริง |
-| Protocol | CRC, frame encode/decode, fragmentation, scalar serialization | **QtTest 11 passed, 0 failed** รวม init/cleanup |
-| Branding | MotorLab title, About, logo และ settings namespace | รายละเอียดใน [branding](docs/branding.md) |
-
-Direct PC CAN backend ต้องเปิด `HAS_CANBUS` และมี Qt CAN backend ที่เหมาะสม ค่า default ต้นทางไม่ได้เปิด flag นี้ ส่วน CAN forwarding ผ่าน VESC เป็นอีกเส้นทางหนึ่ง จึงไม่ควรใช้ผลของเส้นทางหนึ่งรับรองอีกเส้นทางหนึ่ง
-
-## โครงสร้างระบบ
+## ขั้นตอนทำงาน
 
 ```mermaid
 flowchart LR
-    UI["MotorLab / Qt Widgets + QML"] --> CFG["ConfigParams / firmware XML schemas"]
-    UI --> CMD["Commands / request and response"]
-    CFG --> CMD
-    CMD --> IF["VescInterface / connection state"]
-    IF --> PKT["Packet / CRC and framing"]
-    PKT --> LINK["Serial · TCP · UDP · BLE"]
-    LINK <--> DEV["Compatible VESC firmware/controller"]
-    DEV <--> CAN["CAN devices via forwarding"]
-    IF --> VIEW["Telemetry · graphs · logs"]
-    VIEW --> UI
+    A["SAT Workspace"] --> B["1. Connect & Identify"]
+    B --> C["2. Read & Back Up"]
+    C --> D["3. Configure Motor / Application"]
+    D --> E["Confirm → Write → Readback"]
+    E --> F["4. Live Measurements / Logs"]
 ```
 
-ระบบพารามิเตอร์เลือก schema และความสามารถตาม firmware ที่ตรวจพบ ไม่ควรสมมติว่าทุก command ใช้ได้กับ firmware ทุกเวอร์ชัน การ build นี้ยังคง `exclude_fw` ตาม default ของ upstream; ตัวแอปจึงไม่ได้บรรจุ firmware image ครบทุกบอร์ด
+หน้าเริ่มต้นแสดง **DISCONNECTED** เมื่อไม่มีอุปกรณ์ ไม่สร้างข้อมูล controller ขึ้นมาแทน เมื่อเชื่อมต่อจะแสดง port, firmware, UUID และ CAN target จากสถานะจริง ทางลัดหน้าแรกเป็นเพียงการเปิดหน้าทำงาน ไม่ส่งคำสั่งหมุนมอเตอร์หรือเขียนค่า
 
-## รุ่นอ้างอิงที่ตรึงไว้
+## ความสามารถ
 
-| ส่วนประกอบ | Reference | ขอบเขต |
+| กลุ่ม | สิ่งที่มีในโปรแกรม | สถานะหลักฐาน |
 |:--|:--|:--|
-| Base application | [VESC Tool 7.00](https://github.com/vedderb/vesc_tool/commit/01d5f10901116c311e3fb84d5a1541f663d3ce20) | Commit `01d5f10901116c311e3fb84d5a1541f663d3ce20` |
-| Matching firmware source | [bldc release 7.00](https://github.com/vedderb/bldc/commit/26af69484014b6771d02e68c22f4cb96645b5f22) | Source reference; ยังไม่ได้แฟลช firmware นี้ลงบอร์ด |
-| Existing comparison binary | รายงานตัวเองเป็น `7.00-0+255006e8` | Qt6-port lineage ต่างจาก release source ที่เลือก |
-| Build toolchain | Qt 5.15.2 / MinGW 8.1 / Windows x64 | ใช้สร้างโปรแกรมและ protocol tests |
+| SAT Workspace | หน้าบริษัท, target status, ทางลัด 4 ขั้น | ทดสอบการนำทางจริงใน Windows |
+| เริ่มใช้งานครั้งแรก | บทนำ SAT, ข้อกำหนดการใช้, warranty, ขั้นตอนเริ่มงาน | ตรวจ 4 หน้า; Usage/Warranty ยังต้องยอมรับก่อนผ่าน |
+| คู่มือและแอป | SAT quick start, project/builds, issues, changelog, About | ไม่มีการตรวจอัปเดตแอปต้นฉบับอัตโนมัติ |
+| Motor/App configuration | General, BLDC, DC, FOC, GPDrive, PID, PPM, ADC, UART, NRF, PAS, IMU | สืบทอด engine/schema; รอ controller acceptance |
+| Transport | Serial/USB, BLE, TCP/UDP และ CAN forwarding | คงกลไกเดิม; รอทดสอบแต่ละอุปกรณ์/transport |
+| Telemetry/analysis | Realtime, sampled data, experiments, BMS, IMU, log analysis | ตรวจ disconnected UI; live readings ยังรอยืนยัน |
+| Engineering tools | Terminal, LispBM, QML, SWD, ESP programmer, packages | มี implementation; รายฟังก์ชันยังมี acceptance ค้าง |
+| Toolbar Write | อ่านค่าปัจจุบัน → backup → ยืนยัน → ACK → fresh readback | มีในโค้ด; ยังไม่ส่ง write ไปอุปกรณ์จริง |
 
-เลือก commit ที่ประกาศ release 7.00 ชัดเจน แทนการนำ HEAD รุ่นทดสอบมาเรียกว่า stable ส่วน binary ที่ติดตั้งเดิมเป็นหลักฐานคนละชุดกับ source release นี้ อ่านเหตุผล hashes และข้อจำกัดได้ใน [Reference and compatibility](docs/REFERENCE_AND_COMPATIBILITY.md) และ [reference manifest](evidence/reference-manifest.json)
+Direct PC CAN adapter ต้องใช้ build/backend ที่เปิด `HAS_CANBUS`; build default นี้ไม่ได้เปิด จึงไม่ใช้การมี CAN forwarding มาอ้างว่าทดสอบ PC CAN adapter แล้ว Firmware/package downloads เป็นข้อมูล compatibility เมื่อเรียกฟังก์ชันนั้น ไม่ใช่การติดตั้งหรือเปิดใช้แอปต้นฉบับ ไม่มีการ flash firmware อัตโนมัติในชุดทดสอบ
 
-## เริ่มใช้งานบน Windows
+## เริ่มใช้งาน
 
-1. ชุดทดลองที่เตรียมใน workspace ใช้ไฟล์ `MotorLab-Windows-x64-trial.zip` หรือเปิดจาก `dist/MotorLab/MotorLab.exe` หลัง build/deploy โครงการนี้ยังไม่มี public binary release; สำหรับการใช้งานจาก repository ให้ทำตาม [ขั้นตอน build](#build-จาก-source)
-2. แตก ZIP ทั้งโฟลเดอร์ไว้ในตำแหน่งที่เขียนไฟล์ได้ และเปิด `MotorLab.exe` พร้อม DLL/plugins ที่มากับชุดเดียวกัน
-3. เริ่มสำรวจหน้าจอในสถานะ offline ก่อนเชื่อมต่ออุปกรณ์ แล้วตรวจ firmware และชื่อ hardware ที่อ่านกลับได้ก่อนเปลี่ยนค่า
-4. เก็บ configuration เดิมและตรวจค่าที่อ่านกลับก่อนใช้ wizard, calibration, firmware update หรือคำสั่งขับมอเตอร์
+ชุดทดลองใน workspace: `SAT-Motor-Pilot-Windows-x64.zip`
 
-แพ็กเกจทดลองและผล host test ยังไม่รับรองความพร้อมของภาคกำลัง การคาลิเบรตกระแส หรือการหยุดมอเตอร์จริง ต้องตรวจบนชุดทดลองที่เหมาะกับ controller และมอเตอร์ของตนเอง
+1. แตก ZIP ทั้งโฟลเดอร์
+2. เปิด `SATMotorPilot/SATMotorPilot.exe` โดยเก็บ DLL, `platforms` และ `qml` ไว้ด้วยกัน
+3. ทำตามการเริ่มใช้งานครั้งแรก แล้วเปิด **Connection** จาก SAT Workspace
+4. ตรวจอุปกรณ์และ firmware จากนั้นเริ่มอ่าน configuration ก่อนเปลี่ยนค่า
+
+ไฟล์หลัง build: `dist/SATMotorPilot/SATMotorPilot.exe` ใช้ runtime Qt ที่มากับแพ็กเกจ รุ่นนี้ยังเป็น engineering preview และมี resource/dependency review ก่อน public binary release
 
 ## Build จาก source
 
-ใช้ Windows x64, PowerShell, Qt **5.15.2 MinGW 8.1 64-bit** Python 3 สำหรับ bootstrap, Git สำหรับ clone และ compiler ที่ตรงกับ Qt build หลีกเลี่ยงการผสม Qt DLL จากการติดตั้งคนละรุ่น
+ใช้ Git, Python 3, PowerShell และ Qt 5.15.2 / MinGW 8.1 x64 ให้ตรงกัน เพราะ engine ใช้ Qt private headers
 
 ```powershell
 git clone https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot.git
 cd SAT-Motor-Pilot
 ./bootstrap.ps1
-./build.ps1
+./build.ps1 -Clean
 ```
 
-รายละเอียด option และตำแหน่ง output ให้อ่านจาก script ที่มากับ commit เดียวกัน หากเตรียม Qt เอง ใช้ qmake กับ `source/motorlab.pro` ใน build directory แยกจาก source แล้ว build ด้วย MinGW 8.1 ที่ตรงกัน
+`bootstrap.ps1` ติดตั้ง toolchain ใน `tooling/` ของโปรเจกต์ ไม่ต้องติดตั้งแอปอ้างอิง ระบุ Qt ที่มีอยู่ด้วย `./build.ps1 -QtRoot C:/path/to/Qt`
 
-ทดสอบ protocol:
+โปรเจกต์: `source/sat_motor_pilot.pro` ส่วน `source/vesc_tool.pro` เป็นรายการ source/dependencies ของ compatibility engine ที่เก็บเพื่อรักษาสถาปัตยกรรมเดิม
+
+## ผลทดสอบและหลักฐาน
+
+| การตรวจ | ขอบเขตและผล | หลักฐาน |
+|:--|:--|:--|
+| Windows launch | เปิดจาก runtime ในแพ็กเกจ โดย PATH เฉพาะ Windows system | [Launch](evidence/ui/motorlab/launch.json), [Runtime](evidence/ui/motorlab/runtime-audit.json) |
+| SAT navigation | ปุ่มหน้าแรก 4 ปุ่มไปยังหน้าที่ถูกต้อง | `workspaceNavigation` ใน runtime report |
+| Onboarding | 4 หน้า; required acceptance ยังคงอยู่ | `onboardingPages` และ [ภาพ](evidence/ui/motorlab/onboarding) |
+| Packet/scalar | **11 passed, 0 failed** รวม init/cleanup; 9 test methods | [ผลข้อความ](validation/results/protocol-tests.txt), [JUnit](validation/results/protocol-tests.junit.xml) |
+| Compatibility regression | **88 checks** ของ command/packet/serializer/schema และ transport functions | [Core regression](evidence/company-core-regression.json) |
+| XML persistence | motor 211 params / 488 bytes, app 122 params / 284 bytes; เปลี่ยน destination ก่อน load แล้วค่ากลับมาครบ | `configurationRoundtrips` ใน runtime report |
+| Disconnected rendering | 33 navigation rows; ไม่ได้แปลว่าทุก control ผ่าน | Runtime และ [traceability](validation/ui-function-traceability.csv) |
+| REA / ต้นทาง | ไฟล์แอปจริง, package inventory, hash, provider limitations | [REA findings](docs/REA_FINDINGS.md), [reference](docs/REFERENCE_AND_COMPATIBILITY.md) |
+
+Core regression normalize CRLF และยอมให้เปลี่ยนชื่อใน audit diagnostic เท่านั้น ไม่ใช้ source comparison อ้างว่าผ่านฮาร์ดแวร์
 
 ```powershell
 ./validation/run-protocol-tests.ps1
+python validation/verify_compatibility_core.py
+./validation/run-ui-audit.ps1
 ```
 
-script ใช้ Qt จาก `tooling/Qt` ตามค่า default หรือระบุ `-QtRoot` ไปยังตำแหน่งติดตั้ง Qt ที่มีโครงสร้าง `5.15.2/mingw81_64` และ `Tools/mingw810_64`
+Audit ใช้ settings แยก บล็อก physical outbound packets และไม่กดคำสั่งมอเตอร์/เขียนค่า/flash **ยังไม่รับรองความเทียบเท่าฮาร์ดแวร์ทุกชุดหรือทุก workflow** ต้องเพิ่มหลักฐาน controller read/write, detection, firmware flashing, BLE/CAN adapter, reconnect และ live telemetry ดู [Acceptance](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md) และ [Toolbar Write](docs/CONFIGURATION_WRITE_SAFETY.md)
 
-## การตรวจสอบและหลักฐาน
+## แหล่งอ้างอิงและไลเซนส์
 
-ธีมบริษัทใช้โลโก้ **Somboon Advance Technology** ที่ผู้ใช้จัดส่ง และสีน้ำเงิน **#304B8A** ดู [ภาพเทียบก่อน/หลัง](evidence/ui/comparison/side-by-side-000.png), [UI comparison](docs/UI_COMPARISON.md), [ขั้นตอน Write ที่เพิ่ม](docs/CONFIGURATION_WRITE_SAFETY.md) และ [ผล REA](docs/REA_FINDINGS.md)
+Compatibility reference: VESC Tool stable **7.00**, commit `01d5f10901116c311e3fb84d5a1541f663d3ce20`; firmware reference: bldc 7.00, commit `26af69484014b6771d02e68c22f4cb96645b5f22`
 
-
-| การตรวจ | ผลที่มีหลักฐาน | ไฟล์ |
-|:--|:--|:--|
-| Original packet/serializer tests | **11 passed, 0 failed, 0 skipped**; 9 test methods และ init/cleanup | [ผลข้อความ](validation/results/protocol-tests.txt), [JUnit XML](validation/results/protocol-tests.junit.xml) |
-| UI/function source inventory | 158 `.ui`/`.qml`, 5,170 traceability rows | [CSV](validation/ui-function-traceability.csv), [summary](validation/inventory-summary.json) |
-| Parameter inventory | 6,606 รายการรวม schema หลาย firmware version | [Parameter CSV](validation/parameter-traceability.csv) |
-| Command inventory | 157 active command IDs | [Command CSV](validation/command-traceability.csv) |
-| Disconnected UI | บันทึก 33 visible page rows ของ reference และ MotorLab; ไม่ใช่ทุก control ผ่าน | [MotorLab audit](evidence/ui/motorlab/runtime-audit.json), [reference audit](evidence/ui/reference/runtime-audit.json) |
-| Local config persistence | Motor 211 params / 488 bytes, App 122 params / 284 bytes; sentinel perturbation ก่อน load แล้ว diff กลับเป็น 0 | [Runtime results](evidence/ui/motorlab/runtime-audit.json) |
-| Reference identity | Source commits, binary version/hash และข้อจำกัด | [Compatibility report](docs/REFERENCE_AND_COMPATIBILITY.md) |
-| Test evidence identity | SHA-256 ของ original source, tests และผลที่ตรวจ | [Hashes](validation/test-evidence-sha256.json) |
-
-QtTest compile จาก **original `packet.cpp` และ `vbytearray.cpp`** โดยตรง ครอบคลุม CRC known vector, frame ความยาว 1/255/256/10000 bytes, fragment ทุกจุดแบ่งของตัวอย่าง, รับทีละ byte, หลาย frame ต่อกัน, CRC/stop/length ผิด, reset ระหว่าง frame, integer endian/sign, fixed point และกรณีข้อมูลสั้น
-
-ค่าคาดหวังเขียนแยกจาก production lookup table เช่น CRC-16/XMODEM ของ `123456789` เท่ากับ `0x31c3` จึงไม่ได้อาศัยเพียงการ encode/decode ด้วย implementation เดียวกัน รายละเอียดและวิธีทำซ้ำอยู่ใน [Validation README](validation/README.md)
-
-**แถว form ที่มีภาพและจับคู่ source ได้ใช้ `RENDERED_ONLY`; แถว controls/actions/functions ยังคง `PENDING`** ต้องแนบผลจริงก่อนเปลี่ยนเป็นผ่าน โดยเฉพาะ timeout/reconnect, firmware negotiation, log import/export, connected-state pixel comparison และ wizard ทุกขั้น ผล local XML ตรวจ save/load ในเครื่องและ serialized bytes หลังเปลี่ยนค่า destination อย่างตั้งใจ ไม่ใช่ controller read/write หรือการทดสอบมอเตอร์ อ่าน [Acceptance และ known issues](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md) สำหรับ evidence levels, runtime warnings และขั้นตอนทดสอบฮาร์ดแวร์ภายหลัง
-
-## Repository layout
-
-```text
-SAT-Motor-Pilot/
-├── source/                 Modified VESC Tool 7.00 source + retained licenses
-├── docs/                   Branding and reference/compatibility reports
-├── evidence/               Reference identity, build and UI evidence
-├── validation/             QtTest, inventories and acceptance gaps
-├── dist/MotorLab/          Local portable application after deployment
-├── bootstrap.ps1           Toolchain setup
-├── build.ps1               Windows build
-└── THIRD_PARTY_NOTICES.md   Upstream, dependency and asset notices
-```
-
-## License และที่มาของโครงการ
-
-MotorLab เป็น modified build ของ **VESC Tool โดย Benjamin Vedder และผู้ร่วมพัฒนา** source อยู่ภายใต้ **GPL-3.0-or-later** โดยเก็บ copyright headers และ [LICENSE ต้นทาง](source/LICENSE) ไว้ โปรแกรมนี้ไม่มีการรับประกัน และไม่ได้อ้างความเกี่ยวข้องหรือการรับรองจาก VESC Project
-
-โลโก้บริษัท Somboon Advance Technology เป็นไฟล์ที่ผู้ใช้จัดส่งให้สำหรับโครงการนี้; ใช้ร่วมกับชื่อ MotorLab และธีมน้ำเงิน #304B8A โดยไม่ได้อ้างว่าเป็นโลโก้ภายใต้ GPL แต่ source ยังคงมี dependency, icons, fonts และ resource ต้นทางที่ต้องตรวจสิทธิ์แยกกัน อ่าน [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) เพื่อดูรายการและประเด็นที่ยังไม่ยืนยัน การเผยแพร่ binary ต้องแนบ corresponding source, build instructions และ notices ของ dependency ให้ครบตามเงื่อนไขที่เกี่ยวข้อง ไม่ควรตีความ GPL ของ source ว่ารับรองสิทธิ์ของ trademark หรือทุก asset โดยอัตโนมัติ
-
-รูปแบบ README ต่อเนื่องจาก [ESC-FOC-Driver-V3.0](https://github.com/poommyroboticcamera-netizen/ESC-FOC-Driver-V3.0) และ [ESP32 Passive CAN Data Logger Dashboard](https://github.com/poommyroboticcamera-netizen/DATA-logging-dashboard-CANBUS) โดยเนื้อหา ผลตรวจ และขอบเขตทั้งหมดในหน้านี้เป็นของ MotorLab
-
-
-
+เก็บ copyright ของ Benjamin Vedder และผู้ร่วมพัฒนา รวมทั้ง [GPL-3.0-or-later](LICENSE) และ [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) ไม่อ้างการรับรองจากเจ้าของ engine เดิม โลโก้ Somboon Advance Technology เป็นไฟล์ที่ผู้ใช้จัดส่ง ไม่อ้างว่าเป็นงาน GPL ที่สร้างใหม่

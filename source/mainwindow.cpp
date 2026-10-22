@@ -36,6 +36,7 @@
 #include "utility.h"
 #include "widgets/paramdialog.h"
 #include "motorlabconfigwrite.h"
+#include "satproduct.h"
 
 namespace {
 void stepTowards(double &value, double goal, double step) {
@@ -167,6 +168,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionShutdown->setIcon(Utility::getIcon("icons/Shutdown-96.png"));
     ui->actionExit->setIcon(Utility::getIcon("icons/Shutdown-96.png"));
     ui->pageLabel->setPixmap(Utility::getIcon("logo.png"));
+    auto quickStart = new QAction("SAT quick start", this);
+    ui->menuHelp->insertAction(ui->actionVESCProjectForums, quickStart);
+    quickStart->setObjectName("actionSatQuickStart");
+    connect(quickStart, &QAction::triggered, this, [this]() {
+        QMessageBox::information(this, "SAT Motor Pilot quick start", SatProduct::quickStart());
+    });
     ui->actionReconnect->setIcon(Utility::getIcon("icons/Connected-96.png"));
     ui->actionDisconnect->setIcon(Utility::getIcon("icons/Disconnected-96.png"));
     ui->actionReadMcconf->setIcon(Utility::getIcon("icons/motor_up.png"));
@@ -565,7 +572,7 @@ MainWindow::MainWindow(QWidget *parent) :
     updateAppToUse();
 
     ui->leftSplitter->setSizes(QList<int>({1000, 80}));
-    mPageDebugPrint->printConsole("VESC® Tool " + mVersion + " started<br>");
+    mPageDebugPrint->printConsole("SAT Motor Pilot " + mVersion + " started<br>");
 
     setAcceptDrops(true);
 }
@@ -698,7 +705,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
                     this,
                     tr("Unsaved LispBM Tabs"),
                     tr("There are unsaved LispBM tabs open. Do you want to close "
-                       "VESC Tool without saving them?"),
+                       "SAT Motor Pilot without saving them?"),
                     QMessageBox::Yes | QMessageBox::Cancel
                     );
 
@@ -712,7 +719,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
                     this,
                     tr("Unsaved Qml-Tabs"),
                     tr("There are unsaved Qml-tabs open. Do you want to close "
-                       "VESC Tool without saving them?"),
+                       "SAT Motor Pilot without saving them?"),
                     QMessageBox::Yes | QMessageBox::Cancel
                     );
 
@@ -971,14 +978,14 @@ void MainWindow::timerSlot()
         if (!mSettings.value("intro_done").toBool()) {
             QMessageBox::critical(this,
                                   tr("Warning"),
-                                  tr("You have not finished the VESC Tool introduction. You must do that "
-                                     "in order to use VESC Tool."));
+                                  tr("You have not finished the SAT Motor Pilot introduction. You must do that "
+                                     "in order to use SAT Motor Pilot."));
             QCoreApplication::quit();
         }
 
         has_run_start_checks = true;
         checkUdev();
-        Utility::checkVersion(mVesc);
+        // SAT application builds are checked manually from Help / Project and builds.
     }
 }
 
@@ -1298,7 +1305,7 @@ void MainWindow::on_actionLaunchMobileTool_triggered()
 
 void MainWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(this, "MotorLab", Utility::aboutText());
+    QMessageBox::about(this, "SAT Motor Pilot", Utility::aboutText());
 }
 
 void MainWindow::on_actionLibrariesUsed_triggered()
@@ -1428,9 +1435,10 @@ void MainWindow::reloadPages()
 
     mPageWelcome = new PageWelcome(this);
     mPageWelcome->setVesc(mVesc);
+    connect(mPageWelcome, &PageWelcome::openWorkspace, this, [this](const QString &name) { showPage(name); });
     ui->pageWidget->addWidget(mPageWelcome);
     QString theme = Utility::getThemePath();
-    addPageItem(tr("Welcome & Wizards"),  theme + "icons/Home-96.png", "", true);
+    addPageItem(tr("SAT Workspace"),  theme + "icons/Home-96.png", "", true);
     connect(ui->actionAutoSetupFOC, SIGNAL(triggered(bool)),
             mPageWelcome, SLOT(startSetupWizardFocQml()));
     connect(ui->actionMotorSetupWizard, SIGNAL(triggered(bool)),
@@ -2020,7 +2028,7 @@ void MainWindow::on_actionWarrantyStatement_triggered()
 
 void MainWindow::on_actionVESCToolChangelog_triggered()
 {
-    HelpDialog::showHelp(this, "VESC® Tool Changelog", Utility::vescToolChangeLog());
+    HelpDialog::showHelp(this, "SAT Motor Pilot Changelog", Utility::vescToolChangeLog());
 }
 
 void MainWindow::on_actionFirmwareChangelog_triggered()
@@ -2030,12 +2038,12 @@ void MainWindow::on_actionFirmwareChangelog_triggered()
 
 void MainWindow::on_actionVESCProjectForums_triggered()
 {
-    QDesktopServices::openUrl(QUrl("http://vesc-project.com/forum"));
+    QDesktopServices::openUrl(QUrl("https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot"));
 }
 
 void MainWindow::on_actionVESC_Discord_triggered()
 {
-    QDesktopServices::openUrl(QUrl("https://discord.gg/JgvV5NwYts"));
+    QDesktopServices::openUrl(QUrl("https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot/issues"));
 }
 
 void MainWindow::on_actionLicense_triggered()
@@ -2092,7 +2100,7 @@ void MainWindow::on_actionClearConfigurationBackups_triggered()
     reply = QMessageBox::warning(this,
                                  tr("Warning"),
                                  tr("This is going to remove all configuration backups for "
-                                    "this instance of VESC Tool. Continue?"),
+                                    "this instance of SAT Motor Pilot. Continue?"),
                                  QMessageBox::Yes | QMessageBox::Cancel);
 
     if (reply == QMessageBox::Yes) {

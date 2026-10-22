@@ -497,7 +497,7 @@ Item {
                                 text: "Help"
                                 onTriggered: {
                                     VescIf.emitMessageDialog(
-                                                "VESC LispBM Editor",
+                                                "controller LispBM Editor",
                                                 "For documentation, see:<br>" +
                                                 "<a href=\"https://github.com/vedderb/bldc/blob/master/lispBM/README.md\">" +
                                                 "https://github.com/vedderb/bldc/blob/master/lispBM/README.md</a>",

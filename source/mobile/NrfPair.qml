@@ -136,9 +136,9 @@ Item {
                 }
 
                 VescIf.emitMessageDialog(
-                            "VESC Remote Pairing",
+                            "Remote Control Pairing",
                             "No response received. This most likely means that the " +
-                            "hardware you are using is not capable of VESC Remote pairing " +
+                            "hardware you are using is not capable of Remote Control pairing " +
                             "or that something is not plugged in properly.",
                             true, false)
             }
@@ -161,7 +161,7 @@ Item {
                 pairOngoing = false
                 VescIf.emitStatusMessage("Pairing Sucessful", true)
                 VescIf.emitMessageDialog(
-                            "VESC Remote Pairing",
+                            "Remote Control Pairing",
                             "Pairing was successful.",
                             true, false)
                 break;
@@ -173,11 +173,11 @@ Item {
                 pairOngoing = false
                 VescIf.emitStatusMessage("Pairing NRF Timed Out", false)
                 VescIf.emitMessageDialog(
-                            "VESC Remote Pairing",
-                            "Pairing timed out. Make sure to put your device (e.g. VESC Wand) " +
+                            "Remote Control Pairing",
+                            "Pairing timed out. Make sure to put your device (e.g. controller Wand) " +
                             "in pairing mode before the time runs out." +
                             "<br><br>" +
-                            "To put a VESC-compatible Remote in " +
+                            "To put a controller-compatible Remote in " +
                             "pairing mode, just switch it on using any of the buttons. Then it " +
                             "will enter pairing mode if it was switched off previously.",
                             false, false)

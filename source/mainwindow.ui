@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MotorLab</string>
+   <string>SAT Motor Pilot</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -842,7 +842,7 @@
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About MotorLab</string>
+    <string>About SAT Motor Pilot</string>
    </property>
   </action>
   <action name="actionKeyboardControl">
@@ -1006,7 +1006,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionVESCToolChangelog">
    <property name="text">
-    <string>VESC Tool Changelog</string>
+    <string>SAT Motor Pilot Changelog</string>
    </property>
   </action>
   <action name="actionTerminalDRVResetLatchedFaults">
@@ -1016,7 +1016,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionVESCProjectForums">
    <property name="text">
-    <string>VESC Project Forums</string>
+    <string>Project and builds</string>
    </property>
   </action>
   <action name="actionFirmwareChangelog">
@@ -1161,7 +1161,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionVESC_Discord">
    <property name="text">
-    <string>VESC Discord</string>
+    <string>Report an issue</string>
    </property>
   </action>
   <action name="actionRemoveDownloadedConfigs">

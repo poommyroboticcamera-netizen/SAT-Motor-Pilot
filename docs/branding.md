@@ -1,3 +1,8 @@
+# Current product identity: SAT Motor Pilot 0.2.0
+
+As of 2026-10-23, the active company product is SAT Motor Pilot, by user request. App identity is Somboon.SATMotorPilot; Qt organization SomboonAdvanceTechnology, domain satmotorpilot.local, application SAT Motor Pilot. SAT Workspace, first-run pages, manual and application builds are owned product surfaces. MotorLab below records preliminary design history only. Current artwork is user-supplied Somboon branding; see COMPANY_PRODUCT.md and notices.
+
+---
 # MotorLab product identity
 
 MotorLab is a modified build of VESC Tool 7.00, pinned to upstream commit `01d5f10901116c311e3fb84d5a1541f663d3ce20`.

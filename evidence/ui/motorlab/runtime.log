@@ -13,6 +13,12 @@ qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for pro
 qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
 qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
 qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
+qrc:/mobile/ConnectScreen.qml:834:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/mobile/Profiles.qml:91:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/res/qml/WelcomeQmlPanel.qml:118:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/mobile/SetupWizardFoc.qml:827:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/mobile/SetupWizardFoc.qml:768:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/mobile/SetupWizardFoc.qml:726:5: QML Dialog: Binding loop detected for property "implicitHeight"
 Could not load package archive resource. Please update the archive in order to use VESC packages.
 QFSFileEngine::open: No file name specified
 QFSFileEngine::open: No file name specified

@@ -752,9 +752,9 @@ Item {
             if (fwItems.rowCount() === 0) {
                 VescIf.emitMessageDialog(
                             "Upload Error",
-                            "This version of VESC Tool does not include any firmware " +
+                            "This version of SAT Motor Pilot does not include any firmware " +
                             "for your hardware version. You can either " +
-                            "upload a custom file or look for a later version of VESC " +
+                            "upload a custom file or look for a later version of controller " +
                             "Tool that might support your hardware.",
                             false)
                 return;
@@ -765,7 +765,7 @@ Item {
 
                 if (VescIf.getFwSupportsConfiguration()) {
                     msg += "\n\n" +
-                            "Uploading new firmware will clear all settings in the VESC firmware. You can make " +
+                            "Uploading new firmware will clear all settings in the controller firmware. You can make " +
                             "a backup of the settings from the connection page and restore them after the " +
                             "update if you'd like (if you haven't done the backup already). " +
                             "Do you want to continue with the update, or cancel and do the backup first?"
@@ -806,7 +806,7 @@ Item {
             if (blItems.rowCount() === 0) {
                 VescIf.emitMessageDialog(
                             "Upload Error",
-                            "This version of VESC Tool does not include any bootloader " +
+                            "This version of SAT Motor Pilot does not include any bootloader " +
                             "for your hardware version.",
                             false)
                 return;
@@ -828,7 +828,7 @@ Item {
             if (archFwItems.rowCount() === 0) {
                 VescIf.emitMessageDialog(
                             "Upload Error",
-                            "This version of VESC Tool does not include the selected firmware " +
+                            "This version of SAT Motor Pilot does not include the selected firmware " +
                             "for your hardware version. You can try to update the archive and see " +
                             "if it has been added since your last update.",
                             false)

@@ -40,7 +40,7 @@
         </sizepolicy>
        </property>
        <property name="toolTip">
-        <string>Send help command to VESC</string>
+        <string>Send help command to controller</string>
        </property>
        <property name="text">
         <string/>

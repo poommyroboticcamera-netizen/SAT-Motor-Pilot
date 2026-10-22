@@ -58,7 +58,7 @@ Item {
             color: "White"
             horizontalAlignment: Text.AlignHCenter
             font.pointSize: 20
-            text: "MMX VESC UI"
+            text: "MMX controller UI"
         }
         
         GridLayout {

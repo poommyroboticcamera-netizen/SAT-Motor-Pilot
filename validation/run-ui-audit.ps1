@@ -1,4 +1,4 @@
-param([string]$Executable = "$PSScriptRoot/../dist/MotorLab/MotorLab.exe", [string]$Output = "$PSScriptRoot/../evidence/ui/motorlab")
+param([string]$Executable = "$PSScriptRoot/../dist/SATMotorPilot/SATMotorPilot.exe", [string]$Output = "$PSScriptRoot/../evidence/ui/motorlab")
 $ErrorActionPreference = 'Stop'
 $Executable = (Resolve-Path $Executable).Path
 $Output = [IO.Path]::GetFullPath($Output)
@@ -16,6 +16,7 @@ try {
     if ($run.ExitCode -ne 0) { throw "Audit exited $($run.ExitCode)" }
     $report = Get-Content "$Output/runtime-audit.json" -Raw | ConvertFrom-Json
     if (!$report.interfaceFound -or $report.pages.Count -lt 1 -or @($report.configurationRoundtrips | Where-Object { !$_.pass }).Count) { throw 'Audit incomplete or local persistence failed' }
+    if ($report.applicationName -eq 'SAT Motor Pilot' -and (@($report.workspaceNavigation).Count -ne 4 -or @($report.workspaceNavigation | Where-Object { !$_.pass }).Count -ne 0)) { throw 'SAT workspace navigation failed; inspect runtime-audit.json' }
     @{exitCode=$run.ExitCode;platform=$report.platform;qtVersion=$report.qtVersion;pageCount=$report.pages.Count;pathPolicy='Windows system directories only';transport='audit blocks physical packets';companyTheme='#304B8A'} | ConvertTo-Json | Set-Content "$Output/launch.json"
     Write-Host "Audited $($report.pages.Count) disconnected pages; local XML checks passed."
 } finally {

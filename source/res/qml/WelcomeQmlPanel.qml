@@ -50,7 +50,7 @@ Item {
     function nrfQuickPair() {
         if (!VescIf.isPortConnected()) {
             VescIf.emitMessageDialog("NRF Quick Pair",
-                                     "You are not connected to the VESC. Please connect in order " +
+                                     "You are not connected to the controller. Please connect in order " +
                                      "to quick pair an NRF-based remote.", false, false)
         } else {
             nrfPairStartDialog.open()
@@ -60,7 +60,7 @@ Item {
     function dirSetup() {
         if (!VescIf.isPortConnected()) {
             VescIf.emitMessageDialog("Directions",
-                                     "You are not connected to the VESC. Please connect in order " +
+                                     "You are not connected to the controller. Please connect in order " +
                                      "to map directions.", false, false)
         } else {
             enabled = false
@@ -81,7 +81,7 @@ Item {
     function openBleSetup() {
         if (!VescIf.isPortConnected()) {
             VescIf.emitMessageDialog("BLE Setup",
-                                     "You are not connected to the VESC.", false, false)
+                                     "You are not connected to the controller.", false, false)
         } else {
             if (VescIf.getLastFwRxParams().nrfNameSupported &&
                     VescIf.getLastFwRxParams().nrfPinSupported) {
@@ -436,7 +436,7 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "After clicking OK the VESC will be put in pairing mode for 10 seconds. Switch" +
+                "After clicking OK the controller will be put in pairing mode for 10 seconds. Switch" +
                 "on your remote during this time to complete the pairing process."
         }
 
@@ -475,8 +475,8 @@ Item {
                 wrapMode: Text.WordWrap
                 text:
                     "The hardware you are connecting to contains code that will alter the " +
-                    "user interface of VESC Tool. This code has not been verified by the " +
-                    "authors of VESC Tool and could contain bugs and security problems. \n\n" +
+                    "user interface of SAT Motor Pilot. This code has not been verified by the " +
+                    "authors of SAT Motor Pilot and could contain bugs and security problems. \n\n" +
                     "Do you want to load this custom user interface?"
             }
 

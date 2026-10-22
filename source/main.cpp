@@ -19,6 +19,7 @@
 
 #include "mainwindow.h"
 #include "motorlabaudit.h"
+#include "satproduct.h"
 #include "boardsetupwindow.h"
 #include "mobile/qmlui.h"
 #include "mobile/fwhelper.h"
@@ -82,10 +83,10 @@ static void showHelp()
     qDebug() << "Arguments";
     qDebug() << "-h, --help : Show help text";
     qDebug() << "--about : Show about text";
-    qDebug() << "--version : Show VESC Tool version information on one line";
+    qDebug() << "--version : Show SAT Motor Pilot version information on one line";
     qDebug() << "--tcpServer [port] : Connect to VESC and start TCP server on [port]";
-    qDebug() << "--loadQml [file] : Load QML UI from file instead of the regular VESC Tool UI";
-    qDebug() << "--loadQmlVesc : Load QML UI from the connected VESC instead of the regular VESC Tool UI";
+    qDebug() << "--loadQml [file] : Load QML UI from file instead of the regular SAT Motor Pilot UI";
+    qDebug() << "--loadQmlVesc : Load QML UI from the connected VESC instead of the regular SAT Motor Pilot UI";
     qDebug() << "--qmlAutoConn : Connect over USB before loading the QML UI";
     qDebug() << "--qmlFullscreen : Run QML UI in fullscreen mode";
     qDebug() << "--qmlOtherScreen : Run QML UI on other screen";
@@ -169,9 +170,9 @@ static void addFonts() {
 int main(int argc, char *argv[])
 {
     // Settings
-    QCoreApplication::setOrganizationName("MotorLab");
-    QCoreApplication::setOrganizationDomain("motorlab.local");
-    QCoreApplication::setApplicationName("MotorLab");
+    QCoreApplication::setOrganizationName("SomboonAdvanceTechnology");
+    QCoreApplication::setOrganizationDomain("satmotorpilot.local");
+    QCoreApplication::setApplicationName("SAT Motor Pilot");
 #ifdef Q_OS_WIN
     // MotorLab owns a separate Windows taskbar identity. Resolve dynamically.
     HMODULE shellModule = LoadLibraryW(L"shell32.dll");
@@ -179,7 +180,7 @@ int main(int argc, char *argv[])
         typedef HRESULT (WINAPI *SetAppId)(PCWSTR);
         SetAppId setAppId = reinterpret_cast<SetAppId>(
                     GetProcAddress(shellModule, "SetCurrentProcessExplicitAppUserModelID"));
-        if (setAppId) setAppId(L"MotorLab.Desktop");
+        if (setAppId) setAppId(L"Somboon.SATMotorPilot");
         FreeLibrary(shellModule);
     }
 #endif
@@ -194,6 +195,7 @@ int main(int argc, char *argv[])
         auditIntro.setValue("introVersion", 1);
         auditIntro.sync();
     }
+    SatProduct::PresentationTranslator satTranslator;
     QSettings set;
     bool isDark = set.value("darkMode", true).toBool();
     Utility::setDarkMode(isDark);
@@ -1056,6 +1058,7 @@ int main(int argc, char *argv[])
 #ifdef USE_MOBILE
     QApplication *a = new QApplication(argc, argv);
     app = a;
+        app->installTranslator(&satTranslator);
 
     addFonts();
 
@@ -1620,6 +1623,7 @@ int main(int argc, char *argv[])
     } else {
         QApplication *a = new QApplication(argc, argv);
         app = a;
+        app->installTranslator(&satTranslator);
 
         addFonts();
 

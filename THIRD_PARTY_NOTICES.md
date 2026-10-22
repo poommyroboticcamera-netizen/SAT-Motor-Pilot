@@ -35,3 +35,6 @@ The neutral desktop resource collection uses the new MotorLab application icon a
 
 ## Company artwork supplied by user
 Active application branding uses the user-provided Somboon Advance Technology image, stored unchanged as source/res/motorlab/somboon-user-supplied.png. Its use was expressly requested by the user. No ownership, GPL relicensing or independent trademark clearance is asserted. Previous original geometric artwork remains only as historical project material. Qt LGPLv3 and GPLv3 texts retained under licenses/; the local trial deploys matching Qt 5.15.2 DLLs dynamically. Public binary distribution remains pending the documented resource review.
+
+## SAT Motor Pilot 0.2.0 company product
+The active product is SAT Motor Pilot. Earlier MotorLab references in this inventory describe preliminary history only. Product UI, onboarding, help, app identity and distribution are company-specific; the GPL-derived compatibility engine keeps all existing copyright notices. The logo remains user-supplied company artwork, without a claim of GPL relicensing. See docs/COMPANY_PRODUCT.md for boundaries.

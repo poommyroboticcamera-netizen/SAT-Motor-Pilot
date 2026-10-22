@@ -104,13 +104,13 @@ Item {
                         Layout.preferredWidth: 500
                         Layout.preferredHeight: 80
 
-                        buttonText: "VESC\nRemote\nQuick Pair"
+                        buttonText: "controller\nRemote\nQuick Pair"
                         imageSrc: "qrc" + Utility.getThemePath() + "icons/icons8-fantasy-96.png"
 
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
                                 VescIf.emitMessageDialog("Quick Pair",
-                                                         "You are not connected to the VESC. Please connect in order " +
+                                                         "You are not connected to the controller. Please connect in order " +
                                                          "to quick pair an NRF-based remote.", false, false)
                             } else {
                                 nrfPairStartDialog.open()
@@ -130,7 +130,7 @@ Item {
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
                                 VescIf.emitMessageDialog("FOC Setup Wizard",
-                                                         "You are not connected to the VESC. Please connect in order " +
+                                                         "You are not connected to the controller. Please connect in order " +
                                                          "to run this wizard.", false, false)
                             } else {
                                 wizardFoc.openDialog()
@@ -150,7 +150,7 @@ Item {
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
                                 VescIf.emitMessageDialog("Input Setup Wizard",
-                                                         "You are not connected to the VESC. Please connect in order " +
+                                                         "You are not connected to the controller. Please connect in order " +
                                                          "to run this wizard.", false, false)
                             } else {
                                 // Something in the opendialog function causes a weird glitch, probably
@@ -175,7 +175,7 @@ Item {
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
                                 VescIf.emitMessageDialog("IMU Setup Wizard",
-                                                         "You are not connected to the VESC. Please connect in order " +
+                                                         "You are not connected to the controller. Please connect in order " +
                                                          "to run this wizard.", false, false)
                             } else {
                                 wizardIMU.openDialog()
@@ -240,7 +240,7 @@ Item {
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
                                 VescIf.emitMessageDialog("Directions",
-                                                         "You are not connected to the VESC. Please connect in order " +
+                                                         "You are not connected to the controller. Please connect in order " +
                                                          "to map directions.", false, false)
                             } else {
                                 enabled = false
@@ -474,7 +474,7 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "After clicking OK the VESC will be put in pairing mode for 10 seconds. Switch" +
+                "After clicking OK the controller will be put in pairing mode for 10 seconds. Switch" +
                 "on your remote during this time to complete the pairing process."
         }
 
@@ -508,9 +508,9 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "This will backup the configuration of the connected VESC, as well as for the VESCs " +
-                "connected over CAN-bus. The configurations are stored by VESC UUID. If a backup for a " +
-                "VESC UUID already exists it will be overwritten. Continue?"
+                "This will backup the configuration of the connected controller, as well as for the controllers " +
+                "connected over CAN-bus. The configurations are stored by controller UUID. If a backup for a " +
+                "controller UUID already exists it will be overwritten. Continue?"
         }
 
         onAccepted: {
@@ -552,9 +552,9 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "This will restore the configuration of the connected VESC, as well as the VESCs connected over CAN bus " +
-                "if a backup exists for their UUID in this instance of VESC Tool. If no backup is found for the UUID of " +
-                "the VESCs nothing will be changed. Continue?"
+                "This will restore the configuration of the connected controller, as well as the controllers connected over CAN bus " +
+                "if a backup exists for their UUID in this instance of SAT Motor Pilot. If no backup is found for the UUID of " +
+                "the controllers nothing will be changed. Continue?"
         }
 
         onAccepted: {

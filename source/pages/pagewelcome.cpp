@@ -29,6 +29,11 @@
 #include <QSettings>
 #include <QmlHighlighter>
 #include <QQuickItem>
+#include <QTimer>
+#include <QFrame>
+#include <QGridLayout>
+#include <QPushButton>
+#include <QLabel>
 
 PageWelcome::PageWelcome(QWidget *parent) :
     QWidget(parent),
@@ -48,7 +53,62 @@ PageWelcome::PageWelcome(QWidget *parent) :
 
     layout()->setContentsMargins(0, 0, 0, 0);
     mVesc = nullptr;
-    ui->bgWidget->setPixmap(QPixmap("://res/bg.png"));
+    ui->bgWidget->setPixmap(QPixmap());
+    ui->label->hide();
+    auto dashboard = new QFrame(this);
+    dashboard->setObjectName("satCommissioningWorkspace");
+    dashboard->setStyleSheet("QFrame#satCommissioningWorkspace {background:#18243a;border:1px solid #304b8a;border-radius:12px;} "
+                            "QPushButton {padding:10px;background:#304b8a;color:white;border-radius:5px;} "
+                            "QPushButton:hover {background:#3d63ae;}");
+    auto grid = new QGridLayout(dashboard);
+    grid->setContentsMargins(20,18,20,18);
+    auto title = new QLabel("<span style='font-size:23pt;font-weight:600;color:#ffffff'>SAT Motor Pilot</span>", dashboard);
+    auto subtitle = new QLabel("SOMBOON ADVANCE TECHNOLOGY  /  MOTOR COMMISSIONING", dashboard);
+    subtitle->setWordWrap(true);
+    subtitle->setStyleSheet("color:#71b9e8;font-size:10pt;");
+    auto guidance = new QLabel("Connect and identify your controller. Read its existing configuration before editing. "
+                               "Use the workspace below to configure, verify and measure.", dashboard);
+    guidance->setWordWrap(true);
+    auto target = new QLabel("No controller connected", dashboard);
+    target->setObjectName("satTargetStatus");
+    target->setWordWrap(true);
+    target->setStyleSheet("padding:8px;color:#b8d9f3;");
+    grid->addWidget(title,0,0,1,2);
+    grid->addWidget(subtitle,1,0,1,2);
+    grid->addWidget(guidance,2,0,1,2);
+    grid->addWidget(target,3,0,1,2);
+    const QList<QPair<QString,QString>> destinations = {
+        {"1  Connection", "Connection"}, {"2  Motor configuration", "Motor Settings"},
+        {"3  Application configuration", "App Settings"}, {"4  Live measurements", "Realtime Data"}};
+    int index = 0;
+    for (const auto &destination : destinations) {
+        auto button = new QPushButton(destination.first, dashboard);
+        button->setObjectName(QString("satWorkspace%1").arg(index));
+        const QString name = destination.second;
+        connect(button, &QPushButton::clicked, this, [this,name]() { emit openWorkspace(name); });
+        grid->addWidget(button,4+index/2,index%2);
+        ++index;
+    }
+    ui->verticalLayout->insertWidget(0,dashboard);
+    ui->qmlWidget->setMinimumWidth(280);
+    ui->splitter->setStretchFactor(0, 3);
+    ui->splitter->setStretchFactor(1, 1);
+    ui->splitter->setSizes(QList<int>{690,300});
+    auto statusTimer = new QTimer(this);
+    statusTimer->setInterval(500);
+    connect(statusTimer, &QTimer::timeout, this, [this,target]() {
+        if (!mVesc || !mVesc->isPortConnected()) {
+            target->setText("DISCONNECTED  |  No controller readings. Select Connection to begin.");
+        } else if (!mVesc->fwRx()) {
+            target->setText("CONNECTED  |  Waiting for firmware and controller identity.");
+        } else {
+            const auto fw = mVesc->getLastFwRxParams();
+            const QString can = mVesc->commands()->getSendCan() ? QString::number(mVesc->commands()->getCanSendId()) : "local";
+            target->setText(QString("TARGET  %1  |  FW %2.%3  |  CAN %4\nUUID %5")
+                .arg(mVesc->getConnectedPortName()).arg(fw.major).arg(fw.minor,2,10,QChar('0')).arg(can,mVesc->getConnectedUuid()));
+        }
+    });
+    statusTimer->start();
 
     connect(ui->wizardFocSimpleButton, &QPushButton::clicked, [this]() {
         QMetaObject::invokeMethod(ui->qmlWidget->rootObject(), "setupMotors");

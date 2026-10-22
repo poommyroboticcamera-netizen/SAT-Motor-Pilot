@@ -150,10 +150,10 @@ void TcpHub::newTcpHubConnection()
                     });
 
                     connect(v->vescToolSocket, &QTcpSocket::disconnected, [uuid]() {
-                        qDebug() << "VESC Tool disconnected from" << uuid;
+                        qDebug() << "SAT Motor Pilot disconnected from" << uuid;
                     });
 
-                    qDebug() << "VESC Tool connected to" << uuid;
+                    qDebug() << "SAT Motor Pilot connected to" << uuid;
 
                     return;
                 } else {

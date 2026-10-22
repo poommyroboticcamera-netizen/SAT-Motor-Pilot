@@ -30,7 +30,7 @@ ApplicationWindow {
     visibility: Window.Windowed
     width: 1920
     height: 1080
-    title: qsTr("VESC Custom GUI")
+    title: qsTr("controller Custom GUI")
 
     // Full screen iPhone X workaround:
     property int notchLeft: 0
