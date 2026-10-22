@@ -26,6 +26,8 @@ try {
     "[Paths]`nPlugins=.`nQml2Imports=qml" | Set-Content "$PSScriptRoot/dist/MotorLab/qt.conf"
     Copy-Item "$compiler/libgcc_s_seh-1.dll", "$compiler/libstdc++-6.dll", "$compiler/libwinpthread-1.dll" "$PSScriptRoot/dist/MotorLab" -Force
     Copy-Item "$PSScriptRoot/LICENSE", "$PSScriptRoot/THIRD_PARTY_NOTICES.md" "$PSScriptRoot/dist/MotorLab" -Force
+    Copy-Item "$PSScriptRoot/TRIAL_README.md" "$PSScriptRoot/dist/MotorLab/README.md" -Force
+    if (Test-Path "$PSScriptRoot/licenses") { Copy-Item "$PSScriptRoot/licenses" "$PSScriptRoot/dist/MotorLab" -Recurse -Force }
     Get-FileHash "$PSScriptRoot/dist/MotorLab/MotorLab.exe" | ConvertTo-Json | Set-Content "$PSScriptRoot/evidence/build-executable-sha256.json"
     Write-Host "Built $PSScriptRoot/dist/MotorLab/MotorLab.exe"
 } finally { Pop-Location }

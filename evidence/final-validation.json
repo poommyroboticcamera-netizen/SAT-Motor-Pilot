@@ -1,0 +1,14 @@
+{
+  "protocolFailed": 0,
+  "renderedPages": 33,
+  "localXmlMotorPass": true,
+  "protocolPassed": 11,
+  "cleanBuild": true,
+  "whitespaceScope": "source/docs/scripts; generated raw logs excluded",
+  "compilerInvocations": 286,
+  "appLaunchExitCode": 0,
+  "buildExitCode": 0,
+  "localXmlAppPass": true,
+  "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
+  "physicalHardwareTests": "not run"
+}

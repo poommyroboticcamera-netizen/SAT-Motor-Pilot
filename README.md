@@ -113,6 +113,9 @@ script ใช้ Qt จาก `tooling/Qt` ตามค่า default หรื�
 
 ## การตรวจสอบและหลักฐาน
 
+ธีมบริษัทใช้โลโก้ **Somboon Advance Technology** ที่ผู้ใช้จัดส่ง และสีน้ำเงิน **#304B8A** ดู [ภาพเทียบก่อน/หลัง](evidence/ui/comparison/side-by-side-000.png), [UI comparison](docs/UI_COMPARISON.md), [ขั้นตอน Write ที่เพิ่ม](docs/CONFIGURATION_WRITE_SAFETY.md) และ [ผล REA](docs/REA_FINDINGS.md)
+
+
 | การตรวจ | ผลที่มีหลักฐาน | ไฟล์ |
 |:--|:--|:--|
 | Original packet/serializer tests | **11 passed, 0 failed, 0 skipped**; 9 test methods และ init/cleanup | [ผลข้อความ](validation/results/protocol-tests.txt), [JUnit XML](validation/results/protocol-tests.junit.xml) |

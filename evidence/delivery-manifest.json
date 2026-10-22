@@ -1,0 +1,91 @@
+{
+  "product": "MotorLab 0.1.0 engineering preview",
+  "companyArtwork": "User supplied Somboon Advance Technology",
+  "upstreamAppCommit": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
+  "upstreamFirmwareCommit": "26af69484014b6771d02e68c22f4cb96645b5f22",
+  "buildSourceCommit": "13c1fd0585846339ccc34b133d30ca72c7cf6836",
+  "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
+  "protocolTests": {
+    "passed": 11,
+    "failed": 0,
+    "substantiveMethods": 9
+  },
+  "renderedDisconnectedPages": 33,
+  "localXmlChecks": [
+    {
+      "differenceCount": 0,
+      "differences": [],
+      "differencesBeforeLoad": 197,
+      "kind": "motor",
+      "loaded": true,
+      "parameterCount": 211,
+      "pass": true,
+      "saved": true,
+      "serializedBytes": 488,
+      "serializedBytesEqual": true,
+      "xmlStatus": "OK"
+    },
+    {
+      "differenceCount": 0,
+      "differences": [],
+      "differencesBeforeLoad": 117,
+      "kind": "application",
+      "loaded": true,
+      "parameterCount": 122,
+      "pass": true,
+      "saved": true,
+      "serializedBytes": 284,
+      "serializedBytesEqual": true,
+      "xmlStatus": "OK"
+    }
+  ],
+  "hardwareTesting": "NOT RUN; no controller access or actuation requested",
+  "acceptance": "OPEN; see docs/ACCEPTANCE_AND_KNOWN_ISSUES.md",
+  "files": [
+    {
+      "path": "dist/MotorLab/MotorLab.exe",
+      "bytes": 21193216,
+      "sha256": "4613d9c4f272528395ee6898fc93ab7119f605a3b4b0e4964e080a1144d56f84"
+    },
+    {
+      "path": "MotorLab-Windows-x64-trial.zip",
+      "bytes": 62800159,
+      "sha256": "ec95a2312387a2720ebe7ea851a44c40b1b1029a3299f80878ff882d8077fad0"
+    },
+    {
+      "path": "source/packet.cpp",
+      "bytes": 8892,
+      "sha256": "e78cc6f6cff726730d5c1fc457f51f5a33c584f94922d957eba67dfe42a88984"
+    },
+    {
+      "path": "source/vbytearray.cpp",
+      "bytes": 7953,
+      "sha256": "5ad58786900379706ff66cf21a044fa7b39b8dc64ecac934df54401e29e06149"
+    },
+    {
+      "path": "source/commands.cpp",
+      "bytes": 81077,
+      "sha256": "c063c498f9555c97feb824c58a14a52d082061254ee4fb479a9a7c477b9a518a"
+    },
+    {
+      "path": "source/configparams.cpp",
+      "bytes": 62074,
+      "sha256": "10480638eba97f2695343bd20d2f94f78ff1e763ba44363525df4dfde28949e6"
+    },
+    {
+      "path": "source/motorlabconfigwrite.h",
+      "bytes": 10947,
+      "sha256": "60a79b86c2c0b94f821eaecee81c970d885fef38a3e6c2c407af96de254b1613"
+    },
+    {
+      "path": "source/main.cpp",
+      "bytes": 68930,
+      "sha256": "ca5129f66a4bec04587602eec89c52d1f07b94116eed76811732ce56a497408b"
+    },
+    {
+      "path": "source/res/motorlab/somboon-user-supplied.png",
+      "bytes": 92550,
+      "sha256": "5a67af7797ca959a29fc1ed2c87eda27b7a2532d257368c4b0f09a9425832555"
+    }
+  ]
+}
