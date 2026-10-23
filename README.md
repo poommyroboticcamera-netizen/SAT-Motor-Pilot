@@ -146,4 +146,4 @@ SAT Motor Pilot พัฒนาต่อจาก VESC Tool stable **7.00** โ�
 
 Source reference: `01d5f10901116c311e3fb84d5a1541f663d3ce20` · Firmware reference: `26af69484014b6771d02e68c22f4cb96645b5f22`
 
-โลโก้ Somboon Advance Technology เป็นภาพที่ผู้ใช้จัดส่ง รุ่นนี้ใช้ภาพดัดแปลงพื้นโปร่งใสและเก็บต้นฉบับไว้ ดู [LICENSE](LICENSE) และ [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) สำหรับเครดิตและรายการ resource ที่ยังต้องตรวจสอบก่อนเผยแพร่ binary สาธารณะ
+โลโก้ Somboon Advance Technology เป็นภาพที่ผู้ใช้จัดส่ง รุ่นนี้ใช้ภาพดัดแปลงพื้นโปร่งใสและเก็บต้นฉบับไว้ ดู [LICENSE](LICENSE) และ [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) สำหรับเครดิตและรายการ resource/dependency ที่ยังต้องตรวจสอบ

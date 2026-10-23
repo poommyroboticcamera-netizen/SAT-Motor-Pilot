@@ -1,5 +1,5 @@
 {
-  "product": "SAT Motor Pilot 0.3.0",
+  "product": "SAT Motor Pilot 0.3.1",
   "checks": 15,
   "runtimePassed": 14,
   "failed": 0,

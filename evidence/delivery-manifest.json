@@ -1,9 +1,9 @@
 {
-  "product": "SAT Motor Pilot 0.3.0 engineering preview",
+  "product": "SAT Motor Pilot 0.3.1 engineering preview",
   "companyArtwork": "User supplied Somboon Advance Technology",
   "upstreamAppCommit": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
   "upstreamFirmwareCommit": "26af69484014b6771d02e68c22f4cb96645b5f22",
-  "buildSourceCommit": "51d1dd0d95da539a8dcc225370d32fdad5563088",
+  "buildSourceCommit": "8c53bbb9e280fb146b6978c9422def8947b6e203",
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
   "protocolTests": {
     "passed": 11,
@@ -44,13 +44,13 @@
   "files": [
     {
       "path": "dist/SATMotorPilot/SATMotorPilot.exe",
-      "bytes": 22180352,
-      "sha256": "e60a51a39223146287b6558a7459c7f9238503e22bb5c8a20a0ef62ef1c0e387"
+      "bytes": 22181376,
+      "sha256": "e4a66d929204369066d0daaccb946b4aade0df7d2c8480fce11f6979f4932e18"
     },
     {
       "path": "SAT-Motor-Pilot-Windows-x64.zip",
-      "bytes": 61968552,
-      "sha256": "8097db5df220351dd8e4ec8d7185587b8979b9e85370b1732a93566a142c407a"
+      "bytes": 61983896,
+      "sha256": "e529307b8b4add78dd43fce4a6b1653c15b36b05e0f95e56bfa989d7db8f6009"
     },
     {
       "path": "source/packet.cpp",
@@ -90,7 +90,7 @@
     {
       "path": "source/satstartup.h",
       "bytes": 4925,
-      "sha256": "52a853d27a6e03da268ba0eb4ba755445dfb4896a522694a5031bf15fe915622"
+      "sha256": "630d44789f5ace3aee7952945866dbe30f440ac50b5ae13ce0cbe4e1fa7fe04f"
     },
     {
       "path": "source/sattypography.h",

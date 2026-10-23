@@ -12011,194 +12011,194 @@
     "qtVersion": "5.15.2",
     "scope": "Disconnected UI rendering and local configuration persistence only; no hardware validation",
     "startupAnimation": {
-        "durationMs": 1624,
+        "durationMs": 1653,
         "hardwareActions": 0,
-        "paintedFrames": 67,
+        "paintedFrames": 68,
         "samples": [
             {
-                "elapsedMs": 196,
+                "elapsedMs": 222,
                 "path": "startup/frame-000.png",
-                "pixelSha256": "e47921c48241f416bef45d70ec0e02c16b538d96e48348c3a308c2e6ce5ebea8",
+                "pixelSha256": "191a2a1c1a8ef16e415a3ad1b89502f31c5183573de5f55f1a92b8cfd4864029",
                 "saved": true
             },
             {
-                "elapsedMs": 242,
+                "elapsedMs": 283,
                 "path": "startup/frame-001.png",
-                "pixelSha256": "0d886f4553acf11c0e9e6f3229325f48477ba93d0a070c92819e4a4c1897a38a",
+                "pixelSha256": "2c95752a3e530de76cebd5fed08c1c1ec799366f65ff8a4c42e5e82a02cd1a2c",
                 "saved": true
             },
             {
-                "elapsedMs": 287,
+                "elapsedMs": 329,
                 "path": "startup/frame-002.png",
-                "pixelSha256": "85793a2d84455225468ef5dd26bc8a9b624ba01f640a504ef183df9e7bd38653",
+                "pixelSha256": "2d3cc0533d35247ead6dd2fdf7af7700996f985e4f016852be8db775247795b3",
                 "saved": true
             },
             {
-                "elapsedMs": 333,
+                "elapsedMs": 375,
                 "path": "startup/frame-003.png",
-                "pixelSha256": "d71955c2e7dd982211fe502bfe53355db2afd08c9acbdcd85f75e634e0d772fa",
+                "pixelSha256": "3b20ce9c3c94bbb44500a91450eba29ca5b82a1eb173871d86f4e6adf25ede25",
                 "saved": true
             },
             {
-                "elapsedMs": 379,
+                "elapsedMs": 420,
                 "path": "startup/frame-004.png",
-                "pixelSha256": "ff28534b7b607e693b89c1d796503fd7583d425566e89c3a899557de21a5fd90",
+                "pixelSha256": "0ebafa87d2c21b14616a5f20f3f71e8b1aa256ba24a0c5dcb6a5663e43efff3a",
                 "saved": true
             },
             {
-                "elapsedMs": 425,
+                "elapsedMs": 466,
                 "path": "startup/frame-005.png",
-                "pixelSha256": "b5197ae0fd30adc33b7e41bcf1bebd2f6263b72719959b784b1c3bd7f7e0a3b0",
+                "pixelSha256": "1d5980885dccef9fb67baef87dd6155d9a5878f51c9c2ee1b3efee66fdc771af",
                 "saved": true
             },
             {
-                "elapsedMs": 471,
+                "elapsedMs": 512,
                 "path": "startup/frame-006.png",
-                "pixelSha256": "9832e7d31973b9a91493084ce78ccdaefa4d1743ce445d878daea572cd1d2847",
+                "pixelSha256": "cf0a3c807fce48514a98a12e6f23e781fac218a86c2e3aed25f11e49c4e74923",
                 "saved": true
             },
             {
-                "elapsedMs": 517,
+                "elapsedMs": 559,
                 "path": "startup/frame-007.png",
-                "pixelSha256": "926833764d16489a9a9a249e36c8de9470d34b7cf8d92776e870d908de662962",
+                "pixelSha256": "1c13be51763282c4c3ce2738e315fb3533d1dcd62cd137725f00d70a4d6f6fc2",
                 "saved": true
             },
             {
-                "elapsedMs": 563,
+                "elapsedMs": 604,
                 "path": "startup/frame-008.png",
-                "pixelSha256": "8caa7c7cb0d76e56be2ec3cc8490bd2ea39d7ba99c6e6a57afeb4a7d57329b71",
+                "pixelSha256": "930f9666dfdc13809c76ab59247734c6f92918ee6c4eebe466949682edc1dab2",
                 "saved": true
             },
             {
-                "elapsedMs": 608,
+                "elapsedMs": 651,
                 "path": "startup/frame-009.png",
-                "pixelSha256": "3312d58c3f13508f1a4d600e4480ee1705b6e8e22075f3841c2838770f36bab1",
+                "pixelSha256": "6da5e0da3c4b6cca417bd64535dca539402f5f4c4834631bd44a11e7594a24ec",
                 "saved": true
             },
             {
-                "elapsedMs": 654,
+                "elapsedMs": 696,
                 "path": "startup/frame-010.png",
-                "pixelSha256": "06772710f04761a31fd8a3ca96763b9f7279c1d81875d04ee5b1248d166d6413",
+                "pixelSha256": "4cf7624be465b2b12978d7814d0c9aaabb2e2c3d5175c56468cef752df8fa12a",
                 "saved": true
             },
             {
-                "elapsedMs": 699,
+                "elapsedMs": 742,
                 "path": "startup/frame-011.png",
-                "pixelSha256": "f02c23eec97c8223a016f91efa5b190073fc3dc548080824ae8b5dea91df5455",
+                "pixelSha256": "4d2ae788652dd4c3b472524228c3896bbcdaf5ec322d785cb0f12947491f1da2",
                 "saved": true
             },
             {
-                "elapsedMs": 745,
+                "elapsedMs": 788,
                 "path": "startup/frame-012.png",
-                "pixelSha256": "1956206326c099ce92ad4acbfbfa78cedd2b8335774662b16065528a2ffe6ef1",
+                "pixelSha256": "1b4fbb3862efbabc4387238346d5f6fae6e8de88f9f4bebf1d72d33d79e7e020",
                 "saved": true
             },
             {
-                "elapsedMs": 806,
+                "elapsedMs": 834,
                 "path": "startup/frame-013.png",
-                "pixelSha256": "990af0a7e506ef95c8daaaf8018d1bc607f004f5eddf03e1589a695bac2c7a07",
+                "pixelSha256": "be8814bd4d47759c48ddc5fdb4ce0590b0d0a9cdf0b5a3da21f109689735e403",
                 "saved": true
             },
             {
-                "elapsedMs": 852,
+                "elapsedMs": 880,
                 "path": "startup/frame-014.png",
-                "pixelSha256": "15b0ca923dad1d7b731befed05c778f0faf13c79fb0f598b5a5de6dfe9bc5edb",
+                "pixelSha256": "4ddfcd56509f7a00cf60b110e6ac1e8963b05e4f4a52d57b017e912d197f35af",
                 "saved": true
             },
             {
-                "elapsedMs": 898,
+                "elapsedMs": 926,
                 "path": "startup/frame-015.png",
-                "pixelSha256": "d8a8deed334f7acdfe093e109d076cb40847d6667ce802314f5dee470ff427bc",
+                "pixelSha256": "7087ef07a3abd0a14fb73a3488a3cf5c590a0cd970f52851b76801f83a7773da",
                 "saved": true
             },
             {
-                "elapsedMs": 944,
+                "elapsedMs": 972,
                 "path": "startup/frame-016.png",
-                "pixelSha256": "a383fe22b535f1d747686848eec30f4741965958ed23a4f48869547e3467448c",
+                "pixelSha256": "5925a6bc91b286282e7bf14cac809f8c567fe071f9838c10fd076afa46f8e06f",
                 "saved": true
             },
             {
-                "elapsedMs": 990,
+                "elapsedMs": 1033,
                 "path": "startup/frame-017.png",
-                "pixelSha256": "e26c28f2e4ae7e2fadbed47a06888ef0adae3c186315ed3492f50bb189081559",
+                "pixelSha256": "248fe1b0da5c751bdb5abcd401bc9389c183d2679b09d1449fc7f14f7bce671c",
                 "saved": true
             },
             {
-                "elapsedMs": 1036,
+                "elapsedMs": 1079,
                 "path": "startup/frame-018.png",
-                "pixelSha256": "707292047a94fd1bc8cf3e7d93c5cac4ce64b262856d6a4d0c22ec0094ea0da1",
+                "pixelSha256": "824a549e41196ba5290f63aace678f9784819b2ad5cb6c42c520798bd5255f6b",
                 "saved": true
             },
             {
-                "elapsedMs": 1082,
+                "elapsedMs": 1124,
                 "path": "startup/frame-019.png",
-                "pixelSha256": "f6b58c0d9b046f6e3987a1ce0886a9a844998c2f51fc0bba391d720a064e7e92",
+                "pixelSha256": "644a771e43533eb8ca794b2c02bbc0cbf15d015202e54a3908bba2da8b36610e",
                 "saved": true
             },
             {
-                "elapsedMs": 1128,
+                "elapsedMs": 1170,
                 "path": "startup/frame-020.png",
-                "pixelSha256": "8ad71dd09a8dda78aae4074a19e004604ca0ea87c759a2dc1b5948577a36d996",
+                "pixelSha256": "00d5ac4ab0151d34faba88effea0f3c598c7159439fb049c4c23e00c3ac2a7bd",
                 "saved": true
             },
             {
-                "elapsedMs": 1174,
+                "elapsedMs": 1216,
                 "path": "startup/frame-021.png",
-                "pixelSha256": "ddf8a83fddbefaf285bc5fb244a286dcc42ca89219d24ec40e6b6e1ba5a6e32e",
+                "pixelSha256": "805314b61bfa608a3741e8248bf0e62d1ce20f2927f5ee1dda0d90beeb08d962",
                 "saved": true
             },
             {
-                "elapsedMs": 1219,
+                "elapsedMs": 1262,
                 "path": "startup/frame-022.png",
-                "pixelSha256": "5496f175350308608453ca91cf2577d9786245ec3862a3322c47a434d56745c7",
+                "pixelSha256": "b687b34f322f8952321c2debee36bba1c15f51c97a541ba2b6ad60950b09493f",
                 "saved": true
             },
             {
-                "elapsedMs": 1265,
+                "elapsedMs": 1307,
                 "path": "startup/frame-023.png",
-                "pixelSha256": "57ef0b2cb121afc511fb870aead22fb4b5768ccfa144d5dca948538199ee246a",
+                "pixelSha256": "0e9831cadfbe7212c0907fe8c5ec88ee029c32076902425ee15266fd8f50aa00",
                 "saved": true
             },
             {
-                "elapsedMs": 1311,
+                "elapsedMs": 1353,
                 "path": "startup/frame-024.png",
-                "pixelSha256": "dbbf9420804f0e8d499f881eceeeaeeceb6f6ed03d380acfe861efd19645f77a",
+                "pixelSha256": "4513bafa22ea2a61e9b5fb7d0fbbef4031ad1a10cbf0057c681f99865828b685",
                 "saved": true
             },
             {
-                "elapsedMs": 1357,
+                "elapsedMs": 1398,
                 "path": "startup/frame-025.png",
-                "pixelSha256": "f09f2687b0fcd18689b6bc6be009f7dbc27c9e655f96a7a2273613380328aaff",
+                "pixelSha256": "39fd251b33797904658755331fb29d878d2f395de406570e177cd1be05a3eed5",
                 "saved": true
             },
             {
-                "elapsedMs": 1403,
+                "elapsedMs": 1445,
                 "path": "startup/frame-026.png",
-                "pixelSha256": "e72248a93724f40a0afbee599647f4e17bc8260b96cc12dd49ae6868c40424ac",
+                "pixelSha256": "31320448381e9892a320138468a8d4af046e244d0078846e5c09169d8a5f51d0",
                 "saved": true
             },
             {
-                "elapsedMs": 1449,
+                "elapsedMs": 1491,
                 "path": "startup/frame-027.png",
-                "pixelSha256": "517388aa19753a621681daeceb498689f6b75b024a37ef109cab2faa41e4efe2",
+                "pixelSha256": "c257f70839eb24d9e9685cf67e3a13a7f682f3831019a86b77c7fabf1f9189f4",
                 "saved": true
             },
             {
-                "elapsedMs": 1495,
+                "elapsedMs": 1537,
                 "path": "startup/frame-028.png",
-                "pixelSha256": "960af8f3d2adce7379856517a30ab51fbd836bdc27db890a9846af6c9f8ca9ae",
+                "pixelSha256": "2b5db0015cd837d707c31b8e1d5b7b159dccdac16647028e3379f173d8c49829",
                 "saved": true
             },
             {
-                "elapsedMs": 1556,
+                "elapsedMs": 1583,
                 "path": "startup/frame-029.png",
-                "pixelSha256": "7972946139f9cae9b9ab8d2f43e8fdb127943208cb4cb706b5f71de212dc9397",
+                "pixelSha256": "1371e30c52c8a24b1239ae0fcf1234d05794893a61b396dcd2c2e3bc5a7a50cf",
                 "saved": true
             },
             {
-                "elapsedMs": 1601,
+                "elapsedMs": 1629,
                 "path": "startup/frame-030.png",
-                "pixelSha256": "718c99fd21ef8cbae4a52ee45575dc73fb2926606837f2aaafaf822ba0554307",
+                "pixelSha256": "9e7f965c9f56dfad7d02f4a002a3bafec3c021a961751fb3843e196a19fa6246",
                 "saved": true
             }
         ],

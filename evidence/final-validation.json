@@ -1,12 +1,13 @@
 {
-  "product": "SAT Motor Pilot 0.3.0",
+  "product": "SAT Motor Pilot 0.3.1",
+  "releaseTag": "V0.3.1",
   "cleanBuild": true,
   "buildExitCode": 0,
-  "buildSourceCommit": "51d1dd0d95da539a8dcc225370d32fdad5563088",
+  "buildSourceCommit": "8c53bbb9e280fb146b6978c9422def8947b6e203",
   "compilerInvocations": 267,
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
   "appLaunchExitCode": 0,
-  "testedInstall": "C:/Users/poomc/Downloads/SATMotorPilot/SATMotorPilot.exe",
+  "testedInstall": "dist/SATMotorPilot/SATMotorPilot.exe",
   "renderedPages": 33,
   "companyUiRuntimePassed": 14,
   "companyUiRuntimeFailed": 0,
@@ -16,7 +17,7 @@
   "hardwareTests": "NOT RUN",
   "newPackage": "SAT-Motor-Pilot-Windows-x64.zip",
   "startup": {
-    "durationMs": 1624,
+    "durationMs": 1653,
     "nativeFrames": 31
   },
   "displayTypography": {
@@ -24,7 +25,13 @@
     "fontFilesBundled": false,
     "requestedFamily": "Muffie"
   },
-  "reaExecutableEvidence": "ev_3fea6f40783b48fc279398d46ceb96c44df37dcb3ca3683d63ebe7a9f7e5d289",
-  "reaPackageEvidence": "ev_3a083b06a229cd012c2ade0dee83d15151590e39796e94f1cfe8534637bba0cc",
-  "cleanup": "Old MotorLab output retained: automatic approval review rejected deletion; no alternate deletion attempted"
+  "reaExecutableEvidence": "ev_543ef737d630278cb025163594f2d7139d9b38961692bdeb5b94fa843a560d1a",
+  "reaPackageEvidence": "ev_66a8205ef94a5f28a133f7f63ce2801386011cf26b66a4d52075bceae58dbf45",
+  "archiveIntegrity": "All ZIP CRC checks passed; packaged executable matches tested executable; all ten retained component license texts included",
+  "inPlaceInstall": {
+    "version": "0.3.1",
+    "target": "C:\\Users\\poomc\\Downloads\\SATMotorPilot",
+    "inPlace": false,
+    "reason": "Application is running; not interrupted"
+  }
 }
