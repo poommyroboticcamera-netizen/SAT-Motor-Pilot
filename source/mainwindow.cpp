@@ -29,6 +29,8 @@
 #include <QEventLoop>
 #include <QDesktopServices>
 #include <QProgressDialog>
+#include <QActionGroup>
+#include <QStatusBar>
 #include "parametereditor.h"
 #include "startupwizard.h"
 #include "widgets/experimentplot.h"
@@ -121,6 +123,27 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QMenu *languageMenu = ui->menuHelp->addMenu("Language / ภาษา");
+    QActionGroup *languageChoices = new QActionGroup(languageMenu);
+    languageChoices->setExclusive(true);
+    QAction *english = languageMenu->addAction("English");
+    QAction *thai = languageMenu->addAction("ไทย");
+    for (QAction *choice : {english, thai}) {
+        choice->setCheckable(true);
+        languageChoices->addAction(choice);
+    }
+    auto *translator = SatProduct::activeTranslator();
+    english->setChecked(!translator || !translator->isThai());
+    thai->setChecked(translator && translator->isThai());
+    connect(english, &QAction::triggered, this, [this, translator]() {
+        if (translator) translator->setThai(false);
+        statusBar()->showMessage("English will appear after restarting SAT Motor Pilot.", 10000);
+    });
+    connect(thai, &QAction::triggered, this, [this, translator]() {
+        if (translator) translator->setThai(true);
+        statusBar()->showMessage(QString::fromUtf8("ภาษาไทยจะแสดงหลังเปิด SAT Motor Pilot ใหม่"), 10000);
+    });
 
     this->setWindowIcon(QIcon(":/res/icon.svg"));
 

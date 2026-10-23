@@ -4,6 +4,10 @@
 #include <QString>
 #include <QRegularExpression>
 #include <QTranslator>
+#include <QCoreApplication>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QSettings>
 #include "configparams.h"
 
 namespace SatProduct {
@@ -46,14 +50,34 @@ inline void applyHelp(ConfigParams *info) {
         "Project source and current build information: "
         "<a href=\"https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot\">SAT Motor Pilot project</a>.</p>");
 }
+class PresentationTranslator;
+inline PresentationTranslator *&activeTranslator() { static PresentationTranslator *instance = nullptr; return instance; }
 class PresentationTranslator : public QTranslator {
 public:
+    PresentationTranslator() : mThai(QSettings().value("ui/language", "en").toString() == "th") { activeTranslator() = this; }
+    bool isThai() const { return mThai; }
+    void setThai(bool thai) {
+        if (mThai == thai) return;
+        QSettings().setValue("ui/language", thai ? "th" : "en");
+        if (QCoreApplication::instance()) QCoreApplication::removeTranslator(this);
+        mThai = thai;
+        if (QCoreApplication::instance()) QCoreApplication::installTranslator(this);
+    }
     QString translate(const char *, const char *source, const char *, int) const override {
         const QString original = QString::fromUtf8(source);
         if (original.contains("GPL-") || original.contains("Copyright") || original.contains("Benjamin Vedder")) return {};
+        if (mThai) {
+            static const QJsonObject dictionary = QJsonDocument::fromJson(QByteArray(
+#include "sat_th_dictionary.inc"
+            )).object();
+            const QString localized = dictionary.value(original).toString();
+            if (!localized.isEmpty()) return displayText(localized);
+        }
         const QString translated = displayText(original);
         return translated == original ? QString() : translated;
     }
+private:
+    bool mThai;
 };
 inline QString quickStart() {
     return "<h2>SAT Motor Pilot — Somboon Advance Technology</h2>"
