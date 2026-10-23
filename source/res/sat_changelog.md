@@ -1,8 +1,8 @@
 # SAT Motor Pilot 0.3.0 — 2026-10-23
 
-- New Somboon navy shell with company header and actual session state.
+- New Somboon black laboratory shell with company header and actual session state.
 - Horizontal configuration bar and Session tools menu reuse existing actions.
-- Company navigation and Commissioning console replace the previous presentation.
+- Company navigation and Motor control lab replace the previous presentation.
 - Manual drive is collapsed by default; showing it sends no commands.
 - Transparent corporate artwork removes white logo panels; Windows dark title bar.
 - Existing portable files and archive are updated in place.

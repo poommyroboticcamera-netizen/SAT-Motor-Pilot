@@ -20,7 +20,7 @@
 
 **SAT Motor Pilot 0.3.0** เปิดใช้งานเป็นโปรแกรมของตนเอง ไม่เปิดหรือเรียกใช้โปรแกรม VESC Tool และไม่ต้องติดตั้งโปรแกรมนั้นก่อน ใช้ชื่อไฟล์ `SATMotorPilot.exe`, Windows product/company metadata, AppUserModelID และ settings namespace ของตนเอง
 
-เวอร์ชันนี้จัดหน้าตาและขั้นตอนใช้งานในแบบของสมบูรณ์: แถบชื่อบริษัทและสถานะการเชื่อมต่อด้านบน, เมนู Overview / Motor workspace / Input workspace / Measurement lab, แถบคำสั่งแนวนอน และหน้า Commissioning console ที่มีทางลัด 4 ขั้นตอน โลโก้ไม่มีพื้นขาว ธีมน้ำเงินกรมท่าครอบคลุมเมนู ปุ่ม ช่องกรอกข้อมูล และแถบชื่อหน้าต่างบน Windows ที่ทดสอบ
+เวอร์ชันนี้จัดหน้าตาและขั้นตอนใช้งานในแบบของสมบูรณ์: แถบชื่อบริษัทและสถานะการเชื่อมต่อด้านบน, เมนู Overview / Motor workspace / Input workspace / Measurement lab, แถบคำสั่งแนวนอน และหน้า Motor control lab ที่มีทางลัด 4 ขั้นตอน ควบคุมเกือบเหลี่ยมและเส้นแบ่งชัดเจนในสไตล์ LAB โลโก้ไม่มีพื้นขาว ธีมดำและเทาเข้มใช้สีดำเป็นหลักและสีน้ำเงินเฉพาะส่วนสำคัญ ครอบคลุมเมนู ปุ่ม ช่องกรอกข้อมูล และแถบชื่อหน้าต่างบน Windows ที่ทดสอบ
 
 <img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot company workspace, disconnected" width="100%">
 

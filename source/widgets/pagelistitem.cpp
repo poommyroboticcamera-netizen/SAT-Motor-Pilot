@@ -86,7 +86,7 @@ void PageListItem::setGroupIcon(const QString &path)
         mGroupLabel->setText(path.contains("mcconf")?"M":"I/O");
         mGroupLabel->setAlignment(Qt::AlignCenter);
         mGroupLabel->setFixedSize(32,20);
-        mGroupLabel->setStyleSheet("background:#203c5e;color:#8ab5dd;border:1px solid #335477;border-radius:4px;font-size:8pt;");
+        mGroupLabel->setStyleSheet("background:#20262e;color:#8ab5dd;border:1px solid #424c59;border-radius:2px;font-size:8pt;");
     } else {
         mSpaceStart->changeSize(2, 0);
         mGroupLabel->setPixmap(QPixmap());

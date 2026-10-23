@@ -54,13 +54,13 @@ PageWelcome::PageWelcome(QWidget *parent) :
     ui->label->hide();
     auto dashboard = new QFrame(this);
     dashboard->setObjectName("satCommissioningWorkspace");
-    dashboard->setStyleSheet("QFrame#satCommissioningWorkspace {background:#14243b;border:1px solid #2b4668;border-radius:12px;} "
-                            "QPushButton {padding:10px;background:#234d7c;color:#dcecff;border-radius:5px;} "
+    dashboard->setStyleSheet("QFrame#satCommissioningWorkspace {background:#171a1e;border:1px solid #3a424c;border-radius:2px;} "
+                            "QPushButton {padding:10px;background:#253c59;color:#dbe5f2;border-radius:2px;} "
                             "QPushButton:hover {background:#3d63ae;}");
     auto grid = new QGridLayout(dashboard);
     grid->setContentsMargins(20,18,20,18);
-    auto title = new QLabel("<span style='font-size:22pt;font-weight:600;color:#e5f0ff'>Commissioning console</span>", dashboard);
-    auto subtitle = new QLabel("FIELD OPERATIONS  /  PLAN · LINK · VERIFY", dashboard);
+    auto title = new QLabel("<span style='font-size:20pt;font-weight:600;color:#e4e8ed'>Motor control lab</span>", dashboard);
+    auto subtitle = new QLabel("COMMISSIONING  /  LINK · CONFIGURE · MEASURE", dashboard);
     subtitle->setWordWrap(true);
     subtitle->setStyleSheet("color:#71b9e8;font-size:10pt;");
     auto guidance = new QLabel("Connect and identify your controller. Read its existing configuration before editing. "
@@ -69,7 +69,7 @@ PageWelcome::PageWelcome(QWidget *parent) :
     auto target = new QLabel("No controller connected", dashboard);
     target->setObjectName("satTargetStatus");
     target->setWordWrap(true);
-    target->setStyleSheet("padding:8px;color:#b8d9f3;");
+    target->setStyleSheet("padding:8px;color:#b8c2cf;");
     grid->addWidget(title,0,0,1,2);
     grid->addWidget(subtitle,1,0,1,2);
     grid->addWidget(guidance,2,0,1,2);
@@ -95,7 +95,7 @@ PageWelcome::PageWelcome(QWidget *parent) :
     statusTimer->setInterval(500);
     connect(statusTimer, &QTimer::timeout, this, [this,target]() {
         if (!mVesc || !mVesc->isPortConnected()) {
-            target->setText("DISCONNECTED  |  No controller readings. Select Connection to begin.");
+            target->setText("DISCONNECTED  |  No controller readings. Select Device link to begin.");
         } else if (!mVesc->fwRx()) {
             target->setText("CONNECTED  |  Waiting for firmware and controller identity.");
         } else {

@@ -6,6 +6,12 @@
 ## SAT product conversion 0.2.0
 
 โปรแกรมปัจจุบันคือ SAT Motor Pilot ของสมบูรณ์ มี dashboard/navigation, onboarding, คู่มือ/changelog, application identity และ settings ของตนเองตาม COMPANY_PRODUCT.md รูปแบบหน้าแรกต่างจากต้นฉบับโดยตั้งใจตามคำสั่งล่าสุด จึงไม่ใช้ pixel identity ของหน้าแรกเป็นเกณฑ์รับงานใหม่ ผล 88-item core regression บอกว่าโปรโตคอล/serializer/schema ในขอบเขตนั้นคงเดิม ไม่ได้ยืนยันฮาร์ดแวร์ ผล navigation 4 ปุ่มและ onboarding เป็นการทดสอบ UI เท่านั้น ขั้นตอน read/write, detection และ flash กับอุปกรณ์จริงยังค้างเช่นเดิม
+## Company shell 0.3.0
+
+หน้าตา SAT ปรับใหม่ทั้งแถบหัว เมนู แถบคำสั่ง และแผง Manual drive การเปิด/ปิดแผงไม่ส่ง command ตาม runtime audit และ native dark title bar ใช้ได้บนเครื่องที่ทดสอบ ภาพเทียบรุ่นนี้มีขนาดหน้าต่างต่างจาก reference ทั้ง 33 คู่ จึงไม่คำนวณ pixel delta ข้ามขนาด ภาพ side-by-side เก็บขนาดจริงโดยไม่ rescale ผลภาพเปรียบเทียบรุ่นก่อนเป็นหลักฐานเก่า ไม่ใช่การรับรองหน้าตาปัจจุบัน
+
+USB เป็นช่องทางเริ่มทดสอบบอร์ด VESC: จ่ายไฟตามข้อกำหนดของบอร์ด ต่อ USB data cable เปิด Device link แล้วตรวจ firmware และอ่าน configuration ก่อนเปลี่ยนค่า รายชื่อ schema เป็นขอบเขตของ source ไม่ใช่ผลทดสอบบอร์ดจริง
+
 ## Evidence levels
 
 | หัวข้อ | หลักฐานปัจจุบัน | สิ่งที่ยืนยันได้ | สิ่งที่ยังยืนยันไม่ได้ |

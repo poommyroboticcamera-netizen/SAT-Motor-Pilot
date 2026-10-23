@@ -22,9 +22,9 @@ The Windows audit tests actual navigation, first-run pages and acceptance state,
 
 ## 0.3.0 presentation and in-place delivery
 
-The SAT shell replaces the old vertical icon toolbar and permanent drive strip with a horizontal configuration bar, session menu and collapsed manual-drive drawer. Existing QAction objects and original drive slots are reused. Navigation labels are company-specific; stable internal page names remain unchanged so routing continues to reach the same working pages. A top company bar shows real connection state without polling hardware through new commands.
+The black SAT laboratory shell replaces the old vertical icon toolbar and permanent drive strip with a horizontal configuration bar, session menu and collapsed manual-drive drawer. Existing QAction objects and original drive slots are reused. Navigation labels are company-specific; stable internal page names remain unchanged so routing continues to reach the same working pages. A top company bar shows real connection state without polling hardware through new commands.
 
-Navy surfaces, typography, selected navigation accents and transparent logo derivatives replace the white logo panels and grey shell. The unchanged user-supplied image remains in source/res/motorlab/somboon-user-supplied.png. The transparent master in app-icon.png was derived using image editing; all active raster assets are regenerated at their existing paths. The company emblem is framed with QPixmap at runtime.
+Black and charcoal surfaces, square controls, typography, selected navigation accents and transparent logo derivatives replace the white logo panels and grey shell. The unchanged user-supplied image remains in source/res/motorlab/somboon-user-supplied.png. The transparent master in app-icon.png was derived using image editing; all active raster assets are regenerated at their existing paths. The company emblem is framed with QPixmap at runtime.
 
 On the tested Windows host, the native dark title-bar attribute succeeds. The implementation dynamically loads DwmSetWindowAttribute and tolerates its absence. Reference: [Microsoft desktop themes](https://learn.microsoft.com/windows/apps/desktop/modernize/apply-windows-themes), [DWM attributes](https://learn.microsoft.com/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute).
 

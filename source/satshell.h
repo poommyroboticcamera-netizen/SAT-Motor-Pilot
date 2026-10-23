@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QToolButton>
 #include <QToolBar>
+#include <QTabWidget>
 #include <QMenu>
 #include <QTimer>
 #include <QHBoxLayout>
@@ -18,41 +19,43 @@
 #endif
 
 namespace SatShell {
+// Black instrument surfaces, square controls and restrained company-blue accents.
 inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc,
                     std::function<void(QString)> navigate) {
     window->setStyleSheet(
-        "QMainWindow,QWidget#centralWidget {background:#0c1422;color:#d7e3f4;}"
-        "QMenuBar,QMenu {background:#111d30;color:#b7c8df;padding:3px;}"
+        "QMainWindow,QWidget#centralWidget {background:#0b0c0e;color:#d2d5da;}"
+        "QMenuBar,QMenu {background:#15171a;color:#b9bec6;padding:3px;}"
         "QMenuBar::item:selected,QMenu::item:selected {background:#244d83;color:#edf6ff;}"
-        "QWidget#satAppBar {background:#111f34;border:1px solid #243752;border-radius:9px;}"
-        "QWidget#satCommandBar {background:#111f34;border:1px solid #243752;border-radius:8px;}"
-        "QWidget#satManualPanel {background:#142238;border:1px solid #31517a;border-radius:8px;}"
-        "QListWidget#pageList {background:#0f1c2e;border:1px solid #20344e;border-radius:8px;outline:0;}"
-        "QListWidget#pageList::item {border:0;border-radius:5px;margin:1px 5px;}"
+        "QWidget#satAppBar {background:#17191c;border:1px solid #363b42;border-radius:2px;}"
+        "QWidget#satCommandBar {background:#17191c;border:1px solid #363b42;border-radius:2px;}"
+        "QWidget#satManualPanel {background:#191c20;border:1px solid #41474f;border-radius:2px;}"
+        "QListWidget#pageList {background:#101214;border:1px solid #30343a;border-radius:2px;outline:0;}"
+        "QListWidget#pageList::item {border:0;border-radius:2px;margin:1px 5px;}"
         "QListWidget#pageList::item:selected {background:#224e87;border-left:3px solid #58b7ee;}"
-        "QListWidget#canList {background:#101f32;border:1px solid #243b58;border-radius:6px;}"
-        "QToolButton {background:#1a304c;color:#d8eaff;border:1px solid #315070;border-radius:5px;padding:7px 10px;}"
-        "QToolButton:hover,QPushButton:hover {background:#284c76;border-color:#5d9bc5;}"
+        "QListWidget#canList {background:#131619;border:1px solid #343a42;border-radius:2px;}"
+        "QToolButton {background:#24282d;color:#dde2e8;border:1px solid #424a54;border-radius:2px;padding:7px 10px;}"
+        "QToolButton:hover,QPushButton:hover {background:#303c4b;border-color:#5d9bc5;}"
         "QToolButton:checked {background:#285c98;border-color:#78b9e6;}"
-        "QToolButton:disabled,QPushButton:disabled {color:#5e718c;background:#101e30;border-color:#20324a;}"
-        "QPushButton {background:#1c3554;color:#d9e7f7;border:1px solid #365474;border-radius:5px;padding:6px 10px;}"
-        "QLineEdit,QSpinBox,QDoubleSpinBox,QComboBox,QTextEdit,QPlainTextEdit {background:#101c2d;color:#d7e3f4;border:1px solid #2a4260;border-radius:4px;padding:3px;}"
-        "QGroupBox {border:1px solid #2a3c56;border-radius:7px;margin-top:12px;padding:12px 6px 5px;}"
+        "QToolButton:disabled,QPushButton:disabled {color:#5e718c;background:#17191c;border-color:#2c3036;}"
+        "QPushButton {background:#252a30;color:#d8dde4;border:1px solid #46515e;border-radius:2px;padding:6px 10px;}"
+        "QLineEdit,QSpinBox,QDoubleSpinBox,QComboBox,QTextEdit,QPlainTextEdit {background:#101214;color:#d2d5da;border:1px solid #3b4149;border-radius:2px;padding:3px;}"
+        "QGroupBox {border:1px solid #363c44;border-radius:2px;margin-top:12px;padding:12px 6px 5px;}"
         "QGroupBox::title {subcontrol-origin:margin;left:12px;color:#86a8cf;padding:0 5px;}"
-        "QTabWidget::pane {border:1px solid #29415e;background:#111f32;}"
-        "QTabBar::tab {background:#14243b;color:#96acc8;padding:7px 12px;border-bottom:2px solid #14243b;}"
-        "QTabBar::tab:selected {background:#203b5f;color:#e5f1ff;border-bottom-color:#62b9ec;}"
-        "QStatusBar {background:#0c1422;color:#7d9abb;}"
-        "QSplitter::handle {background:#0c1422;}"
-        "QScrollBar:vertical {background:#101d2f;width:8px;}"
-        "QScrollBar::handle:vertical {background:#365273;min-height:24px;border-radius:4px;}"
+        "QTabWidget::pane {border:1px solid #373e47;background:#14171a;}"
+        "QTabBar::tab {background:#171a1e;color:#a4acb7;padding:7px 12px;border:0;border-bottom:2px solid #171a1e;margin-right:2px;}"
+        "QTabBar::tab:selected {background:#252d38;color:#e6e9ee;border-bottom-color:#62b9ec;}"
+        "QStatusBar {background:#0b0c0e;color:#8d98a6;}"
+        "QSplitter::handle {background:#0b0c0e;}"
+        "QScrollBar:vertical {background:#131518;width:8px;}"
+        "QScrollBar::handle:vertical {background:#444b55;min-height:24px;border-radius:2px;}"
         "QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical {height:0;}"
     );
+    for(auto tabs:window->findChildren<QTabWidget*>()){tabs->setTabShape(QTabWidget::Rounded);tabs->setDocumentMode(true);}
     ui->mainToolBar->hide();
-    ui->verticalLayout_3->setContentsMargins(14,12,14,8);
-    ui->verticalLayout_3->setSpacing(10);
+    ui->verticalLayout_3->setContentsMargins(10,8,10,6);
+    ui->verticalLayout_3->setSpacing(6);
     ui->pageLabel->setPixmap(QPixmap());
-    ui->pageLabel->setText("SAT  /  WORKSPACES");
+    ui->pageLabel->setText("SAT  /  LAB WORKSPACES");
     ui->pageLabel->setStyleSheet("color:#6f99c8;font-size:9pt;font-weight:600;padding:8px;");
     ui->pageLabel->setMaximumHeight(36);
     ui->pageList->setMinimumWidth(244);
@@ -68,7 +71,7 @@ inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc
     auto header = new QFrame(window);
     header->setObjectName("satAppBar");
     auto headerLayout = new QHBoxLayout(header);
-    headerLayout->setContentsMargins(16,10,16,10);
+    headerLayout->setContentsMargins(12,7,12,7);
     auto mark = new QLabel(header);
     QPixmap companyMark(":/res/icon.svg");
     // Native viewport framing of the corporate emblem in the transparent master.
@@ -76,13 +79,13 @@ inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc
                  companyMark.width()*0.39,companyMark.height()*0.45);
     mark->setPixmap(companyMark.copy(emblem).scaled(46,50,Qt::KeepAspectRatio,Qt::SmoothTransformation));
     headerLayout->addWidget(mark);
-    auto identity = new QLabel("<span style='font-size:18pt;font-weight:600;color:#e3efff'>SAT Motor Pilot</span>"
-                               "<br><span style='font-size:9pt;color:#6ea4d4'>SOMBOON ADVANCE TECHNOLOGY · MOTOR SYSTEMS</span>",header);
+    auto identity = new QLabel("<span style='font-size:16pt;font-weight:600;color:#e2e6ec'>SAT Motor Pilot</span>"
+                               "<br><span style='font-size:9pt;color:#6ea4d4'>SOMBOON ADVANCE TECHNOLOGY · MOTOR CONTROL LAB</span>",header);
     headerLayout->addWidget(identity);
     headerLayout->addStretch();
     auto session = new QLabel("NO DEVICE SESSION",header);
     session->setObjectName("satSessionStatus");
-    session->setStyleSheet("color:#8ba7c8;background:#172c46;border-radius:5px;padding:9px;");
+    session->setStyleSheet("color:#b0bac7;background:#20252b;border-radius:2px;padding:9px;");
     headerLayout->addWidget(session);
     auto deviceLink = new QToolButton(header);
     deviceLink->setText("Device link");
@@ -93,7 +96,7 @@ inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc
     auto commands = new QFrame(window);
     commands->setObjectName("satCommandBar");
     auto commandsLayout = new QHBoxLayout(commands);
-    commandsLayout->setContentsMargins(12,8,12,8);
+    commandsLayout->setContentsMargins(10,6,10,6);
     auto caption = new QLabel("CONFIGURATION",commands);
     caption->setStyleSheet("color:#6992bf;font-size:8pt;font-weight:600;padding-right:8px;");
     commandsLayout->addWidget(caption);
@@ -136,7 +139,7 @@ inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc
     auto manualLayout=new QVBoxLayout(manual);
     auto manualNote=new QLabel("MANUAL DRIVE  ·  Commands act on the selected controller. Review the target and limits before enabling output.",manual);
     manualNote->setWordWrap(true);
-    manualNote->setStyleSheet("color:#a0bad7;padding:4px;");
+    manualNote->setStyleSheet("color:#aab4c2;padding:4px;");
     manualLayout->addWidget(manualNote);
     manualLayout->addLayout(ui->gridLayout_3);
     ui->verticalLayout_3->addWidget(manual);
