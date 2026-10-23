@@ -23,6 +23,8 @@
 
 <img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot: black laboratory interface with Somboon branding" width="100%">
 
+[ดูแอนิเมชันเปิดแอป](evidence/ui/motorlab/startup.mp4)
+
 ### รูปแบบหน้าจอ
 
 - **ดำและเทาเข้มเป็นหลัก** ใช้สีน้ำเงินบริษัทเน้นปุ่มและสถานะที่เลือก

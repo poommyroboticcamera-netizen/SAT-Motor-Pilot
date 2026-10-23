@@ -48,6 +48,10 @@ public:
         mReady=std::move(ready);
         mElapsed.start();
         show();
+        // Native first-show initialization must not consume the reveal animation.
+        mElapsed.restart();
+        mStarted=true;
+        repaint();
         mTimer.start();
     }
     QJsonObject auditReport() const {
@@ -57,10 +61,11 @@ public:
 protected:
     void paintEvent(QPaintEvent *) override {
         ++mPaintedFrames;
-        const qreal time=qMin(1.0,mElapsed.elapsed()/650.0);
+        const qreal time=mStarted?qMin(1.0,mElapsed.elapsed()/650.0):0.0;
         const qreal reveal=1.0-(1.0-time)*(1.0-time);
         QPainter p(this);
         p.setRenderHint(QPainter::Antialiasing);
+        p.setRenderHint(QPainter::SmoothPixmapTransform);
         p.fillRect(rect(),QColor("#090a0c"));
         p.setPen(QColor("#353a43"));
         p.drawRect(rect().adjusted(0,0,-1,-1));
@@ -101,5 +106,6 @@ private:
     QJsonArray mSamples;
     int mFrames=0;
     int mPaintedFrames=0;
+    bool mStarted=false;
 };
 #endif
