@@ -37,6 +37,7 @@
 #include "widgets/paramdialog.h"
 #include "motorlabconfigwrite.h"
 #include "satproduct.h"
+#include "satshell.h"
 
 namespace {
 void stepTowards(double &value, double goal, double step) {
@@ -575,6 +576,7 @@ MainWindow::MainWindow(QWidget *parent) :
     mPageDebugPrint->printConsole("SAT Motor Pilot " + mVersion + " started<br>");
 
     setAcceptDrops(true);
+    SatShell::install(this, ui, mVesc, [this](const QString &name) { showPage(name); });
 }
 
 MainWindow::~MainWindow()

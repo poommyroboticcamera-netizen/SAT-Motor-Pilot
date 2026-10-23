@@ -8,8 +8,8 @@
 
 ![Windows](https://img.shields.io/badge/Platform-Windows_x64-304B8A?style=for-the-badge)
 ![Qt](https://img.shields.io/badge/Qt-5.15.2-304B8A?style=for-the-badge&logo=qt)
-![Version](https://img.shields.io/badge/Version-0.2.0-304B8A?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Engineering_Preview-B45309?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-0.3.0-304B8A?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Engineering_Preview-245987?style=for-the-badge)
 ![License](https://img.shields.io/badge/Source-GPL--3.0--or--later-2563EB?style=for-the-badge)
 
 [เริ่มใช้งาน](#เริ่มใช้งาน) · [Build](#build-จาก-source) · [หลักฐาน](#ผลทดสอบและหลักฐาน) · [รายการที่ยังต้องยืนยัน](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md)
@@ -18,13 +18,17 @@
 
 ## โปรแกรมของสมบูรณ์
 
-**SAT Motor Pilot 0.2.0** เปิดใช้งานเป็นโปรแกรมของตนเอง ไม่เปิดหรือเรียกใช้โปรแกรม VESC Tool และไม่ต้องติดตั้งโปรแกรมนั้นก่อน ใช้ชื่อไฟล์ `SATMotorPilot.exe`, Windows product/company metadata, AppUserModelID และ settings namespace ของตนเอง
+**SAT Motor Pilot 0.3.0** เปิดใช้งานเป็นโปรแกรมของตนเอง ไม่เปิดหรือเรียกใช้โปรแกรม VESC Tool และไม่ต้องติดตั้งโปรแกรมนั้นก่อน ใช้ชื่อไฟล์ `SATMotorPilot.exe`, Windows product/company metadata, AppUserModelID และ settings namespace ของตนเอง
 
-เวอร์ชันนี้พัฒนาต่อจาก MotorLab รุ่นทดลองเดิมเป็นส่วนผลิตภัณฑ์ของสมบูรณ์: หน้า **SAT Workspace** สำหรับ commissioning, สถานะอุปกรณ์จริง, ทางลัด 4 ขั้นตอนที่กดแล้วไปหน้าทำงานได้, การเริ่มใช้งานครั้งแรก, คู่มือเริ่มต้น, changelog และลิงก์โครงการ/แจ้งปัญหาของ SAT พร้อมธีมสีน้ำเงินและโลโก้บริษัทที่ผู้ใช้แนบ
+เวอร์ชันนี้จัดหน้าตาและขั้นตอนใช้งานในแบบของสมบูรณ์: แถบชื่อบริษัทและสถานะการเชื่อมต่อด้านบน, เมนู Overview / Motor workspace / Input workspace / Measurement lab, แถบคำสั่งแนวนอน และหน้า Commissioning console ที่มีทางลัด 4 ขั้นตอน โลโก้ไม่มีพื้นขาว ธีมน้ำเงินกรมท่าครอบคลุมเมนู ปุ่ม ช่องกรอกข้อมูล และแถบชื่อหน้าต่างบน Windows ที่ทดสอบ
 
 <img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot company workspace, disconnected" width="100%">
 
 ส่วนสื่อสารและเครื่องมือตั้งค่าอาศัยโค้ด GPL จากรุ่นอ้างอิงเพื่อรักษาความเข้ากันได้กับ controller และ firmware จึงยังเก็บเครดิตผู้พัฒนาเดิมและไลเซนส์ใน About/เอกสาร การเป็นผลิตภัณฑ์ของสมบูรณ์ไม่ได้หมายความว่าอ้างว่าเขียนโค้ดต้นทางทั้งหมดขึ้นใหม่ ดู [ขอบเขตผลิตภัณฑ์และ compatibility core](docs/COMPANY_PRODUCT.md)
+
+แผง **Manual drive** เปิดเฉพาะเมื่อผู้ใช้กด ปุ่มเปิด/ปิดแผงไม่ส่งคำสั่งมอเตอร์ เครื่องมือเดิมยังเข้าถึงได้จาก **Session tools** ส่วน **Output off** ใช้กับ controller ที่เลือกเท่านั้น
+
+อัปเดตไฟล์เดิมใน `dist/SATMotorPilot/` และ ZIP ชื่อเดิม ไม่สร้างโฟลเดอร์แยกตามเวอร์ชัน
 
 ## ขั้นตอนทำงาน
 
@@ -43,7 +47,7 @@ flowchart LR
 
 | กลุ่ม | สิ่งที่มีในโปรแกรม | สถานะหลักฐาน |
 |:--|:--|:--|
-| SAT Workspace | หน้าบริษัท, target status, ทางลัด 4 ขั้น | ทดสอบการนำทางจริงใน Windows |
+| SAT console | แถบบริษัท, target status, ทางลัด 4 ขั้น, Manual drive ที่พับเก็บได้ | ทดสอบการนำทางจริงใน Windows |
 | เริ่มใช้งานครั้งแรก | บทนำ SAT, ข้อกำหนดการใช้, warranty, ขั้นตอนเริ่มงาน | ตรวจ 4 หน้า; Usage/Warranty ยังต้องยอมรับก่อนผ่าน |
 | คู่มือและแอป | SAT quick start, project/builds, issues, changelog, About | ไม่มีการตรวจอัปเดตแอปต้นฉบับอัตโนมัติ |
 | Motor/App configuration | General, BLDC, DC, FOC, GPDrive, PID, PPM, ADC, UART, NRF, PAS, IMU | สืบทอด engine/schema; รอ controller acceptance |
@@ -60,7 +64,7 @@ Direct PC CAN adapter ต้องใช้ build/backend ที่เปิด 
 
 1. แตก ZIP ทั้งโฟลเดอร์
 2. เปิด `SATMotorPilot/SATMotorPilot.exe` โดยเก็บ DLL, `platforms` และ `qml` ไว้ด้วยกัน
-3. ทำตามการเริ่มใช้งานครั้งแรก แล้วเปิด **Connection** จาก SAT Workspace
+3. ทำตามการเริ่มใช้งานครั้งแรก แล้วเปิด **Device link** จาก Overview
 4. ตรวจอุปกรณ์และ firmware จากนั้นเริ่มอ่าน configuration ก่อนเปลี่ยนค่า
 
 ไฟล์หลัง build: `dist/SATMotorPilot/SATMotorPilot.exe` ใช้ runtime Qt ที่มากับแพ็กเกจ รุ่นนี้ยังเป็น engineering preview และมี resource/dependency review ก่อน public binary release
@@ -86,6 +90,7 @@ cd SAT-Motor-Pilot
 |:--|:--|:--|
 | Windows launch | เปิดจาก runtime ในแพ็กเกจ โดย PATH เฉพาะ Windows system | [Launch](evidence/ui/motorlab/launch.json), [Runtime](evidence/ui/motorlab/runtime-audit.json) |
 | SAT navigation | ปุ่มหน้าแรก 4 ปุ่มไปยังหน้าที่ถูกต้อง | `workspaceNavigation` ใน runtime report |
+| Company shell | เปิด/ปิด Manual drive ไม่ส่ง command; Windows dark title bar ผ่านบนเครื่องทดสอบ | `manualPanel`, `darkTitlebarApplied` ใน runtime report |
 | Onboarding | 4 หน้า; required acceptance ยังคงอยู่ | `onboardingPages` และ [ภาพ](evidence/ui/motorlab/onboarding) |
 | Packet/scalar | **11 passed, 0 failed** รวม init/cleanup; 9 test methods | [ผลข้อความ](validation/results/protocol-tests.txt), [JUnit](validation/results/protocol-tests.junit.xml) |
 | Compatibility regression | **88 checks** ของ command/packet/serializer/schema และ transport functions | [Core regression](evidence/company-core-regression.json) |

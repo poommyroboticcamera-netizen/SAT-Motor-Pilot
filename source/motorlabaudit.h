@@ -13,6 +13,7 @@
 #include <QAction>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QToolButton>
 #include <QSettings>
 #include <QTimer>
 #include <QScreen>
@@ -34,6 +35,7 @@ inline void motorLabAudit(MainWindow *window, const QString &directory)
     (*report)["applicationName"] = QCoreApplication::applicationName();
     (*report)["organizationName"] = QCoreApplication::organizationName();
     (*report)["organizationDomain"] = QCoreApplication::organizationDomain();
+    (*report)["darkTitlebarApplied"] = window->property("satDarkTitlebarApplied").toBool();
     (*report)["devicePixelRatio"] = window->devicePixelRatioF();
     (*report)["logicalDpi"] = QGuiApplication::primaryScreen()->logicalDotsPerInch();
     (*report)["mapPolicy"] = "Remote OpenStreetMap rendering disabled identically in both audited builds to eliminate asynchronous tile content";
@@ -103,6 +105,25 @@ inline void motorLabAudit(MainWindow *window, const QString &directory)
     }
     if (navigationList) navigationList->setCurrentRow(initialRow);
     (*report)["workspaceNavigation"] = navigation;
+    if (vesc) {
+        int commandCount=0;
+        const auto signalConnection=QObject::connect(vesc->commands(),&Commands::dataToSend,window,[&](QByteArray &) { ++commandCount; });
+        auto toggle=window->findChild<QToolButton *>("satManualToggle");
+        auto manual=window->findChild<QWidget *>("satManualPanel");
+        QJsonObject control;
+        control["exists"] = toggle && manual;
+        control["collapsedByDefault"] = manual && !manual->isVisible();
+        if(toggle && manual){
+            toggle->click();
+            control["expands"] = manual->isVisible();
+            window->grab().save(directory + "/manual-drive.png");
+            toggle->click();
+            control["collapses"] = !manual->isVisible();
+        }
+        QObject::disconnect(signalConnection);
+        control["commandsSentByToggle"] = commandCount;
+        (*report)["manualPanel"] = control;
+    }
     if (vesc) {
         QSettings settings;
         const QVariant previousIntro = settings.value("intro_done");

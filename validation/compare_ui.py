@@ -25,12 +25,16 @@ for page in modified['pages']:
         changed = sum(1 for p in delta.getdata() if max(p) > 8)
         record.update(changedPixelsAbove8=changed, fractionChanged=changed/(a.width*a.height), exact=not delta.getbbox())
         delta.save(out/f'diff-{row:03}.png')
-        canvas = Image.new('RGB', (a.width*2, a.height+36), '#151b26')
-        canvas.paste(a,(0,36)); canvas.paste(b,(a.width,36))
-        draw = ImageDraw.Draw(canvas)
-        draw.text((16,10),'Pinned upstream source reference (instrumented)',fill='white')
-        draw.text((a.width+16,10),'MotorLab modified source build',fill='white')
-        canvas.save(out/f'side-by-side-{row:03}.png')
+    else:
+        # No false pixel delta when the company shell has a different geometry.
+        stale_delta=out/f'diff-{row:03}.png'
+        if stale_delta.exists(): stale_delta.unlink()
+    canvas = Image.new('RGB', (a.width+b.width, max(a.height,b.height)+36), '#151b26')
+    canvas.paste(a,(0,36)); canvas.paste(b,(a.width,36))
+    draw = ImageDraw.Draw(canvas)
+    draw.text((16,10),'Pinned upstream source reference (instrumented)',fill='white')
+    draw.text((a.width+16,10),'SAT Motor Pilot company shell (actual size)',fill='white')
+    canvas.save(out/f'side-by-side-{row:03}.png')
     reports.append(record)
 (out/'metrics.json').write_text(json.dumps({'scope':'Disconnected native Windows source builds; all differences retained, including intentional branding. Pixel metrics are not functional equivalence.', 'pages':reports},indent=2,ensure_ascii=False),encoding='utf-8')
 print(f'Compared {len(reports)} page pairs; size matches: {sum(p["comparable"] for p in reports)}')

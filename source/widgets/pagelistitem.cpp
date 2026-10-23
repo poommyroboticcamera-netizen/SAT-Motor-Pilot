@@ -19,6 +19,7 @@
 
 #include "pagelistitem.h"
 #include <QHBoxLayout>
+#include <QMap>
 
 PageListItem::PageListItem(QString name,
                            QString icon,
@@ -52,13 +53,22 @@ PageListItem::PageListItem(QString name,
 
 void PageListItem::setName(const QString &name)
 {
-    mNameLabel->setText(name);
+    mNavigationName = name;
+    static const QMap<QString,QString> titles={
+        {"SAT Workspace","Overview"},{"Connection","Device link"},{"Firmware","Firmware center"},
+        {"Controller Packages","Extensions"},{"Motor Settings","Motor workspace"},{"App Settings","Input workspace"},
+        {"Data Analysis","Measurement lab"},{"Realtime Data","Live scope"},{"Sampled Data","Signal capture"},
+        {"Log Analysis","Run history"},{"Motor Analysis","Motor models"},{"VESC Dev Tools","Engineering"}};
+    mNameLabel->setText(titles.value(name,name));
 }
 
 void PageListItem::setIcon(const QString &path)
 {
     if (!path.isEmpty()) {
-        mIconLabel->setPixmap(QPixmap(path));
+        mIconLabel->setPixmap(QPixmap());
+        mIconLabel->setText("·");
+        mIconLabel->setAlignment(Qt::AlignCenter);
+        mIconLabel->setStyleSheet("color:#56aee8;font-weight:700;");
 
         QFontMetrics fm(this->font());
         int height = fm.height() * 1.1;
@@ -72,13 +82,11 @@ void PageListItem::setIcon(const QString &path)
 void PageListItem::setGroupIcon(const QString &path)
 {
     if (!path.isEmpty()) {
-        QPixmap pix(path);
-        mGroupLabel->setPixmap(pix);
-
-        QFontMetrics fm(this->font());
-        int height = fm.height();
-
-        mGroupLabel->setFixedSize((height * pix.width()) / pix.height(), height);
+        mGroupLabel->setPixmap(QPixmap());
+        mGroupLabel->setText(path.contains("mcconf")?"M":"I/O");
+        mGroupLabel->setAlignment(Qt::AlignCenter);
+        mGroupLabel->setFixedSize(32,20);
+        mGroupLabel->setStyleSheet("background:#203c5e;color:#8ab5dd;border:1px solid #335477;border-radius:4px;font-size:8pt;");
     } else {
         mSpaceStart->changeSize(2, 0);
         mGroupLabel->setPixmap(QPixmap());
@@ -87,7 +95,7 @@ void PageListItem::setGroupIcon(const QString &path)
 
 QString PageListItem::name()
 {
-    return mNameLabel->text();
+    return mNavigationName;
 }
 
 void PageListItem::setBold(bool bold)

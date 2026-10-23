@@ -38,3 +38,6 @@ Active application branding uses the user-provided Somboon Advance Technology im
 
 ## SAT Motor Pilot 0.2.0 company product
 The active product is SAT Motor Pilot. Earlier MotorLab references in this inventory describe preliminary history only. Product UI, onboarding, help, app identity and distribution are company-specific; the GPL-derived compatibility engine keeps all existing copyright notices. The logo remains user-supplied company artwork, without a claim of GPL relicensing. See docs/COMPANY_PRODUCT.md for boundaries.
+
+## 0.3.0 transparent company artwork
+The original user-supplied image remains unchanged. Active PNG/ICO branding is a transparent derivative made with image editing, with layout variants generated into existing resource paths. This does not establish new ownership or alter the company artwork's trademark status. The SAT shell uses text navigation instead of the previous navigation raster icons; retained compatibility tools may still use upstream resources subject to the review above.

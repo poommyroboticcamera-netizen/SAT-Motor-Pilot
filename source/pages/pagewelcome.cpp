@@ -42,28 +42,25 @@ PageWelcome::PageWelcome(QWidget *parent) :
     ui->setupUi(this);
     mUtil = new Utility(this);
 
-    ui->autoConnectButton->setIcon(Utility::getIcon("icons/Connected-96.png"));
-    ui->wizardFocSimpleButton->setIcon(Utility::getIcon("icons/Wizard-96.png"));
-    ui->wizardAppButton->setIcon(Utility::getIcon("icons/Wizard-96.png"));
-    ui->nrfPairButton->setIcon(Utility::getIcon("icons/icons8-fantasy-96.png"));
-    ui->multiSettingButton->setIcon(Utility::getIcon("icons/Settings-96.png"));
-    ui->invertDirButton->setIcon(Utility::getIcon("icons/Process-96.png"));
-    ui->setupBluetoothButton->setIcon(Utility::getIcon("icons/bluetooth.png"));
-    ui->wizardIMUButton->setIcon(Utility::getIcon("icons/imu_off.png"));
-
+    const QList<QPair<QPushButton*,QString>> utilities={
+        {ui->autoConnectButton,"Find USB controller"},{ui->wizardFocSimpleButton,"Motor commissioning"},
+        {ui->wizardAppButton,"Input commissioning"},{ui->wizardIMUButton,"Align IMU"},
+        {ui->nrfPairButton,"Pair a remote"},{ui->multiSettingButton,"Multi-controller setup"},
+        {ui->invertDirButton,"Review motor direction"},{ui->setupBluetoothButton,"Configure Bluetooth"}};
+    for(const auto &item:utilities){item.first->setIcon(QIcon());item.first->setText(item.second);item.first->setMinimumHeight(42);}
     layout()->setContentsMargins(0, 0, 0, 0);
     mVesc = nullptr;
     ui->bgWidget->setPixmap(QPixmap());
     ui->label->hide();
     auto dashboard = new QFrame(this);
     dashboard->setObjectName("satCommissioningWorkspace");
-    dashboard->setStyleSheet("QFrame#satCommissioningWorkspace {background:#18243a;border:1px solid #304b8a;border-radius:12px;} "
-                            "QPushButton {padding:10px;background:#304b8a;color:white;border-radius:5px;} "
+    dashboard->setStyleSheet("QFrame#satCommissioningWorkspace {background:#14243b;border:1px solid #2b4668;border-radius:12px;} "
+                            "QPushButton {padding:10px;background:#234d7c;color:#dcecff;border-radius:5px;} "
                             "QPushButton:hover {background:#3d63ae;}");
     auto grid = new QGridLayout(dashboard);
     grid->setContentsMargins(20,18,20,18);
-    auto title = new QLabel("<span style='font-size:23pt;font-weight:600;color:#ffffff'>SAT Motor Pilot</span>", dashboard);
-    auto subtitle = new QLabel("SOMBOON ADVANCE TECHNOLOGY  /  MOTOR COMMISSIONING", dashboard);
+    auto title = new QLabel("<span style='font-size:22pt;font-weight:600;color:#e5f0ff'>Commissioning console</span>", dashboard);
+    auto subtitle = new QLabel("FIELD OPERATIONS  /  PLAN · LINK · VERIFY", dashboard);
     subtitle->setWordWrap(true);
     subtitle->setStyleSheet("color:#71b9e8;font-size:10pt;");
     auto guidance = new QLabel("Connect and identify your controller. Read its existing configuration before editing. "
@@ -78,8 +75,8 @@ PageWelcome::PageWelcome(QWidget *parent) :
     grid->addWidget(guidance,2,0,1,2);
     grid->addWidget(target,3,0,1,2);
     const QList<QPair<QString,QString>> destinations = {
-        {"1  Connection", "Connection"}, {"2  Motor configuration", "Motor Settings"},
-        {"3  Application configuration", "App Settings"}, {"4  Live measurements", "Realtime Data"}};
+        {"01  Link a controller", "Connection"}, {"02  Configure the motor", "Motor Settings"},
+        {"03  Map the inputs", "App Settings"}, {"04  Inspect live signals", "Realtime Data"}};
     int index = 0;
     for (const auto &destination : destinations) {
         auto button = new QPushButton(destination.first, dashboard);

@@ -47,6 +47,7 @@ signals:
 public slots:
 
 private:
+    QString mNavigationName;
     QLabel *mIconLabel;
     QLabel *mNameLabel;
     QLabel *mGroupLabel;

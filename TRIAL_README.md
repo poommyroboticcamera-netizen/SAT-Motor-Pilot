@@ -1,4 +1,4 @@
-# SAT Motor Pilot 0.2.0 — Windows trial
+# SAT Motor Pilot 0.3.0 — Windows trial
 
 โปรแกรม commissioning มอเตอร์ของสมบูรณ์ มี SAT Workspace และระบบเริ่มใช้งาน/คู่มือของตนเอง เปิดใช้งานได้โดยไม่ต้องติดตั้ง VESC Tool ส่วน compatibility engine อาศัยโค้ด GPL จากรุ่นอ้างอิงเพื่อคงการสื่อสารและ schema
 
@@ -16,3 +16,5 @@
 SAT Motor Pilot เก็บ settings แยกจากต้นฉบับ ไม่มีการ flash firmware หรือสั่งมอเตอร์อัตโนมัติระหว่างการทดสอบทั่วไป Audit mode มีไว้สำหรับตรวจ UI/ไฟล์ในเครื่องและบล็อก packet ที่จะส่งออก
 
 GPL-3.0-or-later สำหรับซอร์สแอป เก็บเครดิต Benjamin Vedder และผู้ร่วมพัฒนา ตาม LICENSE และ THIRD_PARTY_NOTICES.md โลโก้บริษัทเป็นไฟล์จากผู้ใช้ ไม่อ้างว่าเป็นงานที่สร้างใหม่หรือ GPL artwork ชุดนี้สำหรับทดลองใน workspace; public binary release ยังรอการตรวจ resource licenses ตามที่ระบุใน notices
+
+หน้าตา 0.3.0 ใช้โทนน้ำเงินกรมท่าและโลโก้โปร่งใส แถบคำสั่งอยู่ด้านบน เปิดแผงควบคุมด้วย Manual drive และใช้ Session tools เพื่อเข้าถึงเครื่องมืออื่น การเปิดแผงไม่สั่งมอเตอร์ อัปเดตทับโฟลเดอร์เดิมได้หลังปิดโปรแกรม

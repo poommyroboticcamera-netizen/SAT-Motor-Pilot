@@ -164,7 +164,7 @@ static void addFonts() {
 
     QFontDatabase::addApplicationFont("://res/fonts/Exan-Regular.ttf");
 
-    qApp->setFont(QFont("Roboto", 12));
+    qApp->setFont(QFont("Segoe UI", 10));
 }
 
 int main(int argc, char *argv[])
@@ -204,11 +204,11 @@ int main(int argc, char *argv[])
     if (isDark) {
         qputenv("QT_QUICK_CONTROLS_CONF", ":/qtquickcontrols2_dark.conf");
 
-        Utility::setAppQColor("lightestBackground", QColor(80,80,80));
-        Utility::setAppQColor("lightBackground", QColor(72,72,72));
-        Utility::setAppQColor("normalBackground", QColor(48,48,48));
-        Utility::setAppQColor("darkBackground", QColor(39,39,39));
-        Utility::setAppQColor("plotBackground", QColor(39,39,39));
+        Utility::setAppQColor("lightestBackground", QColor(37,61,91));
+        Utility::setAppQColor("lightBackground", QColor(26,46,72));
+        Utility::setAppQColor("normalBackground", QColor(16,29,47));
+        Utility::setAppQColor("darkBackground", QColor(12,20,34));
+        Utility::setAppQColor("plotBackground", QColor(12,20,34));
         Utility::setAppQColor("normalText", QColor(180,180,180));
         Utility::setAppQColor("lightText", QColor(215,215,215));
         Utility::setAppQColor("disabledText", QColor(127,127,127));

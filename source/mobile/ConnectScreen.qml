@@ -102,6 +102,7 @@ Item {
 
         Image {
             id: image
+            visible: fullLogo
             Layout.preferredWidth: Math.min(column.width, column.height*0.8) * 0.8
             Layout.preferredHeight: (sourceSize.height * Layout.preferredWidth) / sourceSize.width
             Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
@@ -138,8 +139,9 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Button {
-                text: qsTr("Hide")
-                Layout.preferredWidth: 120
+                text: qsTr("Close")
+                font.capitalization: Font.MixedCase
+                Layout.preferredWidth: 64
                 flat: true
                 onClicked: {
                     rootItem.opened = false
@@ -150,7 +152,7 @@ Item {
                 id: text
                 Layout.fillWidth: true
                 color: Utility.getAppHexColor("lightText")
-                text: qsTr("Devices Found")
+                text: qsTr("Device inbox")
                 font.bold: true
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
@@ -158,10 +160,11 @@ Item {
 
             Button {
                 id: scanButton
-                text: qsTr("Scan...")
+                text: qsTr("Discover")
+                font.capitalization: Font.MixedCase
                 enabled: true
                 flat: true
-                Layout.preferredWidth: 120
+                Layout.preferredWidth: 92
 
                 onClicked: {
                     scanMenu.open()
@@ -319,6 +322,7 @@ Item {
                                 anchors.centerIn: parent
                                 Image {
                                     id: image
+            visible: fullLogo
                                     fillMode: Image.PreserveAspectFit
                                     Layout.preferredWidth: 40
                                     Layout.preferredHeight: 40
@@ -614,7 +618,7 @@ Item {
             if (done) {
                 scanDotTimer.running = false
                 scanning = false
-                scanButton.text = qsTr("Scan...")
+                scanButton.text = qsTr("Discover")
             }
             var devices = [];
             
