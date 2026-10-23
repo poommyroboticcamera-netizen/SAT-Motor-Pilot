@@ -20,6 +20,7 @@
 #include "mainwindow.h"
 #include "motorlabaudit.h"
 #include "satproduct.h"
+#include "satstartup.h"
 #include "boardsetupwindow.h"
 #include "mobile/qmlui.h"
 #include "mobile/fwhelper.h"
@@ -1770,9 +1771,16 @@ int main(int argc, char *argv[])
             bw->show();
         } else {
             QPixmapCache::setCacheLimit(256000);
-            w = new MainWindow;
-            w->show();
-            motorLabAudit(w, motorLabAuditDirectory);
+            auto startup = new SatStartupScreen(motorLabAuditDirectory);
+            startup->start([startup,&w,motorLabAuditDirectory]() {
+                const auto animation = startup->auditReport();
+                w = new MainWindow;
+                w->setProperty("satStartupAudit",animation.toVariantMap());
+                w->show();
+                startup->close();
+                startup->deleteLater();
+                motorLabAudit(w, motorLabAuditDirectory);
+            });
         }
     }
 #endif

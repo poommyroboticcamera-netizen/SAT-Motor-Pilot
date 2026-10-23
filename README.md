@@ -1,77 +1,114 @@
 <div align="center">
 
-<img src="source/res/motorlab/logo.png" alt="Somboon Advance Technology — SAT Motor Pilot" width="480">
+<img src="source/res/motorlab/logo.png" alt="Somboon Advance Technology — SAT Motor Pilot" width="460">
 
 # SAT Motor Pilot
 
-**พื้นที่ทำงานตั้งค่า ทดสอบ และตรวจข้อมูลมอเตอร์ของสมบูรณ์ บน Windows**
+**เครื่องมือตั้งค่าและตรวจสอบระบบมอเตอร์สำหรับ Windows โดยสมบูรณ์**
 
-![Windows](https://img.shields.io/badge/Platform-Windows_x64-304B8A?style=for-the-badge)
-![Qt](https://img.shields.io/badge/Qt-5.15.2-304B8A?style=for-the-badge&logo=qt)
+![Windows](https://img.shields.io/badge/Windows-x64-30343B?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-0.3.0-304B8A?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Engineering_Preview-245987?style=for-the-badge)
-![License](https://img.shields.io/badge/Source-GPL--3.0--or--later-2563EB?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Engineering_Preview-30343B?style=for-the-badge)
+![License](https://img.shields.io/badge/License-GPL--3.0--or--later-304B8A?style=for-the-badge)
 
-[เริ่มใช้งาน](#เริ่มใช้งาน) · [Build](#build-จาก-source) · [หลักฐาน](#ผลทดสอบและหลักฐาน) · [รายการที่ยังต้องยืนยัน](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md)
+[เริ่มใช้งาน](#เริ่มใช้งาน) · [ความสามารถ](#ความสามารถ) · [ผลทดสอบ](#ผลทดสอบ) · [Build จากซอร์ส](#build-จากซอร์ส)
 
 </div>
 
-## โปรแกรมของสมบูรณ์
+## เกี่ยวกับโปรเจกต์
 
-**SAT Motor Pilot 0.3.0** เปิดใช้งานเป็นโปรแกรมของตนเอง ไม่เปิดหรือเรียกใช้โปรแกรม VESC Tool และไม่ต้องติดตั้งโปรแกรมนั้นก่อน ใช้ชื่อไฟล์ `SATMotorPilot.exe`, Windows product/company metadata, AppUserModelID และ settings namespace ของตนเอง
+**SAT Motor Pilot** เป็นแอปสำหรับเชื่อมต่อ controller อ่านและปรับค่ามอเตอร์ ตรวจสัญญาณ และวิเคราะห์ข้อมูลการทำงาน เหมาะกับงานเตรียมระบบ ทดสอบบนโต๊ะ LAB และตรวจสอบการตั้งค่าก่อนนำไปใช้งาน
 
-เวอร์ชันนี้จัดหน้าตาและขั้นตอนใช้งานในแบบของสมบูรณ์: แถบชื่อบริษัทและสถานะการเชื่อมต่อด้านบน, เมนู Overview / Motor workspace / Input workspace / Measurement lab, แถบคำสั่งแนวนอน และหน้า Motor control lab ที่มีทางลัด 4 ขั้นตอน ควบคุมเกือบเหลี่ยมและเส้นแบ่งชัดเจนในสไตล์ LAB โลโก้ไม่มีพื้นขาว ธีมดำและเทาเข้มใช้สีดำเป็นหลักและสีน้ำเงินเฉพาะส่วนสำคัญ ครอบคลุมเมนู ปุ่ม ช่องกรอกข้อมูล และแถบชื่อหน้าต่างบน Windows ที่ทดสอบ
+แอปมีชื่อ หน้าจอ และขั้นตอนใช้งานของสมบูรณ์เอง เปิดใช้งานได้โดยไม่ต้องติดตั้งหรือเปิด VESC Tool ส่วนระบบสื่อสารพัฒนาต่อจากโค้ด GPL เพื่อรักษาความเข้ากันได้กับบอร์ดที่ใช้โปรโตคอล VESC
 
-<img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot company workspace, disconnected" width="100%">
+<img src="evidence/ui/motorlab/screenshots/page-000.png" alt="SAT Motor Pilot: black laboratory interface with Somboon branding" width="100%">
 
-ส่วนสื่อสารและเครื่องมือตั้งค่าอาศัยโค้ด GPL จากรุ่นอ้างอิงเพื่อรักษาความเข้ากันได้กับ controller และ firmware จึงยังเก็บเครดิตผู้พัฒนาเดิมและไลเซนส์ใน About/เอกสาร การเป็นผลิตภัณฑ์ของสมบูรณ์ไม่ได้หมายความว่าอ้างว่าเขียนโค้ดต้นทางทั้งหมดขึ้นใหม่ ดู [ขอบเขตผลิตภัณฑ์และ compatibility core](docs/COMPANY_PRODUCT.md)
+### รูปแบบหน้าจอ
 
-แผง **Manual drive** เปิดเฉพาะเมื่อผู้ใช้กด ปุ่มเปิด/ปิดแผงไม่ส่งคำสั่งมอเตอร์ เครื่องมือเดิมยังเข้าถึงได้จาก **Session tools** ส่วน **Output off** ใช้กับ controller ที่เลือกเท่านั้น
-
-อัปเดตไฟล์เดิมใน `dist/SATMotorPilot/` และ ZIP ชื่อเดิม ไม่สร้างโฟลเดอร์แยกตามเวอร์ชัน
+- **ดำและเทาเข้มเป็นหลัก** ใช้สีน้ำเงินบริษัทเน้นปุ่มและสถานะที่เลือก
+- **รูปแบบเครื่องมือ LAB** มุมเกือบเหลี่ยม เส้นแบ่งชัดเจน และคำสั่งอยู่ด้านบน
+- **แอนิเมชันเปิดแอป** โลโก้สมบูรณ์ค่อย ๆ ปรากฏบนพื้นดำ พร้อมเส้นแสดงการเริ่มทำงานประมาณ 1.6 วินาที ก่อนเข้าสู่หน้าหลัก
+- **โลโก้โปร่งใส** กลมกลืนกับพื้นหลัง ไม่มีแผ่นพื้นขาว
+- **Manual drive พับเก็บได้** เปิดเฉพาะเมื่อต้องการควบคุมด้วยตนเอง การเปิดแผงไม่ส่งคำสั่งมอเตอร์
 
 ## ขั้นตอนทำงาน
 
 ```mermaid
 flowchart LR
-    A["SAT Workspace"] --> B["1. Connect & Identify"]
-    B --> C["2. Read & Back Up"]
-    C --> D["3. Configure Motor / Application"]
-    D --> E["Confirm → Write → Readback"]
-    E --> F["4. Live Measurements / Logs"]
+    A["1. เชื่อมต่อและตรวจอุปกรณ์"] --> B["2. อ่านค่าและสำรองข้อมูล"]
+    B --> C["3. ตั้งค่ามอเตอร์และอินพุต"]
+    C --> D["4. ตรวจสัญญาณและผลการทำงาน"]
 ```
 
-หน้าเริ่มต้นแสดง **DISCONNECTED** เมื่อไม่มีอุปกรณ์ ไม่สร้างข้อมูล controller ขึ้นมาแทน เมื่อเชื่อมต่อจะแสดง port, firmware, UUID และ CAN target จากสถานะจริง ทางลัดหน้าแรกเป็นเพียงการเปิดหน้าทำงาน ไม่ส่งคำสั่งหมุนมอเตอร์หรือเขียนค่า
+| พื้นที่ทำงาน | ใช้สำหรับ |
+|:--|:--|
+| **Overview / Motor control lab** | เริ่มงาน ดูสถานะ และเปิดขั้นตอนตั้งค่าที่ต้องใช้ |
+| **Device link** | เลือกการเชื่อมต่อ ตรวจ port และข้อมูล firmware |
+| **Motor workspace** | ตั้งค่ามอเตอร์ วิธีควบคุม ขีดจำกัด และ PID |
+| **Input workspace** | ตั้งค่า UART, PPM, ADC, remote และอินพุตอื่น |
+| **Measurement lab** | เปิด live scope, sampled data และเครื่องมือวิเคราะห์ |
+| **Session tools** | เข้าถึงคำสั่งและเครื่องมือเพิ่มเติมของ controller |
+
+สถานะบนหน้าจอมาจากการเชื่อมต่อจริง เมื่อยังไม่ต่ออุปกรณ์จะแสดง **NO DEVICE SESSION / DISCONNECTED**
 
 ## ความสามารถ
 
-| กลุ่ม | สิ่งที่มีในโปรแกรม | สถานะหลักฐาน |
-|:--|:--|:--|
-| SAT console | แถบบริษัท, target status, ทางลัด 4 ขั้น, Manual drive ที่พับเก็บได้ | ทดสอบการนำทางจริงใน Windows |
-| เริ่มใช้งานครั้งแรก | บทนำ SAT, ข้อกำหนดการใช้, warranty, ขั้นตอนเริ่มงาน | ตรวจ 4 หน้า; Usage/Warranty ยังต้องยอมรับก่อนผ่าน |
-| คู่มือและแอป | SAT quick start, project/builds, issues, changelog, About | ไม่มีการตรวจอัปเดตแอปต้นฉบับอัตโนมัติ |
-| Motor/App configuration | General, BLDC, DC, FOC, GPDrive, PID, PPM, ADC, UART, NRF, PAS, IMU | สืบทอด engine/schema; รอ controller acceptance |
-| Transport | Serial/USB, BLE, TCP/UDP และ CAN forwarding | คงกลไกเดิม; รอทดสอบแต่ละอุปกรณ์/transport |
-| Telemetry/analysis | Realtime, sampled data, experiments, BMS, IMU, log analysis | ตรวจ disconnected UI; live readings ยังรอยืนยัน |
-| Engineering tools | Terminal, LispBM, QML, SWD, ESP programmer, packages | มี implementation; รายฟังก์ชันยังมี acceptance ค้าง |
-| Toolbar Write | อ่านค่าปัจจุบัน → backup → ยืนยัน → ACK → fresh readback | มีในโค้ด; ยังไม่ส่ง write ไปอุปกรณ์จริง |
+| กลุ่ม | ขอบเขตที่มีในแอป |
+|:--|:--|
+| การเชื่อมต่อ | Serial/USB, BLE, TCP/UDP และ CAN forwarding |
+| การตั้งค่ามอเตอร์ | BLDC, DC, FOC, GPDrive, PID และพารามิเตอร์ตาม firmware |
+| การตั้งค่าอินพุต | PPM, ADC, UART, NRF, PAS, IMU และ remote control |
+| ข้อมูลและการวิเคราะห์ | Realtime data, sampled data, experiments, BMS, IMU และ log analysis |
+| เครื่องมือวิศวกรรม | Terminal, LispBM, QML, SWD, ESP programmer และ controller packages |
+| ไฟล์ตั้งค่า | อ่าน/บันทึก XML และสำรอง configuration |
 
-Direct PC CAN adapter ต้องใช้ build/backend ที่เปิด `HAS_CANBUS`; build default นี้ไม่ได้เปิด จึงไม่ใช้การมี CAN forwarding มาอ้างว่าทดสอบ PC CAN adapter แล้ว Firmware/package downloads เป็นข้อมูล compatibility เมื่อเรียกฟังก์ชันนั้น ไม่ใช่การติดตั้งหรือเปิดใช้แอปต้นฉบับ ไม่มีการ flash firmware อัตโนมัติในชุดทดสอบ
+การมีเครื่องมือในแอปไม่ได้หมายความว่าทดสอบกับฮาร์ดแวร์ครบทุกแบบแล้ว รุ่นนี้ยังเป็น **Engineering Preview** ดู [สถานะการรับรองและข้อจำกัด](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md)
 
 ## เริ่มใช้งาน
 
-ชุดทดลองใน workspace: `SAT-Motor-Pilot-Windows-x64.zip`
+ชุด Windows ใน workspace ใช้ชื่อ **`SAT-Motor-Pilot-Windows-x64.zip`**
 
-1. แตก ZIP ทั้งโฟลเดอร์
-2. เปิด `SATMotorPilot/SATMotorPilot.exe` โดยเก็บ DLL, `platforms` และ `qml` ไว้ด้วยกัน
-3. ทำตามการเริ่มใช้งานครั้งแรก แล้วเปิด **Device link** จาก Overview
-4. ตรวจอุปกรณ์และ firmware จากนั้นเริ่มอ่าน configuration ก่อนเปลี่ยนค่า
+1. แตก ZIP ทั้งโฟลเดอร์ แล้วเปิด `SATMotorPilot/SATMotorPilot.exe`
+2. เก็บ DLL และโฟลเดอร์ `platforms`, `qml` ไว้ข้างไฟล์แอปตามเดิม
+3. ทำตามคำแนะนำครั้งแรก แล้วเปิด **Device link**
+4. เมื่อตรวจพบ controller ให้ตรวจรุ่น firmware และอ่านค่าก่อนแก้ไข
 
-ไฟล์หลัง build: `dist/SATMotorPilot/SATMotorPilot.exe` ใช้ runtime Qt ที่มากับแพ็กเกจ รุ่นนี้ยังเป็น engineering preview และมี resource/dependency review ก่อน public binary release
+### เชื่อมต่อบอร์ด VESC
 
-## Build จาก source
+แอปคงระบบสื่อสารและการตรวจ firmware ของ compatibility core จึงออกแบบให้เชื่อมต่อบอร์ด VESC ได้ เริ่มจากจ่ายไฟตามข้อกำหนดของบอร์ด ต่อสาย USB ที่ส่งข้อมูลได้ เลือก port ใน **Device link** แล้วเชื่อมต่อ จากนั้นตรวจ firmware และใช้ **Read motor / Read inputs** เพื่ออ่านค่า
 
-ใช้ Git, Python 3, PowerShell และ Qt 5.15.2 / MinGW 8.1 x64 ให้ตรงกัน เพราะ engine ใช้ Qt private headers
+ความเข้ากันได้ขึ้นกับบอร์ดและ firmware ที่ติดตั้ง รุ่นอ้างอิงของโครงการคือ **7.00** หากแอปแจ้ง firmware ไม่รองรับ ให้ตรวจข้อมูลให้ตรงก่อนใช้คำสั่งเขียนค่า ตรวจมอเตอร์ หรือแฟลช firmware ดู [ขอบเขตความเข้ากันได้](docs/REFERENCE_AND_COMPATIBILITY.md)
+
+ปุ่ม **Write motor / Write inputs** บนแถบหลักมีขั้นตอนอ่านค่าปัจจุบัน สำรองข้อมูล แสดงรายการเปลี่ยนแปลง ขอการยืนยัน และตรวจอ่านกลับ ส่วน **Output off** ใช้กับ controller ที่เลือก ไม่ใช่ emergency stop ของทุกอุปกรณ์บนระบบ
+
+### อัปเดตไฟล์เดิม
+
+ไฟล์ที่ build อยู่ที่ `dist/SATMotorPilot/SATMotorPilot.exe` และ ZIP ใช้ชื่อเดิมทุกครั้ง ปิดแอปก่อนเขียนทับโฟลเดอร์เดิม ไม่ต้องแยกโฟลเดอร์ตามเลขเวอร์ชัน
+
+## ผลทดสอบ
+
+ผลต่อไปนี้เป็นการทดสอบโปรแกรมและไฟล์บน Windows โดย **ยังไม่ได้ต่อ controller จริง**
+
+| การตรวจ | ผลล่าสุด |
+|:--|:--|
+| Build และเปิดแอป | เปิดด้วย runtime ที่มากับแพ็กเกจ โดยไม่พึ่ง Qt จาก PATH ของเครื่อง |
+| ส่วนติดต่อผู้ใช้ SAT | **14 runtime checks ผ่าน**, 0 failed และ 1 source review |
+| การนำทางหน้าแรก | ทางลัดทั้ง 4 เปิดหน้าทำงานที่ถูกต้อง |
+| Manual drive | เปิด/ปิดได้ พับเก็บตั้งแต่เริ่ม และไม่ส่ง command จากการเปิดแผง |
+| Packet และการแปลงข้อมูล | **11 passed, 0 failed** รวม init/cleanup; มี 9 test methods |
+| Compatibility core | **88/88 checks** ในขอบเขต command, packet, serializer, schema และ transport ที่ตรวจ |
+| บันทึก/โหลด XML | Motor 211 parameters และ application 122 parameters คืนค่าตรงหลังโหลด |
+| การแสดงหน้าจอ | บันทึกภาพ 33 รายการหน้าในสถานะไม่เชื่อมต่อ |
+
+หลักฐาน: [Runtime audit](evidence/ui/motorlab/runtime-audit.json) · [ผลทดสอบ SAT](evidence/company-product-acceptance.json) · [Protocol tests](validation/results/protocol-tests.txt) · [Core regression](evidence/company-core-regression.json) · [Delivery manifest](evidence/delivery-manifest.json)
+
+งานที่ยังต้องยืนยันกับอุปกรณ์จริง ได้แก่ การอ่าน/เขียน controller, motor detection, การขับมอเตอร์, live telemetry, reconnect, BLE/CAN และ firmware flashing ผลข้างต้นไม่ใช้รับรองความเข้ากันได้กับทุกบอร์ด Audit บล็อกการส่ง packet ออกฮาร์ดแวร์
+
+Direct PC CAN adapter ต้องใช้ build ที่เปิด `HAS_CANBUS` ซึ่งชุด default นี้ไม่ได้เปิด ส่วน CAN forwarding เป็นการสื่อสารผ่าน controller ที่เชื่อมต่อ
+
+## Build จากซอร์ส
+
+ใช้ **Windows x64, Git, Python 3, PowerShell และ Qt 5.15.2 / MinGW 8.1 x64** ให้ตรงกับโครงการ
 
 ```powershell
 git clone https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot.git
@@ -80,36 +117,30 @@ cd SAT-Motor-Pilot
 ./build.ps1 -Clean
 ```
 
-`bootstrap.ps1` ติดตั้ง toolchain ใน `tooling/` ของโปรเจกต์ ไม่ต้องติดตั้งแอปอ้างอิง ระบุ Qt ที่มีอยู่ด้วย `./build.ps1 -QtRoot C:/path/to/Qt`
-
-โปรเจกต์: `source/sat_motor_pilot.pro` ส่วน `source/vesc_tool.pro` เป็นรายการ source/dependencies ของ compatibility engine ที่เก็บเพื่อรักษาสถาปัตยกรรมเดิม
-
-## ผลทดสอบและหลักฐาน
-
-| การตรวจ | ขอบเขตและผล | หลักฐาน |
-|:--|:--|:--|
-| Windows launch | เปิดจาก runtime ในแพ็กเกจ โดย PATH เฉพาะ Windows system | [Launch](evidence/ui/motorlab/launch.json), [Runtime](evidence/ui/motorlab/runtime-audit.json) |
-| SAT navigation | ปุ่มหน้าแรก 4 ปุ่มไปยังหน้าที่ถูกต้อง | `workspaceNavigation` ใน runtime report |
-| Company shell | เปิด/ปิด Manual drive ไม่ส่ง command; Windows dark title bar ผ่านบนเครื่องทดสอบ | `manualPanel`, `darkTitlebarApplied` ใน runtime report |
-| Onboarding | 4 หน้า; required acceptance ยังคงอยู่ | `onboardingPages` และ [ภาพ](evidence/ui/motorlab/onboarding) |
-| Packet/scalar | **11 passed, 0 failed** รวม init/cleanup; 9 test methods | [ผลข้อความ](validation/results/protocol-tests.txt), [JUnit](validation/results/protocol-tests.junit.xml) |
-| Compatibility regression | **88 checks** ของ command/packet/serializer/schema และ transport functions | [Core regression](evidence/company-core-regression.json) |
-| XML persistence | motor 211 params / 488 bytes, app 122 params / 284 bytes; เปลี่ยน destination ก่อน load แล้วค่ากลับมาครบ | `configurationRoundtrips` ใน runtime report |
-| Disconnected rendering | 33 navigation rows; ไม่ได้แปลว่าทุก control ผ่าน | Runtime และ [traceability](validation/ui-function-traceability.csv) |
-| REA / ต้นทาง | ไฟล์แอปจริง, package inventory, hash, provider limitations | [REA findings](docs/REA_FINDINGS.md), [reference](docs/REFERENCE_AND_COMPATIBILITY.md) |
-
-Core regression normalize CRLF และยอมให้เปลี่ยนชื่อใน audit diagnostic เท่านั้น ไม่ใช้ source comparison อ้างว่าผ่านฮาร์ดแวร์
+`bootstrap.ps1` เตรียม toolchain ใน `tooling/` ของโครงการ หากมี Qt อยู่แล้ว ระบุตำแหน่งด้วย `./build.ps1 -QtRoot C:/path/to/Qt`
 
 ```powershell
 ./validation/run-protocol-tests.ps1
 python validation/verify_compatibility_core.py
 ./validation/run-ui-audit.ps1
+python validation/record_company_acceptance.py
 ```
 
-Audit ใช้ settings แยก บล็อก physical outbound packets และไม่กดคำสั่งมอเตอร์/เขียนค่า/flash **ยังไม่รับรองความเทียบเท่าฮาร์ดแวร์ทุกชุดหรือทุก workflow** ต้องเพิ่มหลักฐาน controller read/write, detection, firmware flashing, BLE/CAN adapter, reconnect และ live telemetry ดู [Acceptance](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md) และ [Toolbar Write](docs/CONFIGURATION_WRITE_SAFETY.md)
+โปรเจกต์หลัก: `source/sat_motor_pilot.pro` ผลลัพธ์: `dist/SATMotorPilot/`
 
-## แหล่งอ้างอิงและไลเซนส์
+## เอกสารเพิ่มเติม
 
-Compatibility reference: VESC Tool stable **7.00**, commit `01d5f10901116c311e3fb84d5a1541f663d3ce20`; firmware reference: bldc 7.00, commit `26af69484014b6771d02e68c22f4cb96645b5f22`
+- [ขอบเขตผลิตภัณฑ์ของสมบูรณ์](docs/COMPANY_PRODUCT.md)
+- [สถานะการรับรองและข้อจำกัด](docs/ACCEPTANCE_AND_KNOWN_ISSUES.md)
+- [ขั้นตอนยืนยันการเขียนค่า](docs/CONFIGURATION_WRITE_SAFETY.md)
+- [แหล่งอ้างอิงและความเข้ากันได้](docs/REFERENCE_AND_COMPATIBILITY.md)
+- [หลักฐานการตรวจไฟล์แอปด้วย REA](docs/REA_FINDINGS.md)
+- [ประวัติการเปลี่ยนแปลง](source/res/sat_changelog.md)
 
-เก็บ copyright ของ Benjamin Vedder และผู้ร่วมพัฒนา รวมทั้ง [GPL-3.0-or-later](LICENSE) และ [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) ไม่อ้างการรับรองจากเจ้าของ engine เดิม โลโก้ Somboon Advance Technology เป็นไฟล์ที่ผู้ใช้จัดส่ง ไม่อ้างว่าเป็นงาน GPL ที่สร้างใหม่
+## แหล่งที่มาและไลเซนส์
+
+SAT Motor Pilot พัฒนาต่อจาก VESC Tool stable **7.00** โดย Benjamin Vedder และผู้ร่วมพัฒนา ภายใต้ **GPL-3.0-or-later** เก็บเครดิตและข้อกำหนดเดิมไว้ โครงการนี้ไม่ได้อ้างว่าเขียน compatibility engine ขึ้นใหม่ทั้งหมด หรือได้รับการรับรองจากเจ้าของโครงการต้นทาง
+
+Source reference: `01d5f10901116c311e3fb84d5a1541f663d3ce20` · Firmware reference: `26af69484014b6771d02e68c22f4cb96645b5f22`
+
+โลโก้ Somboon Advance Technology เป็นภาพที่ผู้ใช้จัดส่ง รุ่นนี้ใช้ภาพดัดแปลงพื้นโปร่งใสและเก็บต้นฉบับไว้ ดู [LICENSE](LICENSE) และ [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) สำหรับเครดิตและรายการ resource ที่ยังต้องตรวจสอบก่อนเผยแพร่ binary สาธารณะ

@@ -11,6 +11,9 @@ add('Company application identity','source/main.cpp; source/sat_motor_pilot.pro'
 manual=audit.get('manualPanel',{})
 add('Manual drive drawer','source/satshell.h','Click real toggle twice; inspect visibility and count emitted commands','PASS' if all(manual.get(k) for k in ['exists','collapsedByDefault','expands','collapses']) and manual.get('commandsSentByToggle')==0 else 'FAIL','evidence/ui/motorlab/runtime-audit.json#manualPanel','Physical drive commands remain untested')
 add('Windows dark title bar','source/satshell.h','Check native DWM attribute application succeeded on this Windows host','PASS' if audit.get('darkTitlebarApplied') else 'FAIL','evidence/ui/motorlab/runtime-audit.json#darkTitlebarApplied','Other Windows versions and system themes')
+animation=audit.get('startupAnimation',{})
+samples=animation.get('samples',[])
+add('Somboon startup animation','source/satstartup.h; source/main.cpp','Capture native startup frames, inspect duration and changing pixels, then reach main window','PASS' if animation.get('durationMs',0)>=1600 and animation.get('paintedFrames',0)>10 and len(samples)>5 and all(s.get('saved') for s in samples) and len({s['pixelSha256'] for s in samples})>5 else 'FAIL','evidence/ui/motorlab/runtime-audit.json#startupAnimation','Visual playback and slower/other Windows hosts')
 for item in audit.get('onboardingPages',[]):
     expectedBlocked=item['id'] in [1,2]
     passed=item.get('screenshotSaved',False) and (not expectedBlocked or not item['completeBeforeAcceptance'])

@@ -1,5 +1,6 @@
 # SAT Motor Pilot 0.3.0 — 2026-10-23
 
+- Animated Somboon startup logo and indeterminate loading sweep; no hardware action.
 - New Somboon black laboratory shell with company header and actual session state.
 - Horizontal configuration bar and Session tools menu reuse existing actions.
 - Company navigation and Motor control lab replace the previous presentation.

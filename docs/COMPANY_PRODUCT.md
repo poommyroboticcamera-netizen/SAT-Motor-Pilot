@@ -29,3 +29,7 @@ Black and charcoal surfaces, square controls, typography, selected navigation ac
 On the tested Windows host, the native dark title-bar attribute succeeds. The implementation dynamically loads DwmSetWindowAttribute and tolerates its absence. Reference: [Microsoft desktop themes](https://learn.microsoft.com/windows/apps/desktop/modernize/apply-windows-themes), [DWM attributes](https://learn.microsoft.com/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute).
 
 Build, portable folder and ZIP reuse their existing paths. The audit verifies drawer visibility and zero emitted commands when toggling it. That check does not exercise physical drive outputs. Updated screenshot comparison records actual unequal window sizes without scaling; pixel identity with the original shell is not a target for this version.
+
+## Startup animation
+
+A frameless 760 × 420 black startup screen uses the existing corporate emblem. A timer animates its reveal, loading sweep and status dots for approximately 1.6 seconds before constructing the main workspace. It does not claim a measured loading percentage, controller connection or hardware readiness. CLI version/help/about and alternative UI paths bypass it. The Windows audit captures changing native frames and verifies transition into the real main window.
