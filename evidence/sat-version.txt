@@ -1,1 +1,1 @@
-"SAT Motor Pilot 0.2.0; compatibility core 7.00-0+17d52d56"
+"SAT Motor Pilot 0.3.0; compatibility core 7.00-0+51d1dd0d"

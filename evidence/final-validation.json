@@ -1,19 +1,30 @@
 {
-  "reaExecutableEvidence": "ev_fefdf24435ebe9f8d62fef43a2f366fea4dfaecb2b63724d9b883015e216ad5f",
-  "renderedPages": 33,
-  "buildExitCode": 0,
-  "buildSourceCommit": "17d52d56c44e6a0437a9ff0e5168ce7c0e891741",
-  "protocolFailed": 0,
-  "companyUiRuntimePassed": 11,
-  "compilerInvocations": 276,
-  "appLaunchExitCode": 0,
-  "product": "SAT Motor Pilot 0.2.0",
-  "newPackage": "SAT-Motor-Pilot-Windows-x64.zip",
+  "product": "SAT Motor Pilot 0.3.0",
   "cleanBuild": true,
-  "hardwareTests": "NOT RUN",
-  "companyUiRuntimeFailed": 0,
-  "reaPackageEvidence": "ev_b8f58e8ce274e4f2446338c21d542eb3052847e0373fdca1ea07fbc84093aa2a",
+  "buildExitCode": 0,
+  "buildSourceCommit": "51d1dd0d95da539a8dcc225370d32fdad5563088",
+  "compilerInvocations": 267,
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
+  "appLaunchExitCode": 0,
+  "testedInstall": "C:/Users/poomc/Downloads/SATMotorPilot/SATMotorPilot.exe",
+  "renderedPages": 33,
+  "companyUiRuntimePassed": 14,
+  "companyUiRuntimeFailed": 0,
+  "protocolPassed": 11,
+  "protocolFailed": 0,
   "coreRegressionPassed": 88,
-  "protocolPassed": 11
+  "hardwareTests": "NOT RUN",
+  "newPackage": "SAT-Motor-Pilot-Windows-x64.zip",
+  "startup": {
+    "durationMs": 1624,
+    "nativeFrames": 31
+  },
+  "displayTypography": {
+    "activeFamily": "Impact",
+    "fontFilesBundled": false,
+    "requestedFamily": "Muffie"
+  },
+  "reaExecutableEvidence": "ev_3fea6f40783b48fc279398d46ceb96c44df37dcb3ca3683d63ebe7a9f7e5d289",
+  "reaPackageEvidence": "ev_3a083b06a229cd012c2ade0dee83d15151590e39796e94f1cfe8534637bba0cc",
+  "cleanup": "Old MotorLab output retained: automatic approval review rejected deletion; no alternate deletion attempted"
 }

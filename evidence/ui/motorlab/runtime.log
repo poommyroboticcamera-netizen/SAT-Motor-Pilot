@@ -1,5 +1,7 @@
 Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
 Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
+Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
+Cannot read file ':/res/icon.svg', because: Encountered incorrectly encoded content. (line 1)
 Failed to load opengl32sw.dll (The specified module could not be found.)
 Failed to load and resolve WGL/OpenGL functions
 Software OpenGL failed. Falling back to system OpenGL.
@@ -13,7 +15,7 @@ qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for pro
 qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
 qrc:/mobile/SetupWizardFoc.qml:641:13: QML TabBar: Binding loop detected for property "implicitWidth"
 qrc:/mobile/SetupWizardFoc.qml:657:21: QML TabButton: Binding loop detected for property "width"
-qrc:/mobile/ConnectScreen.qml:834:5: QML Dialog: Binding loop detected for property "implicitHeight"
+qrc:/mobile/ConnectScreen.qml:838:5: QML Dialog: Binding loop detected for property "implicitHeight"
 qrc:/mobile/Profiles.qml:91:5: QML Dialog: Binding loop detected for property "implicitHeight"
 qrc:/res/qml/WelcomeQmlPanel.qml:118:5: QML Dialog: Binding loop detected for property "implicitHeight"
 qrc:/mobile/SetupWizardFoc.qml:827:5: QML Dialog: Binding loop detected for property "implicitHeight"

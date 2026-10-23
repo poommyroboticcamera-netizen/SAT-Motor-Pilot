@@ -3,531 +3,432 @@
   "pages": [
     {
       "row": 0,
-      "title": "SAT Workspace",
+      "title": "· | Overview",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 448451,
-      "fractionChanged": 0.35976815082230246,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 1,
-      "title": "Connection",
+      "title": "· | Device link",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 42073,
-      "fractionChanged": 0.03375290814279984,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 2,
-      "title": "Firmware",
+      "title": "· | Firmware center",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 45553,
-      "fractionChanged": 0.03654472523064581,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 3,
-      "title": "Controller Packages",
+      "title": "· | Extensions",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40288,
-      "fractionChanged": 0.03232089851584436,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 4,
-      "title": "Motor Settings",
+      "title": "· | Motor workspace",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 124627,
-      "fractionChanged": 0.09998154833533895,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 5,
-      "title": "General",
+      "title": "· | General | M",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 50069,
-      "fractionChanged": 0.04016766947452868,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 8,
-      "title": "FOC",
+      "title": "· | FOC | M",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40857,
-      "fractionChanged": 0.03277737665463297,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 10,
-      "title": "PID Controllers",
+      "title": "· | PID Controllers | M",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40780,
-      "fractionChanged": 0.03271560369033293,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 11,
-      "title": "Additional Info",
+      "title": "· | Additional Info | M",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40779,
-      "fractionChanged": 0.032714801444043325,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 12,
-      "title": "Experiments",
+      "title": "· | Experiments | M",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40685,
-      "fractionChanged": 0.0326393902928199,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 13,
-      "title": "App Settings",
+      "title": "· | Input workspace",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 124512,
-      "fractionChanged": 0.0998892900120337,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 14,
-      "title": "General",
+      "title": "· | General | I/O",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 41374,
-      "fractionChanged": 0.033192137986361815,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 17,
-      "title": "UART",
+      "title": "· | UART | I/O",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40863,
-      "fractionChanged": 0.03278219013237064,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 18,
-      "title": "Remote Control",
+      "title": "· | Remote Control | I/O",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40482,
-      "fractionChanged": 0.03247653429602888,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 19,
-      "title": "Nrf",
+      "title": "· | Nrf | I/O",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 40901,
-      "fractionChanged": 0.03281267549137585,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 21,
-      "title": "IMU",
+      "title": "· | IMU | I/O",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 38823,
-      "fractionChanged": 0.031145607701564382,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 25,
-      "title": "Data Analysis",
+      "title": "· | Measurement lab",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 48019,
-      "fractionChanged": 0.03852306458082631,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 26,
-      "title": "Realtime Data",
+      "title": "· | Live scope",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 106456,
-      "fractionChanged": 0.08540393100681909,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 27,
-      "title": "Sampled Data",
+      "title": "· | Signal capture",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 34515,
-      "fractionChanged": 0.027689530685920578,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 28,
-      "title": "Experiment Plot",
+      "title": "· | Experiment Plot",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 32460,
-      "fractionChanged": 0.026040914560770158,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 29,
-      "title": "IMU Data",
+      "title": "· | IMU Data",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 32476,
-      "fractionChanged": 0.02605375050140393,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 30,
-      "title": "BMS Data",
+      "title": "· | BMS Data",
       "referenceSize": [
         1385,
         900
       ],
       "motorlabSize": [
-        1385,
-        900
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 32488,
-      "fractionChanged": 0.026063377456879262,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 31,
-      "title": "Log Analysis",
+      "title": "· | Run history",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 38358,
-      "fractionChanged": 0.028909506116081184,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 32,
-      "title": "Motor Analysis",
+      "title": "· | Motor models",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 38438,
-      "fractionChanged": 0.02896980020047783,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 33,
-      "title": "controller Dev Tools",
+      "title": "· | controller Dev Tools",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 91969,
-      "fractionChanged": 0.06931483309843763,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 34,
-      "title": "Terminal",
+      "title": "· | Terminal",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 33886,
-      "fractionChanged": 0.02553906679830875,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 35,
-      "title": "QML Scripting",
+      "title": "· | QML Scripting",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 34480,
-      "fractionChanged": 0.025986750374953838,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 36,
-      "title": "LispBM Scripting",
+      "title": "· | LispBM Scripting",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 34480,
-      "fractionChanged": 0.025986750374953838,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 37,
-      "title": "CAN Tools",
+      "title": "· | CAN Tools",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 33891,
-      "fractionChanged": 0.02554283517858354,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 38,
-      "title": "Display Tool",
+      "title": "· | Display Tool",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 34157,
-      "fractionChanged": 0.025743313009202386,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 39,
-      "title": "Debug Console",
+      "title": "· | Debug Console",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 49517,
-      "fractionChanged": 0.037319777213358156,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 40,
-      "title": "SWD Programmer",
+      "title": "· | SWD Programmer",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 32514,
-      "fractionChanged": 0.024505023250906297,
-      "exact": false
+      "comparable": false
     },
     {
       "row": 41,
-      "title": "ESP Programmer",
+      "title": "· | ESP Programmer",
       "referenceSize": [
         1385,
         958
       ],
       "motorlabSize": [
-        1385,
-        958
+        1280,
+        1074
       ],
-      "comparable": true,
-      "changedPixelsAbove8": 32514,
-      "fractionChanged": 0.024505023250906297,
-      "exact": false
+      "comparable": false
     }
   ]
 }

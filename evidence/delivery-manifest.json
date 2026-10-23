@@ -1,9 +1,9 @@
 {
-  "product": "SAT Motor Pilot 0.2.0 engineering preview",
+  "product": "SAT Motor Pilot 0.3.0 engineering preview",
   "companyArtwork": "User supplied Somboon Advance Technology",
   "upstreamAppCommit": "01d5f10901116c311e3fb84d5a1541f663d3ce20",
   "upstreamFirmwareCommit": "26af69484014b6771d02e68c22f4cb96645b5f22",
-  "buildSourceCommit": "17d52d56c44e6a0437a9ff0e5168ce7c0e891741",
+  "buildSourceCommit": "51d1dd0d95da539a8dcc225370d32fdad5563088",
   "toolchain": "Qt5.15.2 MinGW8.1 Windows x64",
   "protocolTests": {
     "passed": 11,
@@ -44,13 +44,13 @@
   "files": [
     {
       "path": "dist/SATMotorPilot/SATMotorPilot.exe",
-      "bytes": 21215744,
-      "sha256": "0a0b23164a5601ded2063fe563fd76b22ec1cc2360d3b70c3238cf9e267eee19"
+      "bytes": 22180352,
+      "sha256": "e60a51a39223146287b6558a7459c7f9238503e22bb5c8a20a0ef62ef1c0e387"
     },
     {
       "path": "SAT-Motor-Pilot-Windows-x64.zip",
-      "bytes": 62824720,
-      "sha256": "c557d19056dc0c4a60f797a4e28743485cc765fa035d85124a9f11e1529602e9"
+      "bytes": 61968552,
+      "sha256": "8097db5df220351dd8e4ec8d7185587b8979b9e85370b1732a93566a142c407a"
     },
     {
       "path": "source/packet.cpp",
@@ -79,8 +79,23 @@
     },
     {
       "path": "source/main.cpp",
-      "bytes": 67347,
-      "sha256": "5451d564e69b36ef3ef4d6c992615c902dc4d564ae01a1a73165ffdebb99104c"
+      "bytes": 67754,
+      "sha256": "1307f442303a836468ee6b4a3103f1a3edf482c62a969d3ad720a5fe372ecd8e"
+    },
+    {
+      "path": "source/satshell.h",
+      "bytes": 9780,
+      "sha256": "08998500c5c82fc8cd8e16b8a9bc57a3db462c4f02bf0cc6cbb4979494bbc8b9"
+    },
+    {
+      "path": "source/satstartup.h",
+      "bytes": 4925,
+      "sha256": "52a853d27a6e03da268ba0eb4ba755445dfb4896a522694a5031bf15fe915622"
+    },
+    {
+      "path": "source/sattypography.h",
+      "bytes": 1150,
+      "sha256": "fd530f8823aac42262bd8799b1db8d664bf5df9abcc43f3ce2be0ad1d25ae903"
     },
     {
       "path": "source/res/motorlab/somboon-user-supplied.png",

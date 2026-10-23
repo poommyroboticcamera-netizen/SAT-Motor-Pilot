@@ -1,22 +1,22 @@
 [
   {
-    "sha256": "e78cc6f6cff726730d5c1fc457f51f5a33c584f94922d957eba67dfe42a88984",
-    "path": "source/packet.cpp"
+    "path": "source/packet.cpp",
+    "sha256": "e78cc6f6cff726730d5c1fc457f51f5a33c584f94922d957eba67dfe42a88984"
   },
   {
-    "sha256": "5ad58786900379706ff66cf21a044fa7b39b8dc64ecac934df54401e29e06149",
-    "path": "source/vbytearray.cpp"
+    "path": "source/vbytearray.cpp",
+    "sha256": "5ad58786900379706ff66cf21a044fa7b39b8dc64ecac934df54401e29e06149"
   },
   {
-    "sha256": "dad86f583c92296cbb56bbf17a03d632ef83922a921a39a1f7e6569353216fcd",
-    "path": "validation/protocol_tests.cpp"
+    "path": "validation/protocol_tests.cpp",
+    "sha256": "dad86f583c92296cbb56bbf17a03d632ef83922a921a39a1f7e6569353216fcd"
   },
   {
-    "sha256": "0c78a21cf16385353611a8aa606683a96794c182d125e2bd185339154f66fa49",
-    "path": "validation/results/protocol-tests.txt"
+    "path": "validation/results/protocol-tests.txt",
+    "sha256": "0c78a21cf16385353611a8aa606683a96794c182d125e2bd185339154f66fa49"
   },
   {
-    "sha256": "5a577530aee213f125a473229f07abf6440065c33ab5e5296dca2f19a9b44956",
-    "path": "validation/results/protocol-tests.junit.xml"
+    "path": "validation/results/protocol-tests.junit.xml",
+    "sha256": "5a577530aee213f125a473229f07abf6440065c33ab5e5296dca2f19a9b44956"
   }
 ]

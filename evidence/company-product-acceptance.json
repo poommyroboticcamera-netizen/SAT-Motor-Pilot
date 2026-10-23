@@ -1,7 +1,7 @@
 {
-  "product": "SAT Motor Pilot 0.2.0",
-  "checks": 12,
-  "runtimePassed": 11,
+  "product": "SAT Motor Pilot 0.3.0",
+  "checks": 15,
+  "runtimePassed": 14,
   "failed": 0,
   "sourceReviewed": 1,
   "scope": "Company UI/navigation/onboarding/local files; hardware not tested",
@@ -45,6 +45,30 @@
       "result": "PASS",
       "evidence": "evidence/ui/motorlab/runtime-audit.json",
       "remaining": "Other hosts/install profiles"
+    },
+    {
+      "feature": "Manual drive drawer",
+      "implementation": "source/satshell.h",
+      "test": "Click real toggle twice; inspect visibility and count emitted commands",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#manualPanel",
+      "remaining": "Physical drive commands remain untested"
+    },
+    {
+      "feature": "Windows dark title bar",
+      "implementation": "source/satshell.h",
+      "test": "Check native DWM attribute application succeeded on this Windows host",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#darkTitlebarApplied",
+      "remaining": "Other Windows versions and system themes"
+    },
+    {
+      "feature": "Somboon startup animation",
+      "implementation": "source/satstartup.h; source/main.cpp",
+      "test": "Capture native startup frames, inspect early reveal, duration and changing pixels, then reach main window",
+      "result": "PASS",
+      "evidence": "evidence/ui/motorlab/runtime-audit.json#startupAnimation",
+      "remaining": "Visual playback and slower/other Windows hosts"
     },
     {
       "feature": "Company onboarding 0",

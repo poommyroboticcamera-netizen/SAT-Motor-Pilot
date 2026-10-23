@@ -1,7 +1,7 @@
 from pathlib import Path
 import hashlib,json,subprocess
 root=Path(__file__).resolve().parents[1]
-files=['dist/SATMotorPilot/SATMotorPilot.exe','SAT-Motor-Pilot-Windows-x64.zip','source/packet.cpp','source/vbytearray.cpp','source/commands.cpp','source/configparams.cpp','source/motorlabconfigwrite.h','source/main.cpp','source/res/motorlab/somboon-user-supplied.png']
+files=['dist/SATMotorPilot/SATMotorPilot.exe','SAT-Motor-Pilot-Windows-x64.zip','source/packet.cpp','source/vbytearray.cpp','source/commands.cpp','source/configparams.cpp','source/motorlabconfigwrite.h','source/main.cpp','source/satshell.h','source/satstartup.h','source/sattypography.h','source/res/motorlab/somboon-user-supplied.png']
 records=[]
 for relative in files:
     p=root/relative

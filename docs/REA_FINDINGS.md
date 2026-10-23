@@ -1,14 +1,16 @@
 # REA evidence ledger
 
-## SAT company application, 2026-10-23
+## SAT Motor Pilot 0.3.0, 2026-10-23
 
-REA inspected the actual newly built `dist/SATMotorPilot/SATMotorPilot.exe` using the native PE resource parser. Evidence `ev_fefdf24435ebe9f8d62fef43a2f366fea4dfaecb2b63724d9b883015e216ad5f` establishes PE32+, x86-64, 21,215,744 bytes, SHA-256 `0a0b23164a5601ded2063fe563fd76b22ec1cc2360d3b70c3238cf9e267eee19`. It completed 19 resource entries / 8 resources. Complete PE evidence is in `evidence/rea-company-executable.json`.
+REA inspected the final `dist/SATMotorPilot/SATMotorPilot.exe` using the portable native PE resource parser. Evidence `ev_3fea6f40783b48fc279398d46ceb96c44df37dcb3ca3683d63ebe7a9f7e5d289` establishes PE32+, x86-64, 22,180,352 bytes and SHA-256 `e60a51a39223146287b6558a7459c7f9238503e22bb5c8a20a0ef62ef1c0e387`. It completed 19 resource entries / 8 resources. Full records are in `evidence/rea-company-executable.json`; the target SHA identifies the final record among retained observations.
 
-The Windows version-resource probe independently reports product SAT Motor Pilot, company Somboon Advance Technology, version 0.2.0.0. The supported CLI version/About probes exit successfully using only the packaged runtime and system PATH, and preserve original source attribution. See `sat-executable-identity.json`, `sat-version.txt`, and `sat-about.txt`.
+The Windows version-resource probe reports product SAT Motor Pilot, company Somboon Advance Technology and version 0.3.0.0. Supported version/About probes exit successfully with system-only PATH. The executable reports build source `51d1dd0d` and retains original source attribution. See `evidence/sat-executable-identity.json`, `sat-version.txt`, and `sat-about.txt`.
 
-REA also inspected the actual company trial ZIP: SHA-256 `c557d19056dc0c4a60f797a4e28743485cc765fa035d85124a9f11e1529602e9`; inspection `ev_b8f58e8ce274e4f2446338c21d542eb3052847e0373fdca1ea07fbc84093aa2a`. The inventory contains 1,173 occurrences (1,168 files, 5 directories), 1,164 content nodes and zero integrity contradictions within the ZIP inventory scope. Complete records are in `evidence/rea-company-package.json`. The opened package session was closed successfully after export.
+REA inspected the overwritten trial ZIP, SHA-256 `8097db5df220351dd8e4ec8d7185587b8979b9e85370b1732a93566a142c407a`. Inspection `ev_3a083b06a229cd012c2ade0dee83d15151590e39796e94f1cfe8534637bba0cc` contains 1,168 file occurrences, 1,159 content nodes and zero integrity contradictions within the bounded central-directory inventory. Full records are in `evidence/rea-company-package.json`. The package session was closed after export.
 
-These are static artifact observations, not native call tracing or proof of hardware behavior. UI/navigation/first-run evidence comes from the explicitly instrumented Windows runtime audit, not a REA native UI capture. No native decompilation was needed to read the complete available source. The earlier provider limitations below are retained as historical reference.
+The native Windows audit also runs the overwritten installation at `C:/Users/poomc/Downloads/SATMotorPilot/SATMotorPilot.exe` and reaches all 33 visible navigation rows. It captures actual changing startup frames, checks the early logo reveal and transitions to the working window. Current display font is `Impact`, an explicit fallback because licensed Muffie is not present. Startup frames/video and runtime results are under `evidence/ui/motorlab/`.
+
+Static artifact observations do not establish hardware behavior. Runtime evidence comes from instrumented Qt, not a REA native UI provider. No native decompilation was needed for the available source. Earlier provider limitations below remain historical reference.
 
 ---
 

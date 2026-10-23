@@ -1,0 +1,45 @@
+{
+  "scope": "Transparent image corners, not visual ownership or pixel fidelity",
+  "checks": [
+    {
+      "path": "source/res/motorlab/logo.png",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "path": "source/res/motorlab/logo_light.png",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "path": "source/res/logo_vertical.png",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "path": "source/res/symbol_v_wide.png",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    }
+  ]
+}

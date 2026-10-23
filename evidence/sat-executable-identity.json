@@ -1,10 +1,10 @@
 {
-  "versionText": "\"SAT Motor Pilot 0.2.0; compatibility core 7.00-0+17d52d56\"",
+  "versionText": "\"SAT Motor Pilot 0.3.0; compatibility core 7.00-0+51d1dd0d\"",
+  "sha256": "e60a51a39223146287b6558a7459c7f9238503e22bb5c8a20a0ef62ef1c0e387",
+  "path": "C:\\Users\\poomc\\Documents\\ChatGPT\\DRV8302\\MotorLab\\dist\\SATMotorPilot\\SATMotorPilot.exe",
+  "version": "0.3.0.0",
   "probeScope": "Version/About only, system-only PATH, no hardware connection requested",
-  "product": "SAT Motor Pilot",
-  "company": "Somboon Advance Technology",
-  "version": "0.2.0.0",
-  "sha256": "0a0b23164a5601ded2063fe563fd76b22ec1cc2360d3b70c3238cf9e267eee19",
   "description": "Somboon Advance Technology motor commissioning workspace",
-  "path": "C:\\Users\\poomc\\Documents\\ChatGPT\\DRV8302\\MotorLab\\dist\\SATMotorPilot\\SATMotorPilot.exe"
+  "product": "SAT Motor Pilot",
+  "company": "Somboon Advance Technology"
 }
