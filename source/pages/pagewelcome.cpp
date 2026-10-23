@@ -18,6 +18,7 @@
     */
 
 #include "pagewelcome.h"
+#include "sattypography.h"
 #include "ui_pagewelcome.h"
 #include "setupwizardmotor.h"
 #include "setupwizardapp.h"
@@ -60,6 +61,7 @@ PageWelcome::PageWelcome(QWidget *parent) :
     auto grid = new QGridLayout(dashboard);
     grid->setContentsMargins(20,18,20,18);
     auto title = new QLabel("<span style='font-size:20pt;font-weight:600;color:#e4e8ed'>Motor control lab</span>", dashboard);
+    title->setFont(QFont(SatTypography::displayFamily()));
     auto subtitle = new QLabel("COMMISSIONING  /  LINK · CONFIGURE · MEASURE", dashboard);
     subtitle->setWordWrap(true);
     subtitle->setStyleSheet("color:#71b9e8;font-size:10pt;");

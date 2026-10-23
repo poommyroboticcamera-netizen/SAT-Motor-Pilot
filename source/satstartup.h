@@ -12,6 +12,7 @@
 #include <QCryptographicHash>
 #include <QDir>
 #include <functional>
+#include "sattypography.h"
 
 class SatStartupScreen : public QWidget {
 public:
@@ -78,7 +79,7 @@ protected:
         const int growth=int((1.0-reveal)*10);
         p.drawPixmap(QRect(126+growth,125+growth,92-2*growth,106-2*growth),mEmblem);
         p.setPen(QColor("#e6e9ef"));
-        p.setFont(QFont("Segoe UI",30,QFont::DemiBold));
+        p.setFont(QFont(SatTypography::displayFamily(),30));
         p.drawText(QRect(240,137,480,60),Qt::AlignLeft|Qt::AlignVCenter,"SAT Motor Pilot");
         p.setPen(QColor("#779fc9"));
         p.setFont(QFont("Segoe UI",10));

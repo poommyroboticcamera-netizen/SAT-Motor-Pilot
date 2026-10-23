@@ -9,3 +9,4 @@ __pycache__/
 !evidence/*.log
 !evidence/ui/**/runtime.log
 /MotorLab-Windows-x64-trial/
+source/res/fonts/Muffie*

@@ -33,3 +33,9 @@ Build, portable folder and ZIP reuse their existing paths. The audit verifies dr
 ## Startup animation
 
 A frameless 760 × 420 black startup screen uses the existing corporate emblem. A timer animates its reveal, loading sweep and status dots for approximately 1.6 seconds before constructing the main workspace. It does not claim a measured loading percentage, controller connection or hardware readiness. CLI version/help/about and alternative UI paths bypass it. The Windows audit captures changing native frames and verifies transition into the real main window.
+
+## Display typography
+
+The requested display typeface is Muffie by Almairatype. The designer's [license page](https://payhip.com/Almairatype/license) distinguishes application embedding from ordinary branding and disallows public redistribution of raw fonts. No Muffie binary has been acquired or included in this repository/package.
+
+The app resolves a licensed `fonts/Muffie.ttf` or `fonts/Muffie.otf` beside the executable, or a locally installed Muffie family. Without one, it uses installed Impact, then Segoe UI. This applies to the startup title, company app title and main dashboard heading. Body text and measurements retain readable system fonts. The actual selected family is recorded in `displayTypography` in the runtime audit. Installing a licensed Muffie font activates it on the next launch; no rebuild is needed. Keep the private font outside the public Git repository and review its embedding terms for any redistribution.

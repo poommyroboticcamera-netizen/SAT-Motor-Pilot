@@ -37,6 +37,7 @@ inline void motorLabAudit(MainWindow *window, const QString &directory)
     (*report)["organizationDomain"] = QCoreApplication::organizationDomain();
     (*report)["darkTitlebarApplied"] = window->property("satDarkTitlebarApplied").toBool();
     (*report)["startupAnimation"] = QJsonObject::fromVariantMap(window->property("satStartupAudit").toMap());
+    (*report)["displayTypography"] = QJsonObject{{"requestedFamily","Muffie"},{"activeFamily",window->property("satDisplayFont").toString()},{"fontFilesBundled",false}};
     (*report)["devicePixelRatio"] = window->devicePixelRatioF();
     (*report)["logicalDpi"] = QGuiApplication::primaryScreen()->logicalDotsPerInch();
     (*report)["mapPolicy"] = "Remote OpenStreetMap rendering disabled identically in both audited builds to eliminate asynchronous tile content";

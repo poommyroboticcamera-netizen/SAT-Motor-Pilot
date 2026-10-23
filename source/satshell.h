@@ -14,6 +14,7 @@
 #include <functional>
 #include "ui_mainwindow.h"
 #include "vescinterface.h"
+#include "sattypography.h"
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
@@ -82,6 +83,8 @@ inline void install(QMainWindow *window, Ui::MainWindow *ui, VescInterface *vesc
     auto identity = new QLabel("<span style='font-size:16pt;font-weight:600;color:#e2e6ec'>SAT Motor Pilot</span>"
                                "<br><span style='font-size:9pt;color:#6ea4d4'>SOMBOON ADVANCE TECHNOLOGY · MOTOR CONTROL LAB</span>",header);
     headerLayout->addWidget(identity);
+    identity->setFont(QFont(SatTypography::displayFamily()));
+    window->setProperty("satDisplayFont",SatTypography::displayFamily());
     headerLayout->addStretch();
     auto session = new QLabel("NO DEVICE SESSION",header);
     session->setObjectName("satSessionStatus");
