@@ -7,11 +7,11 @@
 **เครื่องมือตั้งค่าและตรวจสอบระบบมอเตอร์สำหรับ Windows โดยสมบูรณ์**
 
 ![Windows](https://img.shields.io/badge/Windows-x64-30343B?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-0.3.0-304B8A?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-0.3.1-304B8A?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Engineering_Preview-30343B?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-GPL--3.0--or--later-304B8A?style=for-the-badge)
 
-[เริ่มใช้งาน](#เริ่มใช้งาน) · [ความสามารถ](#ความสามารถ) · [ผลทดสอบ](#ผลทดสอบ) · [Build จากซอร์ส](#build-จากซอร์ส)
+[ดาวน์โหลด V0.3.1](https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot/releases/latest) · [เริ่มใช้งาน](#เริ่มใช้งาน) · [ความสามารถ](#ความสามารถ) · [ผลทดสอบ](#ผลทดสอบ) · [Build จากซอร์ส](#build-จากซอร์ส)
 
 </div>
 
@@ -69,7 +69,7 @@ flowchart LR
 
 ## เริ่มใช้งาน
 
-ชุด Windows ใน workspace ใช้ชื่อ **`SAT-Motor-Pilot-Windows-x64.zip`**
+ดาวน์โหลด **`SAT-Motor-Pilot-Windows-x64.zip`** จาก [GitHub Releases](https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot/releases/latest) รุ่นล่าสุด **V0.3.1**
 
 1. แตก ZIP ทั้งโฟลเดอร์ แล้วเปิด `SATMotorPilot/SATMotorPilot.exe`
 2. เก็บ DLL และโฟลเดอร์ `platforms`, `qml` ไว้ข้างไฟล์แอปตามเดิม

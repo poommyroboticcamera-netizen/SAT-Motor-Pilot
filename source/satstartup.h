@@ -96,7 +96,7 @@ protected:
         p.setFont(QFont("Segoe UI",9));
         p.setPen(QColor("#606b79"));
         p.drawText(QRect(28,367,704,24),Qt::AlignLeft,"SAT  /  MOTOR SYSTEMS");
-        p.drawText(QRect(28,367,704,24),Qt::AlignRight,"0.3.0");
+        p.drawText(QRect(28,367,704,24),Qt::AlignRight,"0.3.1");
     }
 private:
     QString mAuditDirectory;

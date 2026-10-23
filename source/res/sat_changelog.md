@@ -1,3 +1,13 @@
+# SAT Motor Pilot V0.3.1 — 2026-10-23
+
+- First GitHub release package for the Somboon Windows motor-control lab.
+- Consistent 0.3.1 Windows metadata, About/version output and startup screen.
+- Black laboratory shell, square controls and Somboon startup animation.
+- Existing controller commands retained in the configuration bar and Session tools.
+- Muffie display-font support with an explicit installed-font fallback.
+- Windows portable ZIP, checksums and corresponding source available from Releases.
+- Engineering preview: live-controller and motor acceptance remains open.
+
 # SAT Motor Pilot 0.3.0 — 2026-10-23
 
 - Animated Somboon startup logo and indeterminate loading sweep; no hardware action.

@@ -2,7 +2,7 @@
 # The upstream project remains the compatible engine and expert tools.
 include(vesc_tool.pro)
 TARGET = SATMotorPilot
-VERSION = 0.3.0
+VERSION = 0.3.1
 QMAKE_TARGET_PRODUCT = SAT Motor Pilot
 QMAKE_TARGET_DESCRIPTION = Somboon Advance Technology motor commissioning workspace
 QMAKE_TARGET_COMPANY = Somboon Advance Technology

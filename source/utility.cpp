@@ -200,7 +200,7 @@ QString Utility::vescToolChangeLog()
 }
 QString Utility::aboutText()
 {
-    return tr("<b>SAT Motor Pilot 0.3.0</b><br>Company artwork supplied by the user: Somboon Advance Technology.<br>Modified build based on VESC® Tool %1<br>Upstream source: 01d5f10901116c311e3fb84d5a1541f663d3ce20<br>GPL-3.0-or-later; provided WITHOUT ANY WARRANTY.<br><a href=\"https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot\">SAT Motor Pilot source and build instructions</a><br>"
+    return tr("<b>SAT Motor Pilot 0.3.1</b><br>Company artwork supplied by the user: Somboon Advance Technology.<br>Modified build based on VESC® Tool %1<br>Upstream source: 01d5f10901116c311e3fb84d5a1541f663d3ce20<br>GPL-3.0-or-later; provided WITHOUT ANY WARRANTY.<br><a href=\"https://github.com/poommyroboticcamera-netizen/SAT-Motor-Pilot\">SAT Motor Pilot source and build instructions</a><br>"
           #if VT_IS_TEST_VERSION
               "Test Version %2<br>"
           #endif
@@ -230,7 +230,7 @@ QString Utility::aboutText()
 
 QString Utility::versionText()
 {
-    return "SAT Motor Pilot 0.3.0; compatibility core " + QString::number(VT_VERSION, 'f', 2) + "-" + QString::number(VT_IS_TEST_VERSION) + "+" + STR(VT_GIT_COMMIT);
+    return "SAT Motor Pilot 0.3.1; compatibility core " + QString::number(VT_VERSION, 'f', 2) + "-" + QString::number(VT_IS_TEST_VERSION) + "+" + STR(VT_GIT_COMMIT);
 }
 
 QString Utility::uuid2Str(QByteArray uuid, bool space)

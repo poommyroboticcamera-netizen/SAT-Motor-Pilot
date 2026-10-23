@@ -23,7 +23,7 @@ for item in audit['configurationRoundtrips']:
     add('Local '+item['kind']+' XML persistence','source/configparams.cpp; source/motorlabaudit.h','Perturb destination, save/load XML, compare all parameters and serialized bytes','PASS' if item['pass'] else 'FAIL','evidence/ui/motorlab/runtime-audit.json#configurationRoundtrips','Physical controller read/write')
 with (root/'validation/company-product-traceability.csv').open('w',newline='',encoding='utf-8-sig') as f:
     w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
-result={'product':'SAT Motor Pilot 0.3.0','checks':len(rows),'runtimePassed':sum(r['result']=='PASS' for r in rows),'failed':sum(r['result']=='FAIL' for r in rows),'sourceReviewed':sum(r['result']=='SOURCE_REVIEWED' for r in rows),'scope':'Company UI/navigation/onboarding/local files; hardware not tested','rows':rows}
+result={'product':'SAT Motor Pilot 0.3.1','checks':len(rows),'runtimePassed':sum(r['result']=='PASS' for r in rows),'failed':sum(r['result']=='FAIL' for r in rows),'sourceReviewed':sum(r['result']=='SOURCE_REVIEWED' for r in rows),'scope':'Company UI/navigation/onboarding/local files; hardware not tested','rows':rows}
 (root/'evidence/company-product-acceptance.json').write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding='utf-8')
 print('Company acceptance:',result['runtimePassed'],'runtime checks,',result['failed'],'failed,',result['sourceReviewed'],'source review')
 if result['failed']: raise SystemExit(1)
